@@ -4,14 +4,16 @@ I have developed my character with the sum of the experiences shared with my fam
 
 I am a number one fan of technology, a devops enthusiast and an Open Source Lover, so I spend part of my free time researching and testing new proposals or solutions.
 
-### Professional career
+## Professional career
 
-![Smart Protection](/assets/images/smart-protection.png) 
+![Smart Protection](/assets/images/smart-protection.png)  
 #### [Smart Protection](https://smartprotection.com/es/) 
 
 ##### Site Reliability Engineering
 > _may. 2021 - actualidad_
+
 > _Madrid, Comunidad de Madrid, España_
+
 > _100% Remote_
 
 - Defines and implements how code is deployed, configured, and monitored, as well as availability, latency, change management, emergency response, and service capacity management in production.
@@ -25,7 +27,7 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 - Implement observability systems at the application level, infrastructure and integration and deployment flows.
 
 <p float="left">
-<img src="assets/images/nubersia.png" alt="Nubersia"> <h4><a href="https://www.nubersia.com/es/">Nubersia</a></h4>
+<img src="assets/images/nubersia.png" alt="Nubersia"> <h4><a href="https://www.nubersia.com/es/" style=font-size:20px;>Nubersia</a></h4>
 </p>
 ##### Chief Technology OfficerChief Technology Officer
 > _ene. 2019 - may. 2021 · 2 años 5 meses_
