@@ -6,7 +6,10 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 
 ### Professional career
 
-#### ![Smart Protection](/assets/images/smart-protection.png) [Smart Protection](https://smartprotection.com/es/) 
+<p float="left">
+![Smart Protection](/assets/images/smart-protection.png) 
+#### [Smart Protection](https://smartprotection.com/es/) 
+</p>
 ##### Site Reliability Engineering
 > _may. 2021 - actualidad_
 > _Madrid, Comunidad de Madrid, España_
@@ -22,7 +25,10 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 - Design and implementation of IaC and CI / CD flows.
 - Implement observability systems at the application level, infrastructure and integration and deployment flows.
 
-#### ![Nubersia](/assets/images/nubersia.png) [Nubersia](https://www.nubersia.com/es/)
+<p float="left">
+<img src="/assets/images/nubersia.png" alt="Nubersia"> 
+<a href="https://www.nubersia.com/es/"><h4>Nubersia</h4></a>
+</p>
 ##### Chief Technology OfficerChief Technology Officer
 > _ene. 2019 - may. 2021 · 2 años 5 meses_
 > _Barcelona y alrededores, EspañaBarcelona y alrededores, España_
