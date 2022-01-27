@@ -24,7 +24,7 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 - Design and implementation of IaC and CI / CD flows.
 - Implement observability systems at the application level, infrastructure and integration and deployment flows.
 
-
+<p float="left">
 <img src="assets/images/nubersia.png" alt="Nubersia"> 
 <h4><a href="https://www.nubersia.com/es/">Nubersia</a></h4>
 </p>
