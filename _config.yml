@@ -1,3 +1,8 @@
 theme: jekyll-theme-slate
 title: Platform Engineering
 description: Reinaldo León
+email: reinaldoleon@gmail.com
+author:
+  name: Reinaldo León
+github_username: reinaldoleon
+logo: "/assets/images/avatar.png"

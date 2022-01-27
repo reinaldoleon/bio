@@ -1,10 +1,10 @@
-## Welcome to GitHub Pages
+## About me
 
-You can use the [editor on GitHub](https://github.com/reinaldoleon/bio/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+I have developed my character with the sum of the experiences shared with my family, colleagues and friends, in my professional path I have tried to learn from the achievements but more from the mistakes made. I dedicate a lot of time to the development and evolution of the people around me and I work on their well-being, which translates into my own.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I am a number one fan of technology, a devops enthusiast and an Open Source Lover, so I spend part of my free time researching and testing new proposals or solutions.
 
-### Markdown
+### Professional career
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
