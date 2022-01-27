@@ -32,7 +32,7 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 ##### Chief Technology OfficerChief Technology Officer
 > _ene. 2019 - may. 2021 · 2 años 5 meses_
 
-> _Barcelona y alrededores, EspañaBarcelona y alrededores, España_
+> _Barcelona y alrededores, España_
 
 - Automation of cloud solutions.
 - Scalable, high availability and fault tolerant systems design on AWS
@@ -48,7 +48,7 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 - Manage and optimize infrastructure assets to meet internal financial goals.
 - Create plans to analyze and monitor technology performance metrics.
 
-##### IT Solutions ArchitectIT Solutions Architect
+##### IT Solutions Architect
 > _jul. 2017 - ene. 2019 · 1 año 7 meses_
 
 - Implementation and automation of cloud solutions.
