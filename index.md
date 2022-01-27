@@ -6,6 +6,54 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 
 ### Professional career
 
+#### [](https://smartprotection.com/es/) ![Smart Protection](/assets/images/smart-protection.jpeg)
+##### Site Reliability Engineering
+> _may. 2021 - actualidad_
+> _Madrid, Comunidad de Madrid, España_
+> _100% Remote_
+
+- Defines and implements how code is deployed, configured, and monitored, as well as availability, latency, change management, emergency response, and service capacity management in production.
+- Define its SLO for each of the services
+- Use this SLO to measure the performance of each service and make reports.
+- Define error budget.
+- Use an error budget as launch criteria.
+- Automate tasks, systems and flows.
+- Carry out postmortems of each event.
+- Design and implementation of IaC and CI / CD flows.
+- Implement observability systems at the application level, infrastructure and integration and deployment flows.
+
+#### [](https://www.nubersia.com/es/) ![Nubersia](/assets/images/nubersia.jpeg)
+##### Chief Technology OfficerChief Technology Officer
+> _ene. 2019 - may. 2021 · 2 años 5 meses_
+> _Barcelona y alrededores, EspañaBarcelona y alrededores, España_
+
+- Automation of cloud solutions.
+- Scalable, high availability and fault tolerant systems design on AWS
+- Identification of the proper use of AWS best architecture practices.
+- Continuous integration and continuous delivery design solutions.
+- Generate and maintain the different Terraform stack templates
+- In charge of technical training for IT teams
+- Maintenance, development, articulation and continuous evolution of the direction of technical strategies.
+- Establish a balance between commercial strategies and technological strategies.
+- Incorporation of tools and trends according to market needs.
+- Orient the different teams towards long-term technical objectives. - Evaluate and motivate the inclusion of new engineers in the team.
+- Direction and monitoring of the objectives established in the different ongoing projects.
+- Manage and optimize infrastructure assets to meet internal financial goals.
+- Create plans to analyze and monitor technology performance metrics.
+
+##### IT Solutions ArchitectIT Solutions Architect
+> _jul. 2017 - ene. 2019 · 1 año 7 meses_
+
+- Implementation and automation of cloud solutions.
+- Design and implementation of scalable, highly available and fault tolerant systems on AWS
+- Identification of the proper use of AWS best architecture practices.
+- Implementation of integration solutions and continuous delivery.
+- IaC and configuration management.
+- Automation solutions for installing linux services
+- Administration and maintenance of the different code repositories.
+- Creation and documentation of different internal processes.
+
+
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
