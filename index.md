@@ -26,11 +26,12 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 - Design and implementation of IaC and CI / CD flows.
 - Implement observability systems at the application level, infrastructure and integration and deployment flows.
 
-<p float="left">
-<img src="assets/images/nubersia.png" alt="Nubersia"> <h4><a href="https://www.nubersia.com/es/" style=font-size:20px;>Nubersia</a></h4>
-</p>
+![Nubersia](/assets/images/nubersia.png)  
+#### [Nubersia](https://nubersia.com/es/) 
+
 ##### Chief Technology OfficerChief Technology Officer
 > _ene. 2019 - may. 2021 · 2 años 5 meses_
+
 > _Barcelona y alrededores, EspañaBarcelona y alrededores, España_
 
 - Automation of cloud solutions.
