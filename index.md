@@ -25,6 +25,7 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 - Carry out postmortems of each event.
 - Design and implementation of IaC and CI / CD flows.
 - Implement observability systems at the application level, infrastructure and integration and deployment flows.
+- Helps to establish the RTO - RPO and defines the DRP
 
 ![Nubersia](/assets/images/nubersia.png)  
 #### [Nubersia](https://nubersia.com/es/) 
@@ -65,13 +66,71 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 
 ## Skill
 
+#### Personally describe the strong and weak skills developed before and during professional practice.
+
 ### Hard
+
+| Name | Description | Level |
+|------|-------------|------|
+| AWS | Cloud Provider | [] [] [] [] [] [] [] [] [] |
+| Terraform | IaC Provider | [] [] [] [] [] [] [] [] [] |
+| Kubernetes | Container Orchestrator | [] [] [] [] [] [] [] |
+| Docker | Containers Package | [] [] [] [] [] [] [] |
+| Git | Control Version System | [] [] [] [] [] [] [] [] |
+| Jenkins | Automations Server | [] [] [] [] [] [] [] |
+| Ansible | Automation Platform | [] [] [] [] [] [] [] |
+| CI/CD | Continuous Integrations and Delivery/Deployment | [] [] [] [] [] [] [] |
+| Linux | Open Source SO | [] [] [] [] [] [] [] [] [] |
+| Shell Scripting | Command Interpreter | [] [] [] [] [] [] [] [] [] |
+| Computer Networking | Capacity | [] [] [] [] [] [] [] [] |
+| Agile Methodology | Project Management | [] [] [] [] [] [] [] [] |
+| Infrastructure Design | Capacity | [] [] [] [] [] [] [] [] [] |
 
 
 ### Soft
 
+| Name | Level |
+|------|------|
+| Teamwork | [] [] [] [] [] [] [] [] [] |
+| Global Vision | [] [] [] [] [] [] [] [] [] |
+| Initiative | [] [] [] [] [] [] [] |
+| Leadership | [] [] [] [] [] [] [] |
+| Communication | [] [] [] [] [] [] [] [] |
+| Project Management | [] [] [] [] [] [] [] [] [] |
+| Documentation | [] [] [] [] [] [] [] [] [] |
+| Commitment | [] [] [] [] [] [] [] |
+| Organization | [] [] [] [] [] [] [] |
+| Customer Management | [] [] [] [] [] [] [] [] |
+| Proactivity | [] [] [] [] [] [] [] [] |
+| Responsibility | [] [] [] [] [] [] [] [] [] |
+| Confidence | [] [] [] [] [] [] [] |
+| Ethics | [] [] [] [] [] [] [] |
 
+
+## Licenses and certifications
+
+AWS Certified DevOps Engineer – Professional
+Expedición nov. 2020 · Vencimiento: nov. 2023
+[Credential])(https://www.youracclaim.com/badges/1adbe747-1c1d-42bc-b8c1-2257382ebb4d?source=linked_in_profile)
+
+AWS Certified SysOps Administrator - Associate
+Expedición oct. 2019 · Vencimiento: oct. 2022
+[Credential](https://www.youracclaim.com/badges/c9855e57-9f27-484e-9f3b-7a0df9a0d907/linked_in_profile)
+
+AWS Certified Cloud Practitioner
+Expedición jul. 2019 · Vencimiento: jul. 2022
+[Credential](/assets/images/aws-cloud-practitioner.pdf)  
+
+AWS Solutions Architect
+Expedición dic. 2017 · Vencimiento: dic. 2017
+[Credential](https://www.youracclaim.com/badges/361c7fea-e04b-49b3-b587-7098bf917fab/linked_in_profile)
+
+AWS Business Professional
+Expedición: abr. 2018 · Sin fecha de vencimiento
+
+AWS Technical Professional
+Expedición: abr. 2018 · Sin fecha de vencimiento
 
 ## Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Reinaldo León - reinaldoleon@gmail.com - [Linkedin](https://www.linkedin.com/in/reinaldoleon/)
