@@ -119,11 +119,11 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 
 #### AWS CTO and Cloud Economics
 > Expedición aug. 2018 · Vencimiento: jul. 2022
-![Credential](/assets/images/aws-cto-cloud-economics.pdf)  
+![Credential](/assets/images/aws-cto-cloud-economics.png)  
 
 #### AWS Certified Cloud Practitioner
 > Expedición jul. 2019
-![Credential](/assets/images/aws-cloud-practitioner.pdf)  
+![Credential](/assets/images/aws-cloud-practitioner.png)  
 
 #### AWS Solutions Architect
 > Expedición dic. 2017 · Vencimiento: dic. 2017
