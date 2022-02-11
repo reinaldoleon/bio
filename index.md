@@ -70,8 +70,8 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 
 ### Hard
 
-| Name | Description |   Level   |
-|------|-----------|-------------|
+| Name | Description |   Level of knowledge   |
+|------|-----------|--------------------------|
 | AWS | Cloud Provider | [] [] [] [] [] [] [] [] [] |
 | Terraform | IaC Provider | [] [] [] [] [] [] [] [] [] |
 | Kubernetes | Container Orchestrator | [] [] [] [] [] [] [] |
@@ -89,8 +89,8 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 
 ### Soft
 
-| Name |   Level   |
-|------|-----------|
+| Name |   Level of knowledge   |
+|------|------------------------|
 | Teamwork | [] [] [] [] [] [] [] [] [] |
 | Global Vision | [] [] [] [] [] [] [] [] [] |
 | Initiative | [] [] [] [] [] [] [] |
