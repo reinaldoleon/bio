@@ -30,7 +30,7 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 ![Nubersia](/assets/images/nubersia.png)  
 #### [Nubersia](https://nubersia.com/es/) 
 
-##### Chief Technology OfficerChief Technology Officer
+##### Chief Technology Officer
 > _ene. 2019 - may. 2021 · 2 años 5 meses_
 
 > _Barcelona y alrededores, España_
@@ -62,6 +62,18 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 - Creation and documentation of different internal processes.
 
 
+![Vileo](/assets/images/vileo.png)  
+#### Vileo (Autónomo)
+##### Consultor en Infraestructura, Plataforma y Telecomunicaciones
+> _feb. 2016 - may. 2017
+
+> _Caracas, Venezuela_
+
+- Instalación y administración de Firewall (pfSense / Fortinet)
+- Instalación y configuración de Swich y Routers CISCO
+- HA en Plataforma Linux
+- Administracion de soluciones con microservicios Docker
+- AWS IAM, EC2, ECS, S3, Elastic Load Balancer, Auto Scaling, Virtual Private Cloud
 
 
 ## Skill
