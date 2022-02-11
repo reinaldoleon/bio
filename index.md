@@ -71,7 +71,7 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 ### Hard
 
 | Name | Description |   Level   |
-|------|-------------|----------|
+|------|-----------|-------------|
 | AWS | Cloud Provider | [] [] [] [] [] [] [] [] [] |
 | Terraform | IaC Provider | [] [] [] [] [] [] [] [] [] |
 | Kubernetes | Container Orchestrator | [] [] [] [] [] [] [] |
@@ -89,8 +89,8 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 
 ### Soft
 
-| Name | Level |
-|------|------|
+| Name |   Level   |
+|------|-----------|
 | Teamwork | [] [] [] [] [] [] [] [] [] |
 | Global Vision | [] [] [] [] [] [] [] [] [] |
 | Initiative | [] [] [] [] [] [] [] |
@@ -110,26 +110,30 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 ## Licenses and certifications
 
 #### AWS Certified DevOps Engineer – Professional
-Expedición nov. 2020 · Vencimiento: nov. 2023
+> Expedición nov. 2020 · Vencimiento: nov. 2023
 [Credential])(https://www.youracclaim.com/badges/1adbe747-1c1d-42bc-b8c1-2257382ebb4d?source=linked_in_profile)
 
 #### AWS Certified SysOps Administrator - Associate
-Expedición oct. 2019 · Vencimiento: oct. 2022
+> Expedición oct. 2019 · Vencimiento: oct. 2022
 [Credential](https://www.youracclaim.com/badges/c9855e57-9f27-484e-9f3b-7a0df9a0d907/linked_in_profile)
 
+#### AWS CTO and Cloud Economics
+> Expedición aug. 2018 · Vencimiento: jul. 2022
+![Credential](/assets/images/aws-cto-cloud-economics.pdf)  
+
 #### AWS Certified Cloud Practitioner
-Expedición jul. 2019 · Vencimiento: jul. 2022
+> Expedición jul. 2019
 ![Credential](/assets/images/aws-cloud-practitioner.pdf)  
 
 #### AWS Solutions Architect
-Expedición dic. 2017 · Vencimiento: dic. 2017
+> Expedición dic. 2017 · Vencimiento: dic. 2017
 [Credential](https://www.youracclaim.com/badges/361c7fea-e04b-49b3-b587-7098bf917fab/linked_in_profile)
 
 #### AWS Business Professional
-Expedición: abr. 2018 · Sin fecha de vencimiento
+> Expedición: abr. 2018 
 
 #### AWS Technical Professional
-Expedición: abr. 2018 · Sin fecha de vencimiento
+> Expedición: abr. 2018
 
 ## Contact
 
