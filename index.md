@@ -121,6 +121,11 @@ I am a number one fan of technology, a devops enthusiast and an Open Source Love
 
 ## Licenses and certifications
 
+##### HashiCorp - Terraform Associate
+> Expedición jul. 2022 · Vencimiento: jul. 2024
+[Credential](https://www.credly.com/badges/160ab75d-8a2d-4bb6-844a-0f2b6320dcdb/public_url)
+
+
 ##### AWS Certified DevOps Engineer – Professional
 > Expedición nov. 2020 · Vencimiento: nov. 2023
 [Credential](https://www.youracclaim.com/badges/1adbe747-1c1d-42bc-b8c1-2257382ebb4d?source=linked_in_profile)
