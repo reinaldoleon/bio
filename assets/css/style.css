@@ -54,6 +54,14 @@
   --shadow-glow: 0 0 25px rgba(99, 102, 241, 0.1);
 }
 
+/* Bilingual content display rules */
+[data-lang="en"] .lang-es {
+  display: none !important;
+}
+[data-lang="es"] .lang-en {
+  display: none !important;
+}
+
 /* Base styles */
 * {
   box-sizing: border-box;
@@ -163,7 +171,7 @@ header {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.75rem;
   list-style: none;
 }
 
@@ -193,6 +201,44 @@ header {
 
 .nav-links a:hover::after {
   width: 100%;
+}
+
+/* Language selector */
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  transition: all var(--transition-fast);
+  font-family: var(--font-body);
+}
+
+.lang-btn:hover, .lang-btn.active {
+  color: var(--text-primary);
+}
+
+.lang-btn.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .lang-btn.active {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.lang-divider {
+  color: var(--text-muted);
+  font-size: 0.8rem;
 }
 
 .theme-toggle-btn {
@@ -362,6 +408,7 @@ header {
   transform: translateY(-2px);
 }
 
+/* Avatar Photo Container */
 .hero-avatar {
   position: relative;
   display: flex;
@@ -392,17 +439,29 @@ header {
   height: 240px;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid var(--bg-secondary);
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  border: 4px solid var(--accent-purple);
+  box-shadow: var(--shadow-lg), var(--shadow-glow), 0 0 40px rgba(139, 92, 246, 0.3);
   position: relative;
   z-index: 10;
-  background-color: var(--bg-secondary);
+  background: radial-gradient(circle, #ffffff 65%, #f1f5f9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+[data-theme="light"] .avatar-img-container {
+  background: radial-gradient(circle, #ffffff 65%, #cbd5e1 100%);
+  border-color: var(--accent-purple);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
 }
 
 .avatar-img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
 }
 
 /* Section Common Layout */
@@ -634,6 +693,99 @@ section {
   height: 6px;
   border-radius: 50%;
   background-color: var(--accent-cyan);
+}
+
+/* Projects Section Styling */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-icon-wrapper {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10px;
+  background-color: rgba(99, 102, 241, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.project-icon-wrapper svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-glass);
+}
+
+[data-theme="light"] .project-tag {
+  background-color: rgba(0,0,0,0.03);
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--accent-purple);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.project-link:hover {
+  color: var(--accent-cyan);
+}
+
+.project-link svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  fill: currentColor;
 }
 
 /* Skills Section */

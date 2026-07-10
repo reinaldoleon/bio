@@ -22,6 +22,32 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('theme', targetTheme);
   });
 
+  // Language Toggle Logic
+  const langButtons = document.querySelectorAll('.lang-btn');
+  const initialLang = localStorage.getItem('lang') || 'en';
+  
+  const setLanguage = (lang) => {
+    document.documentElement.setAttribute('data-lang', lang);
+    localStorage.setItem('lang', lang);
+    langButtons.forEach(btn => {
+      if (btn.getAttribute('data-lang-set') === lang) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  };
+
+  // Set initial language
+  setLanguage(initialLang);
+
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetLang = btn.getAttribute('data-lang-set');
+      setLanguage(targetLang);
+    });
+  });
+
   // Mobile Menu Logic
   const mobileToggle = document.getElementById('mobile-toggle');
   const navLinks = document.getElementById('nav-links');

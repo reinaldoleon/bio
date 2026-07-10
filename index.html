@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
+<html lang="en" data-theme="dark" data-lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Meta Tags -->
   <title>Reinaldo León | SRE, Cloud Architect & AI Platform Engineer</title>
-  <meta name="description" content="Perfil profesional de Reinaldo León - Ingeniero de Fiabilidad de Sitios (SRE), Arquitecto Cloud y especialista en Plataformas de Inteligencia Artificial Corporativa. AWS, Terraform, Kubernetes, LLMOps.">
-  <meta name="keywords" content="Reinaldo Leon, SRE, Site Reliability Engineering, Cloud Architect, DevOps, Terraform, AWS, Kubernetes, AI Platforms, LLMOps, Plataformas de IA">
+  
+  <meta class="lang-en" name="description" content="Professional portfolio of Reinaldo León - Principal Platform Engineer, SRE, and Cloud Architect specializing in AWS, Terraform, Kubernetes, and Enterprise AI (LLMOps).">
+  <meta class="lang-es" name="description" content="Perfil profesional de Reinaldo León - Principal Platform Engineer, SRE y Arquitecto Cloud especializado en AWS, Terraform, Kubernetes y Plataformas de IA Corporativas (LLMOps).">
+  
+  <meta name="keywords" content="Reinaldo Leon, Principal Platform Engineer, SRE, Site Reliability Engineering, Cloud Architect, DevOps, Cobee, Terraform, AWS, Kubernetes, AI Platforms, LLMOps, Plataformas de IA">
   <meta name="author" content="Reinaldo León">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Reinaldo León | SRE, Cloud Architect & AI Platform Engineer">
-  <meta property="og:description" content="Perfil profesional enfocado en DevOps, SRE y diseño de plataformas cloud y entornos corporativos de Inteligencia Artificial.">
+  <meta property="og:description" content="DevOps, SRE, and Enterprise AI Platforms design. AWS, Terraform, Kubernetes, and LLMOps.">
   <meta property="og:image" content="assets/images/avatar.png">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="Reinaldo León | SRE, Cloud Architect & AI Platform Engineer">
-  <meta property="twitter:description" content="Perfil profesional enfocado en DevOps, SRE y diseño de plataformas cloud y entornos corporativos de Inteligencia Artificial.">
+  <meta property="twitter:description" content="DevOps, SRE, and Enterprise AI Platforms design. AWS, Terraform, Kubernetes, and LLMOps.">
   <meta property="twitter:image" content="assets/images/avatar.png">
 
   <!-- Favicon -->
@@ -49,23 +52,35 @@
 
       <nav>
         <ul class="nav-links" id="nav-links">
-          <li><a href="#about">Sobre Mí</a></li>
-          <li><a href="#ai-platforms">IA Corporativa</a></li>
-          <li><a href="#experience">Experiencia</a></li>
-          <li><a href="#skills">Conocimientos</a></li>
-          <li><a href="#certifications">Certificaciones</a></li>
-          <li><a href="#contact">Contacto</a></li>
+          <li><a href="#about"><span class="lang-en">About Me</span><span class="lang-es">Sobre Mí</span></a></li>
+          <li><a href="#ai-platforms"><span class="lang-en">Enterprise AI</span><span class="lang-es">IA Corporativa</span></a></li>
+          <li><a href="#experience"><span class="lang-en">Experience</span><span class="lang-es">Experiencia</span></a></li>
+          <li><a href="#projects"><span class="lang-en">Projects</span><span class="lang-es">Proyectos</span></a></li>
+          <li><a href="#skills"><span class="lang-en">Skills</span><span class="lang-es">Conocimientos</span></a></li>
+          <li><a href="#certifications"><span class="lang-en">Certifications</span><span class="lang-es">Certificaciones</span></a></li>
+          <li><a href="#contact"><span class="lang-en">Contact</span><span class="lang-es">Contacto</span></a></li>
+          
+          <!-- Theme Toggle -->
           <li>
-            <button class="theme-toggle-btn" id="theme-toggle" aria-label="Cambiar tema (Modo Claro / Oscuro)">
-              <!-- Moon Icon (Dark Mode active, click to change to light) -->
+            <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+              <!-- Moon Icon -->
               <svg class="moon-icon" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
               </svg>
-              <!-- Sun Icon (Light Mode active, click to change to dark) -->
+              <!-- Sun Icon -->
               <svg class="sun-icon" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.46 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" clip-rule="evenodd"></path>
               </svg>
             </button>
+          </li>
+
+          <!-- Language Selector -->
+          <li>
+            <div class="lang-selector">
+              <button class="lang-btn active" data-lang-set="en" aria-label="Set language to English">EN</button>
+              <span class="lang-divider">|</span>
+              <button class="lang-btn" data-lang-set="es" aria-label="Establecer idioma en Español">ES</button>
+            </div>
           </li>
         </ul>
       </nav>
@@ -78,11 +93,14 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
       <div class="hero-content">
-        <span class="hero-subtitle">SRE, Cloud Architect & AI Platform Engineer</span>
+        <span class="hero-subtitle">
+          <span class="lang-en">Principal Platform Engineer | Cloud Architect | AI Platforms</span>
+          <span class="lang-es">Principal Platform Engineer | Arquitecto Cloud | Plataformas de IA</span>
+        </span>
         <h1 class="hero-title">Reinaldo León</h1>
         <p class="hero-description">
-          Apasionado de la tecnología, entusiasta de DevOps/SRE y amante del código abierto. 
-          Especializado en automatizar infraestructuras de alta disponibilidad y en diseñar entornos seguros de producción para Inteligencia Artificial Corporativa.
+          <span class="lang-en">Technology enthusiast, DevOps/SRE advocate, and Open Source lover. Specialized in automating highly available cloud infrastructure and designing secure production environments for Enterprise AI.</span>
+          <span class="lang-es">Apasionado de la tecnología, entusiasta de DevOps/SRE y amante del código abierto. Especializado en automatizar infraestructuras cloud de alta disponibilidad y diseñar entornos seguros de producción para IA Corporativa.</span>
         </p>
         
         <div class="hero-socials">
@@ -104,8 +122,14 @@
         </div>
 
         <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary" id="cta-contact-btn">Trabajemos Juntos</a>
-          <a href="#experience" class="btn btn-secondary" id="cta-experience-btn">Ver Experiencia</a>
+          <a href="#contact" class="btn btn-primary" id="cta-contact-btn">
+            <span class="lang-en">Let's Work Together</span>
+            <span class="lang-es">Trabajemos Juntos</span>
+          </a>
+          <a href="#experience" class="btn btn-secondary" id="cta-experience-btn">
+            <span class="lang-en">View Experience</span>
+            <span class="lang-es">Ver Experiencia</span>
+          </a>
         </div>
       </div>
 
@@ -121,15 +145,23 @@
     <!-- About Me Section -->
     <section id="about" class="about-section">
       <div class="section-header">
-        <span class="section-pretitle">Presentación</span>
-        <h2 class="section-title">Sobre Mí</h2>
+        <span class="section-pretitle">
+          <span class="lang-en">Presentation</span>
+          <span class="lang-es">Presentación</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-en">About Me</span>
+          <span class="lang-es">Sobre Mí</span>
+        </h2>
       </div>
       <div class="glass-card">
         <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
-          He desarrollado mi carácter con la suma de las experiencias compartidas con mi familia, compañeros y amigos. A lo largo de mi trayectoria profesional, siempre he intentado aprender de los logros pero, sobre todo, de los errores cometidos. Dedico una gran parte de mi tiempo al desarrollo y evolución de las personas que me rodean, trabajando activamente por su bienestar, lo que a su vez se traduce en el mío propio.
+          <span class="lang-en">I have developed my character with the sum of the experiences shared with my family, colleagues, and friends. Along my professional career, I have always tried to learn from achievements, but above all, from the mistakes made. I dedicate a large part of my time to the development and evolution of the people around me, actively working for their well-being, which in turn translates into my own.</span>
+          <span class="lang-es">He desarrollado mi carácter con la suma de las experiencias compartidas con mi familia, compañeros y amigos. A lo largo de mi trayectoria profesional, siempre he intentado aprender de los logros pero, sobre todo, de los errores cometidos. Dedico una gran parte de mi tiempo al desarrollo y evolución de las personas que me rodean, trabajando activamente por su bienestar, lo que a su vez se traduce en el mío propio.</span>
         </p>
         <p style="font-size: 1.1rem;">
-          Soy un ferviente seguidor de la tecnología, un entusiasta de DevOps y un apasionado del código abierto (Open Source Lover). Dedico mi tiempo libre a investigar, validar y proponer soluciones innovadoras. En la actualidad, dirijo mis esfuerzos hacia el diseño estratégico e implantación de tecnologías de Inteligencia Artificial aplicadas a infraestructuras y plataformas de nivel empresarial.
+          <span class="lang-en">I am a tech enthusiast, DevOps advocate, and Open Source lover. I spend my free time researching, testing, and proposing innovative solutions. Currently, I focus my efforts on the strategic design and implementation of Artificial Intelligence technologies applied to infrastructure and enterprise-grade platforms.</span>
+          <span class="lang-es">Soy un ferviente seguidor de la tecnología, un entusiasta de DevOps y un apasionado del código abierto (Open Source Lover). Dedico mi tiempo libre a investigar, validar y proponer soluciones innovadoras. En la actualidad, dirijo mis esfuerzos hacia el diseño estratégico e implantación de tecnologías de Inteligencia Artificial aplicadas a infraestructuras y plataformas de nivel empresarial.</span>
         </p>
       </div>
     </section>
@@ -137,8 +169,14 @@
     <!-- AI for Corporate Platforms Section -->
     <section id="ai-platforms" class="ai-section">
       <div class="section-header">
-        <span class="section-pretitle">Habilidades Especializadas</span>
-        <h2 class="section-title">IA para Plataformas Corporativas</h2>
+        <span class="section-pretitle">
+          <span class="lang-en">Specialized Skills</span>
+          <span class="lang-es">Habilidades Especializadas</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-en">AI for Corporate Platforms</span>
+          <span class="lang-es">IA para Plataformas Corporativas</span>
+        </h2>
       </div>
       
       <div class="ai-grid">
@@ -151,12 +189,27 @@
             </svg>
           </div>
           <div class="ai-card-content">
-            <h3>LLMOps & Despliegue de Modelos</h3>
-            <p>Arquitectura y optimización del ciclo de vida de Large Language Models (LLMs) dentro de la infraestructura corporativa estándar.</p>
+            <h3>
+              <span class="lang-en">LLMOps & Model Serving</span>
+              <span class="lang-es">LLMOps y Despliegue de Modelos</span>
+            </h3>
+            <p>
+              <span class="lang-en">Architecture and optimization of Large Language Models (LLMs) lifecycle within standard corporate infrastructure.</span>
+              <span class="lang-es">Arquitectura y optimización del ciclo de vida de Large Language Models (LLMs) dentro de la infraestructura corporativa estándar.</span>
+            </p>
             <ul class="ai-bullet-list">
-              <li>Inferencia optimizada con <strong>vLLM, Triton Inference Server</strong> y Ollama.</li>
-              <li>Orquestación híbrida de recursos GPU en clusters Kubernetes (KServe, Ray).</li>
-              <li>Estrategias de caching semántico y cuantización de modelos para ahorro de costes.</li>
+              <li>
+                <span class="lang-en">Optimized inference using <strong>vLLM, Triton Inference Server</strong>, and Ollama.</span>
+                <span class="lang-es">Inferencia optimizada con <strong>vLLM, Triton Inference Server</strong> y Ollama.</span>
+              </li>
+              <li>
+                <span class="lang-en">Hybrid GPU resource orchestration in Kubernetes clusters (KServe, Ray).</span>
+                <span class="lang-es">Orquestación híbrida de recursos GPU en clusters Kubernetes (KServe, Ray).</span>
+              </li>
+              <li>
+                <span class="lang-en">Semantic caching and model quantization strategies to optimize operational costs.</span>
+                <span class="lang-es">Estrategias de caching semántico y cuantización de modelos para ahorro de costes.</span>
+              </li>
             </ul>
           </div>
         </article>
@@ -169,12 +222,27 @@
             </svg>
           </div>
           <div class="ai-card-content">
-            <h3>Arquitecturas RAG & Bases de Datos Vectoriales</h3>
-            <p>Conexión segura de datos propietarios corporativos con modelos fundacionales mediante técnicas de recuperación semántica avanzada (Retrieval-Augmented Generation).</p>
+            <h3>
+              <span class="lang-en">RAG Architectures & Vector DBs</span>
+              <span class="lang-es">Arquitecturas RAG y Bases de Datos Vectoriales</span>
+            </h3>
+            <p>
+              <span class="lang-en">Securely connecting proprietary enterprise data with foundational models using advanced semantic retrieval (Retrieval-Augmented Generation).</span>
+              <span class="lang-es">Conexión segura de datos propietarios corporativos con modelos fundacionales mediante técnicas de recuperación semántica avanzada (Retrieval-Augmented Generation).</span>
+            </p>
             <ul class="ai-bullet-list">
-              <li>Despliegue y escalado de bases de datos vectoriales: <strong>Pinecone, Milvus, Qdrant y PGVector</strong>.</li>
-              <li>Diseño de pipelines de extracción (ETL) e ingesta de documentos en tiempo real.</li>
-              <li>Evaluación y optimización de relevancia de contexto mediante re-ranking.</li>
+              <li>
+                <span class="lang-en">Scaling vector databases: <strong>Pinecone, Milvus, Qdrant, and PGVector</strong>.</span>
+                <span class="lang-es">Despliegue y escalado de bases de datos vectoriales: <strong>Pinecone, Milvus, Qdrant y PGVector</strong>.</span>
+              </li>
+              <li>
+                <span class="lang-en">Designing real-time document extraction and ingestion (ETL) pipelines.</span>
+                <span class="lang-es">Diseño de pipelines de extracción (ETL) e ingesta de documentos en tiempo real.</span>
+              </li>
+              <li>
+                <span class="lang-en">Context relevance evaluation and optimization using re-ranking.</span>
+                <span class="lang-es">Evaluación y optimización de relevancia de contexto mediante re-ranking.</span>
+              </li>
             </ul>
           </div>
         </article>
@@ -187,12 +255,27 @@
             </svg>
           </div>
           <div class="ai-card-content">
-            <h3>Observabilidad de IA & LLM Monitoring</h3>
-            <p>Implementación de telemetría de extremo a extremo para rastrear el rendimiento y la seguridad del sistema cognitivo.</p>
+            <h3>
+              <span class="lang-en">AI Observability & Monitoring</span>
+              <span class="lang-es">Observabilidad de IA y LLM Monitoring</span>
+            </h3>
+            <p>
+              <span class="lang-en">Implementing end-to-end telemetry to track cognitive system performance, cost, and alignment.</span>
+              <span class="lang-es">Implementación de telemetría de extremo a extremo para rastrear el rendimiento, coste y alineación del sistema cognitivo.</span>
+            </p>
             <ul class="ai-bullet-list">
-              <li>Monitoreo de latencia, coste de tokens y tasa de fallos con <strong>LangSmith y Phoenix (Arize)</strong>.</li>
-              <li>Instrumentación de trazas con OpenTelemetry aplicadas a flujos genAI.</li>
-              <li>Detección sistemática de alucinaciones y deriva semántica (data drift) en producción.</li>
+              <li>
+                <span class="lang-en">Monitoring latency, token costs, and API failure rates with <strong>LangSmith and Phoenix (Arize)</strong>.</span>
+                <span class="lang-es">Monitoreo de latencia, coste de tokens y tasa de fallos con <strong>LangSmith y Phoenix (Arize)</strong>.</span>
+              </li>
+              <li>
+                <span class="lang-en">Instrumenting trace telemetry for genAI flows using OpenTelemetry standards.</span>
+                <span class="lang-es">Instrumentación de trazas con OpenTelemetry aplicadas a flujos genAI.</span>
+              </li>
+              <li>
+                <span class="lang-en">Systematic detection of hallucinations and semantic drift in production.</span>
+                <span class="lang-es">Detección sistemática de alucinaciones y deriva semántica (data drift) en producción.</span>
+              </li>
             </ul>
           </div>
         </article>
@@ -205,12 +288,27 @@
             </svg>
           </div>
           <div class="ai-card-content">
-            <h3>Gobernanza de IA y Gateways Seguros</h3>
-            <p>Establecimiento de barreras de seguridad, mitigación de riesgos de fuga de datos sensibles y control de accesos centralizados.</p>
+            <h3>
+              <span class="lang-en">AI Governance & Secure Gateways</span>
+              <span class="lang-es">Gobernanza de IA y Gateways Seguros</span>
+            </h3>
+            <p>
+              <span class="lang-en">Establishing safety guardrails, mitigating data leakage, and implementing centralized access controls.</span>
+              <span class="lang-es">Establecimiento de barreras de seguridad, mitigación de riesgos de fuga de datos sensibles y control de accesos centralizados.</span>
+            </p>
             <ul class="ai-bullet-list">
-              <li>Diseño de API Gateways corporativos de IA para control de accesos, rate limiting y auditoría.</li>
-              <li>Implementación de capas de validación y seguridad mediante <strong>Guardrails (NeMo Guardrails, Llama Guard)</strong>.</li>
-              <li>Cumplimiento normativo y resguardo de privacidad de datos (data masking) en peticiones a proveedores externos.</li>
+              <li>
+                <span class="lang-en">Designing AI API Gateways for request routing, rate limiting, and auditing.</span>
+                <span class="lang-es">Diseño de API Gateways corporativos de IA para control de accesos, rate limiting y auditoría.</span>
+              </li>
+              <li>
+                <span class="lang-en">Implementing input/output validation layers with <strong>Guardrails (NeMo, Llama Guard)</strong>.</span>
+                <span class="lang-es">Implementación de capas de validación y seguridad mediante <strong>Guardrails (NeMo Guardrails, Llama Guard)</strong>.</span>
+              </li>
+              <li>
+                <span class="lang-en">Ensuring regulatory compliance and PII data masking for external API calls.</span>
+                <span class="lang-es">Cumplimiento normativo y resguardo de privacidad de datos (data masking) en peticiones a proveedores externos.</span>
+              </li>
             </ul>
           </div>
         </article>
@@ -221,11 +319,145 @@
     <!-- Professional Career / Timeline Section -->
     <section id="experience" class="experience-section">
       <div class="section-header">
-        <span class="section-pretitle">Trayectoria Profesional</span>
-        <h2 class="section-title">Carrera Profesional</h2>
+        <span class="section-pretitle">
+          <span class="lang-en">Professional Path</span>
+          <span class="lang-es">Trayectoria Profesional</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-en">Career History</span>
+          <span class="lang-es">Carrera Profesional</span>
+        </h2>
       </div>
 
       <div class="timeline">
+
+        <!-- Cobee -->
+        <article class="timeline-item">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="glass-card">
+            <div class="timeline-header">
+              <div class="company-brand">
+                <div class="company-logo" style="background-color: #ff5c5c; color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; border-radius: 8px; width: 2.75rem; height: 2.75rem; border: 1px solid var(--border-glass); flex-shrink: 0;" aria-hidden="true">
+                  C
+                </div>
+                <div>
+                  <h3 class="job-title">Cobee</h3>
+                  <span class="company-name">Principal / Tech Lead / Senior DevOps</span>
+                </div>
+              </div>
+              <div class="job-meta">
+                <span class="job-date">
+                  <span class="lang-en">Sep. 2022 - Present (3 years 11 months)</span>
+                  <span class="lang-es">Sept. 2022 - Actualidad (3 años 11 meses)</span>
+                </span>
+                <span class="job-location">
+                  <span class="lang-en">Madrid, Spain (100% Remote)</span>
+                  <span class="lang-es">Madrid, España (100% Remoto)</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Nested roles inside Cobee -->
+            <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 2rem;">
+              
+              <!-- Role 1: Principal Platform Engineer -->
+              <div style="border-left: 2px solid var(--border-glass); padding-left: 1.25rem; position: relative;">
+                <div style="position: absolute; left: -5px; top: 8px; width: 8px; height: 8px; border-radius: 50%; background-color: var(--accent-purple);" aria-hidden="true"></div>
+                <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.25rem;">Principal Platform Engineer</h4>
+                <span style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 600; display: block; margin-bottom: 0.75rem;">
+                  <span class="lang-en">Nov. 2024 - Present (1 year 9 months)</span>
+                  <span class="lang-es">Nov. 2024 - Actualidad (1 año 9 meses)</span>
+                </span>
+                
+                <ul class="job-description lang-en">
+                  <li>Ensure Service Availability and Reliability.</li>
+                  <li>Maintain Regulatory Compliance in Platform Security.</li>
+                  <li>Cost and Resource Optimization.</li>
+                  <li>Scalability.</li>
+                  <li>Latency and Performance Optimization in New Regions.</li>
+                  <li>Leadership in Innovation.</li>
+                  <li>Promote Technical Culture.</li>
+                  <li>Rapid Resolution of Critical Incidents.</li>
+                  <li>Agility for Innovation.</li>
+                  <li>Prepare Infrastructure for Multi-Account, Multi-Region, and Multi-Environment Scenarios.</li>
+                  <li>Real-Time Compliance Monitoring and Management.</li>
+                </ul>
+                <ul class="job-description lang-es">
+                  <li>Asegurar la disponibilidad y confiabilidad del servicio.</li>
+                  <li>Mantener el cumplimiento normativo en seguridad de la plataforma.</li>
+                  <li>Optimización de costes y recursos.</li>
+                  <li>Escalabilidad.</li>
+                  <li>Optimización de latencia y rendimiento en nuevas regiones.</li>
+                  <li>Liderazgo en innovación.</li>
+                  <li>Promover la cultura técnica.</li>
+                  <li>Resolución rápida de incidentes críticos.</li>
+                  <li>Agilidad para la innovación.</li>
+                  <li>Preparar infraestructura para escenarios multi-cuenta, multi-región y multi-entorno.</li>
+                  <li>Monitoreo y gestión de cumplimiento regulatorio en tiempo real.</li>
+                </ul>
+              </div>
+
+              <!-- Role 2: Tech Lead Platform Engineer -->
+              <div style="border-left: 2px solid var(--border-glass); padding-left: 1.25rem; position: relative;">
+                <div style="position: absolute; left: -5px; top: 8px; width: 8px; height: 8px; border-radius: 50%; background-color: var(--accent-blue);" aria-hidden="true"></div>
+                <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.25rem;">Tech Lead Platform Engineer</h4>
+                <span style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 600; display: block; margin-bottom: 0.75rem;">
+                  <span class="lang-en">Jan. 2024 - Nov. 2024 (11 months)</span>
+                  <span class="lang-es">Ene. 2024 - Nov. 2024 (11 meses)</span>
+                </span>
+                
+                <ul class="job-description lang-en">
+                  <li>Led the platform engineering team in designing and implementing core infrastructure changes.</li>
+                  <li>Coordinated sprint planning, releases, and managed architectural tech debt.</li>
+                  <li>Promoted platform modernization and established high standards of reliability.</li>
+                </ul>
+                <ul class="job-description lang-es">
+                  <li>Liderazgo del equipo de ingeniería de plataforma en el diseño e implantación de cambios clave de infraestructura.</li>
+                  <li>Coordinación de la planificación de sprints, despliegues y gestión de la deuda técnica arquitectónica.</li>
+                  <li>Impulso de la modernización de la plataforma y establecimiento de altos estándares de confiabilidad.</li>
+                </ul>
+              </div>
+
+              <!-- Role 3: Senior DevOps -->
+              <div style="border-left: 2px solid var(--border-glass); padding-left: 1.25rem; position: relative;">
+                <div style="position: absolute; left: -5px; top: 8px; width: 8px; height: 8px; border-radius: 50%; background-color: var(--accent-cyan);" aria-hidden="true"></div>
+                <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.25rem;">Senior DevOps</h4>
+                <span style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 600; display: block; margin-bottom: 0.75rem;">
+                  <span class="lang-en">Sep. 2022 - Jan. 2024 (1 year 5 months)</span>
+                  <span class="lang-es">Sept. 2022 - Ene. 2024 (1 año 5 meses)</span>
+                </span>
+                
+                <ul class="job-description lang-en">
+                  <li>Defines how code is deployed, configured, and monitored, as well as availability, latency, change management, emergency response, and service capacity management in production.</li>
+                  <li>Defines SLOs for each service and uses them to measure performance and generate reports.</li>
+                  <li>Promotes DevOps best practices for infrastructure development and implementation under DevOps culture.</li>
+                  <li>Defines error budgets and uses them as launch criteria.</li>
+                  <li>Automates tasks, systems, and deployment workflows.</li>
+                  <li>Performs postmortems for critical events to drive improvement.</li>
+                  <li>Designs and implements IaC and CI/CD pipelines.</li>
+                  <li>Implements observability at the application, infrastructure, and deployment pipeline levels.</li>
+                  <li>Generates documentation and methodologies to add agility to new features.</li>
+                  <li>Evangelizes engineering teams with technical presentations, demos, pair programming, PoCs, MVPs, and workshops.</li>
+                  <li>Participates in infrastructure, reliability, and resilience decision-making.</li>
+                </ul>
+                <ul class="job-description lang-es">
+                  <li>Definición de despliegue, configuración y monitoreo del código, así como disponibilidad, latencia, gestión de cambios, respuesta a emergencias y gestión de capacidad de servicio en producción.</li>
+                  <li>Definición de SLOs para cada uno de los servicios para medir el rendimiento y generar reportes.</li>
+                  <li>Fomento de las mejores prácticas para el desarrollo e implementación de infraestructura bajo la cultura DevOps.</li>
+                  <li>Definición y uso del presupuesto de errores (Error Budget) como criterio de lanzamiento.</li>
+                  <li>Automatización de tareas, sistemas y flujos de trabajo.</li>
+                  <li>Realización de análisis postmortem de cada evento para la mejora continua.</li>
+                  <li>Diseño e implementación de flujos de IaC y CI/CD.</li>
+                  <li>Implementación de sistemas de observabilidad a nivel de aplicación, infraestructura y flujos de integración.</li>
+                  <li>Generación de documentación y metodologías para incorporar agilidad en la entrega de nuevas funcionalidades.</li>
+                  <li>Evangelización a equipos de ingeniería mediante presentaciones técnicas, demos, programación en pareja (pair programming), PoCs, MVPs o talleres.</li>
+                  <li>Participación en decisiones de diseño e implementación a nivel de infraestructura, fiabilidad y resiliencia.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </article>
 
         <!-- Smart Protection -->
         <article class="timeline-item">
@@ -233,18 +465,39 @@
           <div class="glass-card">
             <div class="timeline-header">
               <div class="company-brand">
-                <img src="assets/images/smart-protection.png" alt="Logo de Smart Protection" class="company-logo">
+                <img src="assets/images/smart-protection.png" alt="Smart Protection Logo" class="company-logo">
                 <div>
                   <h3 class="job-title">Site Reliability Engineering</h3>
                   <a href="https://smartprotection.com/es/" class="company-name" target="_blank" rel="noopener noreferrer">Smart Protection</a>
                 </div>
               </div>
               <div class="job-meta">
-                <span class="job-date">May. 2021 - Actualidad</span>
-                <span class="job-location">Madrid, España (100% Remoto)</span>
+                <span class="job-date">
+                  <span class="lang-en">May. 2021 - Sep. 2022</span>
+                  <span class="lang-es">May. 2021 - Sept. 2022</span>
+                </span>
+                <span class="job-location">
+                  <span class="lang-en">Madrid, Spain (100% Remote)</span>
+                  <span class="lang-es">Madrid, España (100% Remoto)</span>
+                </span>
               </div>
             </div>
-            <ul class="job-description">
+            
+            <!-- Description EN -->
+            <ul class="job-description lang-en">
+              <li>Defines and implements how code is deployed, configured, and monitored, as well as availability, latency, change management, emergency response, and service capacity management in production.</li>
+              <li>Defines SLO (Service Level Objectives) for each core service.</li>
+              <li>Uses SLOs to measure the performance of each service and generates regular reports.</li>
+              <li>Defines and manages the error budget, implementing it as launch criteria.</li>
+              <li>Automates complex tasks, systems, and deployment workflows.</li>
+              <li>Leads and runs postmortem analyses for every incident to drive continuous improvement.</li>
+              <li>Designs and implements IaC (Terraform) and CI/CD deployment pipelines.</li>
+              <li>Implements application, infrastructure, and deployment observability systems.</li>
+              <li>Helps to establish RTO / RPO goals and defines the Disaster Recovery Plan (DRP).</li>
+            </ul>
+
+            <!-- Description ES -->
+            <ul class="job-description lang-es">
               <li>Definición e implementación del despliegue, configuración y monitoreo del código, así como disponibilidad, latencia, gestión de cambios, respuesta a emergencias y gestión de capacidad de servicio en producción.</li>
               <li>Definición de Objetivos de Nivel de Servicio (SLO) para cada uno de los servicios core.</li>
               <li>Uso de SLOs para medir el rendimiento de cada servicio y generación de informes de estado periódicos.</li>
@@ -264,18 +517,40 @@
           <div class="glass-card">
             <div class="timeline-header">
               <div class="company-brand">
-                <img src="assets/images/nubersia.png" alt="Logo de Nubersia" class="company-logo">
+                <img src="assets/images/nubersia.png" alt="Nubersia Logo" class="company-logo">
                 <div>
                   <h3 class="job-title">Chief Technology Officer (CTO)</h3>
                   <span class="company-name">Nubersia</span>
                 </div>
               </div>
               <div class="job-meta">
-                <span class="job-date">Ene. 2019 - May. 2021 (2 años 5 meses)</span>
-                <span class="job-location">Barcelona, España</span>
+                <span class="job-date">
+                  <span class="lang-en">Jan. 2019 - May. 2021 (2 years 5 months)</span>
+                  <span class="lang-es">Ene. 2019 - May. 2021 (2 años 5 meses)</span>
+                </span>
+                <span class="job-location">Barcelona, Spain</span>
               </div>
             </div>
-            <ul class="job-description">
+            
+            <!-- Description EN -->
+            <ul class="job-description lang-en">
+              <li>Automation of enterprise-grade cloud solutions.</li>
+              <li>Scalable, high availability, and fault-tolerant system design on AWS.</li>
+              <li>Identification and alignment of AWS best practices using the Well-Architected Framework.</li>
+              <li>Continuous integration and continuous delivery (CI/CD) design solutions.</li>
+              <li>Generated and maintained different reusable Terraform templates and stacks.</li>
+              <li>In charge of technical bootcamps and training for internal IT teams.</li>
+              <li>Maintained, developed, and guided the evolution of technical and commercial strategies.</li>
+              <li>Incorporation of emerging tools and trends matching market demands.</li>
+              <li>Oriented engineering teams towards long-term technical objectives.</li>
+              <li>Evaluated and hired new engineers to scale up technical teams.</li>
+              <li>Supervised and monitored the technical goals of active commercial projects.</li>
+              <li>Managed and optimized infrastructure assets to meet internal financial goals.</li>
+              <li>Created plans to analyze and monitor technology performance metrics.</li>
+            </ul>
+
+            <!-- Description ES -->
+            <ul class="job-description lang-es">
               <li>Dirección y automatización de soluciones de computación en la nube para clientes de alta escala.</li>
               <li>Diseño de sistemas de alta disponibilidad, escalabilidad y tolerancia a fallos en Amazon Web Services (AWS).</li>
               <li>Identificación y aseguramiento del uso correcto de las mejores prácticas de arquitectura del AWS Well-Architected Framework.</li>
@@ -299,18 +574,35 @@
           <div class="glass-card">
             <div class="timeline-header">
               <div class="company-brand">
-                <img src="assets/images/nubersia.png" alt="Logo de Nubersia" class="company-logo">
+                <img src="assets/images/nubersia.png" alt="Nubersia Logo" class="company-logo">
                 <div>
                   <h3 class="job-title">IT Solutions Architect</h3>
                   <span class="company-name">Nubersia</span>
                 </div>
               </div>
               <div class="job-meta">
-                <span class="job-date">Jul. 2017 - Ene. 2019 (1 año 7 meses)</span>
-                <span class="job-location">Barcelona, España</span>
+                <span class="job-date">
+                  <span class="lang-en">Jul. 2017 - Jan. 2019 (1 year 7 months)</span>
+                  <span class="lang-es">Jul. 2017 - Ene. 2019 (1 año 7 meses)</span>
+                </span>
+                <span class="job-location">Barcelona, Spain</span>
               </div>
             </div>
-            <ul class="job-description">
+            
+            <!-- Description EN -->
+            <ul class="job-description lang-en">
+              <li>Implementation and automation of AWS cloud solutions.</li>
+              <li>Design and implementation of scalable, highly available, and fault-tolerant systems on AWS.</li>
+              <li>Ensuring the correct use of AWS best architecture practices.</li>
+              <li>Implementation of continuous integration and continuous delivery (CI/CD) pipelines.</li>
+              <li>IaC and configuration management.</li>
+              <li>Automation solutions for provisioning and configuring Linux systems.</li>
+              <li>Administration and maintenance of code repositories and version control workflows.</li>
+              <li>Creation, standardization, and documentation of internal IT processes.</li>
+            </ul>
+
+            <!-- Description ES -->
+            <ul class="job-description lang-es">
               <li>Implementación y automatización de complejas soluciones en entornos de nube pública.</li>
               <li>Diseño y despliegue de arquitecturas cloud robustas y escalables con tolerancia a fallos sobre la infraestructura de AWS.</li>
               <li>Garantía de cumplimiento de las mejores prácticas de seguridad y robustez arquitectónica en AWS.</li>
@@ -329,18 +621,35 @@
           <div class="glass-card">
             <div class="timeline-header">
               <div class="company-brand">
-                <img src="assets/images/vileo.png" alt="Logo de Vileo" class="company-logo">
+                <img src="assets/images/vileo.png" alt="Vileo Logo" class="company-logo">
                 <div>
-                  <h3 class="job-title">Consultor en Infraestructura, Plataforma y Telecomunicaciones</h3>
+                  <h3 class="job-title">
+                    <span class="lang-en">Infrastructure & Telecom Consultant</span>
+                    <span class="lang-es">Consultor en Infraestructura, Plataforma y Telecomunicaciones</span>
+                  </h3>
                   <span class="company-name">Vileo (Autónomo)</span>
                 </div>
               </div>
               <div class="job-meta">
-                <span class="job-date">Feb. 2016 - May. 2017 (1 año 4 meses)</span>
+                <span class="job-date">
+                  <span class="lang-en">Feb. 2016 - May. 2017 (1 year 4 months)</span>
+                  <span class="lang-es">Feb. 2016 - May. 2017 (1 año 4 meses)</span>
+                </span>
                 <span class="job-location">Caracas, Venezuela</span>
               </div>
             </div>
-            <ul class="job-description">
+            
+            <!-- Description EN -->
+            <ul class="job-description lang-en">
+              <li>Installation, tuning, and administration of perimetral firewalls (pfSense / Fortinet).</li>
+              <li>Installation and physical/logical configuration of CISCO switches and routers.</li>
+              <li>Implementation of High Availability (HA) schemes on Linux platforms.</li>
+              <li>Administration and containment of microservices using Docker.</li>
+              <li>Management of AWS resources: IAM, EC2, ECS, S3, Elastic Load Balancer, Auto Scaling, and VPC.</li>
+            </ul>
+
+            <!-- Description ES -->
+            <ul class="job-description lang-es">
               <li>Instalación, tunning y administración de cortafuegos de nivel perimetral (pfSense, Fortinet).</li>
               <li>Instalación, segmentación de redes y configuración física/lógica de Switches y Routers CISCO.</li>
               <li>Diseño e implantación de esquemas de alta disponibilidad (HA) en plataformas basadas en sistemas operativos Linux.</li>
@@ -353,19 +662,139 @@
       </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="section-header">
+        <span class="section-pretitle">
+          <span class="lang-en">Portfolio</span>
+          <span class="lang-es">Portafolio</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-en">Featured Projects</span>
+          <span class="lang-es">Proyectos Destacados</span>
+        </h2>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- Project 1: WitAdvisor -->
+        <article class="glass-card project-card">
+          <div class="project-icon-wrapper" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+          </div>
+          <h3>
+            <span class="lang-en">AWS Cloud Migration: WitAdvisor</span>
+            <span class="lang-es">Migración Cloud AWS: WitAdvisor</span>
+          </h3>
+          <p>
+            <span class="lang-en">Covered the complete migration lifecycle of the WitAdvisor platform to AWS. Designed a secure, 3-tier high-availability architecture with Serverless backend and event-driven automation. Managed infrastructure as code (IaC) with Terraform, set up volatile dev environments via Jenkins to reduce costs, implemented full CI/CD pipelines, and integrated robust observability tools.</span>
+            <span class="lang-es">Migración completa de la plataforma WitAdvisor a AWS. Diseño de arquitectura segura en 3 capas de alta disponibilidad con backend Serverless y automatización basada en eventos. Gestión de IaC con Terraform, creación de entornos de desarrollo volátiles con Jenkins para ahorro de costes, automatización de CI/CD e implementación de herramientas de observabilidad.</span>
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">AWS</span>
+            <span class="project-tag">Terraform</span>
+            <span class="project-tag">Serverless</span>
+            <span class="project-tag">Jenkins</span>
+            <span class="project-tag">CI/CD</span>
+            <span class="project-tag">Observability</span>
+          </div>
+          <div class="project-links">
+            <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">
+              <span class="lang-en">Associated with Inversiones VILEO (2020 - 2021)</span>
+              <span class="lang-es">Asociado con Inversiones VILEO (2020 - 2021)</span>
+            </span>
+          </div>
+        </article>
+
+        <!-- Project 2: DevOps Bootcamp -->
+        <article class="glass-card project-card">
+          <div class="project-icon-wrapper" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+            </svg>
+          </div>
+          <h3>
+            <span class="lang-en">DevOps Specialization Program</span>
+            <span class="lang-es">Programa de Especialización DevOps</span>
+          </h3>
+          <p>
+            <span class="lang-en">Structured and delivered comprehensive professional DevOps training. Provided participants with knowledge and hands-on skills in DevOps culture, Agile development, infrastructure architecture, IaC (Terraform, Ansible), containerization (Docker, Kubernetes), High Availability, continuous testing, monitoring, and log analytics.</span>
+            <span class="lang-es">Estructuración e impartición de formación DevOps profesional presencial y online. Capacitación práctica en cultura DevOps, metodologías ágiles, bases de infraestructura, IaC (Terraform, Ansible), contenedorización (Docker, Kubernetes), alta disponibilidad, pruebas continuas, monitoreo y analítica de logs.</span>
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">DevOps Culture</span>
+            <span class="project-tag">Kubernetes</span>
+            <span class="project-tag">Terraform</span>
+            <span class="project-tag">Ansible</span>
+            <span class="project-tag">Docker</span>
+          </div>
+          <div class="project-links">
+            <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">
+              <span class="lang-en">Associated with Nubersia (2019 - 2020)</span>
+              <span class="lang-es">Asociado con Nubersia (2019 - 2020)</span>
+            </span>
+          </div>
+        </article>
+
+        <!-- Project 3: Tech Management -->
+        <article class="glass-card project-card">
+          <div class="project-icon-wrapper" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
+            </svg>
+          </div>
+          <h3>
+            <span class="lang-en">Tech Management & Leadership</span>
+            <span class="lang-es">Gestión Tecnológica y Liderazgo</span>
+          </h3>
+          <p>
+            <span class="lang-en">Designed training modules to enable participants to lead complex IT projects. Covered topics such as CTO/CIO/Tech Lead roles, financial planning and budgeting, Agile methodology, team building, talent sourcing and candidate retention, technology stacks, software quality assurance, and public speaking.</span>
+            <span class="lang-es">Diseño e impartición de módulos de capacitación para la dirección de proyectos complejos de TI. Cobertura de temas de C-levels (CTO/Tech Lead), finanzas y presupuestos, agilidad avanzada, team building, adquisición y retención de talento, calidad de software, stacks tecnológicos y oratoria.</span>
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Tech Leadership</span>
+            <span class="project-tag">CTO Roles</span>
+            <span class="project-tag">Team Building</span>
+            <span class="project-tag">Talent Acquisition</span>
+          </div>
+          <div class="project-links">
+            <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">
+              <span class="lang-en">Associated with Nubersia (2020)</span>
+              <span class="lang-es">Asociado con Nubersia (2020)</span>
+            </span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
       <div class="section-header">
-        <span class="section-pretitle">Especialidades</span>
-        <h2 class="section-title">Habilidades Técnicas y Blandas</h2>
+        <span class="section-pretitle">
+          <span class="lang-en">Expertise</span>
+          <span class="lang-es">Especialidades</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-en">Skills & Competencies</span>
+          <span class="lang-es">Habilidades Técnicas y Blandas</span>
+        </h2>
       </div>
 
       <div class="skills-filter">
-        <button class="filter-btn active" data-filter="all" id="filter-all">Todas</button>
+        <button class="filter-btn active" data-filter="all" id="filter-all">
+          <span class="lang-en">All</span><span class="lang-es">Todas</span>
+        </button>
         <button class="filter-btn" data-filter="ai" id="filter-ai">IA & MLOps</button>
         <button class="filter-btn" data-filter="cloud" id="filter-cloud">Cloud & IaC</button>
-        <button class="filter-btn" data-filter="devops" id="filter-devops">DevOps & Sistemas</button>
-        <button class="filter-btn" data-filter="soft" id="filter-soft">Blandas</button>
+        <button class="filter-btn" data-filter="devops" id="filter-devops">
+          <span class="lang-en">DevOps & Systems</span><span class="lang-es">DevOps & Sistemas</span>
+        </button>
+        <button class="filter-btn" data-filter="soft" id="filter-soft">
+          <span class="lang-en">Soft Skills</span><span class="lang-es">Blandas</span>
+        </button>
       </div>
 
       <div class="skills-grid">
@@ -374,7 +803,9 @@
         <article class="glass-card skill-card" data-categories="ai">
           <div class="skill-info">
             <span class="skill-name">LLMOps & Serving (vLLM/Triton)</span>
-            <span class="skill-level-text">Avanzado</span>
+            <span class="skill-level-text">
+              <span class="lang-en">Advanced</span><span class="lang-es">Avanzado</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="85"></div>
@@ -384,7 +815,9 @@
         <article class="glass-card skill-card" data-categories="ai">
           <div class="skill-info">
             <span class="skill-name">AI Observability (LangSmith/Phoenix)</span>
-            <span class="skill-level-text">Avanzado</span>
+            <span class="skill-level-text">
+              <span class="lang-en">Advanced</span><span class="lang-es">Avanzado</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="80"></div>
@@ -394,7 +827,9 @@
         <article class="glass-card skill-card" data-categories="ai">
           <div class="skill-info">
             <span class="skill-name">Vector DBs (Pinecone/Milvus/Qdrant)</span>
-            <span class="skill-level-text">Avanzado</span>
+            <span class="skill-level-text">
+              <span class="lang-en">Advanced</span><span class="lang-es">Avanzado</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="85"></div>
@@ -405,7 +840,9 @@
         <article class="glass-card skill-card" data-categories="cloud">
           <div class="skill-info">
             <span class="skill-name">Amazon Web Services (AWS)</span>
-            <span class="skill-level-text">Experto</span>
+            <span class="skill-level-text">
+              <span class="lang-en">Expert</span><span class="lang-es">Experto</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="95"></div>
@@ -415,7 +852,9 @@
         <article class="glass-card skill-card" data-categories="cloud">
           <div class="skill-info">
             <span class="skill-name">Terraform (IaC)</span>
-            <span class="skill-level-text">Experto</span>
+            <span class="skill-level-text">
+              <span class="lang-en">Expert</span><span class="lang-es">Experto</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="95"></div>
@@ -424,8 +863,13 @@
 
         <article class="glass-card skill-card" data-categories="cloud">
           <div class="skill-info">
-            <span class="skill-name">Diseño de Infraestructura Cloud</span>
-            <span class="skill-level-text">Experto</span>
+            <span class="skill-name">
+              <span class="lang-en">Cloud Infrastructure Design</span>
+              <span class="lang-es">Diseño de Infraestructura Cloud</span>
+            </span>
+            <span class="skill-level-text">
+              <span class="lang-en">Expert</span><span class="lang-es">Experto</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="95"></div>
@@ -436,7 +880,9 @@
         <article class="glass-card skill-card" data-categories="devops">
           <div class="skill-info">
             <span class="skill-name">Kubernetes</span>
-            <span class="skill-level-text">Avanzado</span>
+            <span class="skill-level-text">
+              <span class="lang-en">Advanced</span><span class="lang-es">Avanzado</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="85"></div>
@@ -446,7 +892,9 @@
         <article class="glass-card skill-card" data-categories="devops">
           <div class="skill-info">
             <span class="skill-name">Docker</span>
-            <span class="skill-level-text">Avanzado</span>
+            <span class="skill-level-text">
+              <span class="lang-en">Advanced</span><span class="lang-es">Avanzado</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="85"></div>
@@ -456,7 +904,9 @@
         <article class="glass-card skill-card" data-categories="devops">
           <div class="skill-info">
             <span class="skill-name">Git</span>
-            <span class="skill-level-text">Experto</span>
+            <span class="skill-level-text">
+              <span class="lang-en">Expert</span><span class="lang-es">Experto</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="90"></div>
@@ -465,8 +915,13 @@
 
         <article class="glass-card skill-card" data-categories="devops">
           <div class="skill-info">
-            <span class="skill-name">Sistemas CI/CD (Jenkins, Actions)</span>
-            <span class="skill-level-text">Avanzado</span>
+            <span class="skill-name">
+              <span class="lang-en">CI/CD Engines (Jenkins, Actions)</span>
+              <span class="lang-es">Sistemas CI/CD (Jenkins, Actions)</span>
+            </span>
+            <span class="skill-level-text">
+              <span class="lang-en">Advanced</span><span class="lang-es">Avanzado</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="85"></div>
@@ -476,7 +931,9 @@
         <article class="glass-card skill-card" data-categories="devops">
           <div class="skill-info">
             <span class="skill-name">Ansible</span>
-            <span class="skill-level-text">Avanzado</span>
+            <span class="skill-level-text">
+              <span class="lang-en">Advanced</span><span class="lang-es">Avanzado</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="80"></div>
@@ -486,7 +943,9 @@
         <article class="glass-card skill-card" data-categories="devops">
           <div class="skill-info">
             <span class="skill-name">Linux & Shell Scripting</span>
-            <span class="skill-level-text">Experto</span>
+            <span class="skill-level-text">
+              <span class="lang-en">Expert</span><span class="lang-es">Experto</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="95"></div>
@@ -496,7 +955,9 @@
         <article class="glass-card skill-card" data-categories="devops">
           <div class="skill-info">
             <span class="skill-name">Networking</span>
-            <span class="skill-level-text">Experto</span>
+            <span class="skill-level-text">
+              <span class="lang-en">Expert</span><span class="lang-es">Experto</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="85"></div>
@@ -506,8 +967,12 @@
         <!-- Soft Skills -->
         <article class="glass-card skill-card" data-categories="soft">
           <div class="skill-info">
-            <span class="skill-name">Trabajo en Equipo (Teamwork)</span>
-            <span class="skill-level-text">Experto</span>
+            <span class="skill-name">
+              <span class="lang-en">Teamwork</span><span class="lang-es">Trabajo en Equipo</span>
+            </span>
+            <span class="skill-level-text">
+              <span class="lang-en">Expert</span><span class="lang-es">Experto</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="95"></div>
@@ -516,8 +981,12 @@
 
         <article class="glass-card skill-card" data-categories="soft">
           <div class="skill-info">
-            <span class="skill-name">Visión Global</span>
-            <span class="skill-level-text">Experto</span>
+            <span class="skill-name">
+              <span class="lang-en">Global Vision</span><span class="lang-es">Visión Global</span>
+            </span>
+            <span class="skill-level-text">
+              <span class="lang-en">Expert</span><span class="lang-es">Experto</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="95"></div>
@@ -526,8 +995,12 @@
 
         <article class="glass-card skill-card" data-categories="soft">
           <div class="skill-info">
-            <span class="skill-name">Iniciativa y Liderazgo</span>
-            <span class="skill-level-text">Avanzado</span>
+            <span class="skill-name">
+              <span class="lang-en">Initiative & Leadership</span><span class="lang-es">Iniciativa y Liderazgo</span>
+            </span>
+            <span class="skill-level-text">
+              <span class="lang-en">Advanced</span><span class="lang-es">Avanzado</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="80"></div>
@@ -536,8 +1009,12 @@
 
         <article class="glass-card skill-card" data-categories="soft">
           <div class="skill-info">
-            <span class="skill-name">Comunicación Efectiva</span>
-            <span class="skill-level-text">Avanzado</span>
+            <span class="skill-name">
+              <span class="lang-en">Effective Communication</span><span class="lang-es">Comunicación Efectiva</span>
+            </span>
+            <span class="skill-level-text">
+              <span class="lang-en">Advanced</span><span class="lang-es">Avanzado</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="85"></div>
@@ -546,8 +1023,12 @@
 
         <article class="glass-card skill-card" data-categories="soft">
           <div class="skill-info">
-            <span class="skill-name">Gestión de Proyectos & Clientes</span>
-            <span class="skill-level-text">Experto</span>
+            <span class="skill-name">
+              <span class="lang-en">Project & Client Management</span><span class="lang-es">Gestión de Proyectos & Clientes</span>
+            </span>
+            <span class="skill-level-text">
+              <span class="lang-en">Expert</span><span class="lang-es">Experto</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="90"></div>
@@ -556,8 +1037,12 @@
 
         <article class="glass-card skill-card" data-categories="soft">
           <div class="skill-info">
-            <span class="skill-name">Responsabilidad & Ética</span>
-            <span class="skill-level-text">Experto</span>
+            <span class="skill-name">
+              <span class="lang-en">Responsibility & Ethics</span><span class="lang-es">Responsabilidad & Ética</span>
+            </span>
+            <span class="skill-level-text">
+              <span class="lang-en">Expert</span><span class="lang-es">Experto</span>
+            </span>
           </div>
           <div class="skill-bar-wrapper">
             <div class="skill-bar-progress" data-level="95"></div>
@@ -570,8 +1055,12 @@
     <!-- Licenses & Certifications Section -->
     <section id="certifications" class="certifications-section">
       <div class="section-header">
-        <span class="section-pretitle">Acreditaciones</span>
-        <h2 class="section-title">Licencias y Certificaciones</h2>
+        <span class="section-pretitle">
+          <span class="lang-en">Credentials</span><span class="lang-es">Acreditaciones</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-en">Licenses & Certifications</span><span class="lang-es">Licencias y Certificaciones</span>
+        </h2>
       </div>
 
       <div class="certs-grid">
@@ -580,9 +1069,12 @@
         <article class="glass-card cert-card">
           <h3 class="cert-title">HashiCorp - Terraform Associate</h3>
           <span class="cert-issuer">HashiCorp</span>
-          <span class="cert-date">Expedición: jul. 2022 · Vencimiento: jul. 2024</span>
+          <span class="cert-date">
+            <span class="lang-en">Issued: Jul. 2022 · Expires: Jul. 2024</span>
+            <span class="lang-es">Expedición: jul. 2022 · Vencimiento: jul. 2024</span>
+          </span>
           <a href="https://www.credly.com/badges/160ab75d-8a2d-4bb6-844a-0f2b6320dcdb/public_url" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial HashiCorp Terraform Associate">
-            Ver Credencial
+            <span class="lang-en">Verify Credential</span><span class="lang-es">Ver Credencial</span>
             <svg viewBox="0 0 20 20" fill="currentColor">
               <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
               <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
@@ -594,9 +1086,12 @@
         <article class="glass-card cert-card">
           <h3 class="cert-title">AWS Certified DevOps Engineer – Professional</h3>
           <span class="cert-issuer">Amazon Web Services (AWS)</span>
-          <span class="cert-date">Expedición: nov. 2020 · Vencimiento: nov. 2023</span>
+          <span class="cert-date">
+            <span class="lang-en">Issued: Nov. 2020 · Expires: Nov. 2023</span>
+            <span class="lang-es">Expedición: nov. 2020 · Vencimiento: nov. 2023</span>
+          </span>
           <a href="https://www.youracclaim.com/badges/1adbe747-1c1d-42bc-b8c1-2257382ebb4d?source=linked_in_profile" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial AWS Certified DevOps Engineer Professional">
-            Ver Credencial
+            <span class="lang-en">Verify Credential</span><span class="lang-es">Ver Credencial</span>
             <svg viewBox="0 0 20 20" fill="currentColor">
               <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
               <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
@@ -608,9 +1103,12 @@
         <article class="glass-card cert-card">
           <h3 class="cert-title">AWS Certified SysOps Administrator - Associate</h3>
           <span class="cert-issuer">Amazon Web Services (AWS)</span>
-          <span class="cert-date">Expedición: oct. 2019 · Vencimiento: oct. 2022</span>
+          <span class="cert-date">
+            <span class="lang-en">Issued: Oct. 2019 · Expires: Oct. 2022</span>
+            <span class="lang-es">Expedición: oct. 2019 · Vencimiento: oct. 2022</span>
+          </span>
           <a href="https://www.youracclaim.com/badges/c9855e57-9f27-484e-9f3b-7a0df9a0d907/linked_in_profile" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial AWS Certified SysOps Administrator Associate">
-            Ver Credencial
+            <span class="lang-en">Verify Credential</span><span class="lang-es">Ver Credencial</span>
             <svg viewBox="0 0 20 20" fill="currentColor">
               <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
               <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
@@ -622,9 +1120,12 @@
         <article class="glass-card cert-card">
           <h3 class="cert-title">AWS CTO and Cloud Economics</h3>
           <span class="cert-issuer">Amazon Web Services (AWS)</span>
-          <span class="cert-date">Expedición: ago. 2018 · Vencimiento: jul. 2022</span>
+          <span class="cert-date">
+            <span class="lang-en">Issued: Aug. 2018 · Expires: Jul. 2022</span>
+            <span class="lang-es">Expedición: ago. 2018 · Vencimiento: jul. 2022</span>
+          </span>
           <a href="https://certified-cloud.s3.eu-west-1.amazonaws.com/aws-cloud-practitioner.png" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial AWS CTO and Cloud Economics">
-            Ver Credencial
+            <span class="lang-en">Verify Credential</span><span class="lang-es">Ver Credencial</span>
             <svg viewBox="0 0 20 20" fill="currentColor">
               <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
               <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
@@ -636,9 +1137,12 @@
         <article class="glass-card cert-card">
           <h3 class="cert-title">AWS Certified Cloud Practitioner</h3>
           <span class="cert-issuer">Amazon Web Services (AWS)</span>
-          <span class="cert-date">Expedición: jul. 2019</span>
+          <span class="cert-date">
+            <span class="lang-en">Issued: Jul. 2019</span>
+            <span class="lang-es">Expedición: jul. 2019</span>
+          </span>
           <a href="https://certified-cloud.s3.eu-west-1.amazonaws.com/aws-cloud-practitioner.png" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial AWS Cloud Practitioner">
-            Ver Credencial
+            <span class="lang-en">Verify Credential</span><span class="lang-es">Ver Credencial</span>
             <svg viewBox="0 0 20 20" fill="currentColor">
               <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
               <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
@@ -650,9 +1154,12 @@
         <article class="glass-card cert-card">
           <h3 class="cert-title">AWS Solutions Architect - Associate</h3>
           <span class="cert-issuer">Amazon Web Services (AWS)</span>
-          <span class="cert-date">Expedición: dic. 2017</span>
+          <span class="cert-date">
+            <span class="lang-en">Issued: Dec. 2017</span>
+            <span class="lang-es">Expedición: dic. 2017</span>
+          </span>
           <a href="https://www.youracclaim.com/badges/361c7fea-e04b-49b3-b587-7098bf917fab/linked_in_profile" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial AWS Solutions Architect Associate">
-            Ver Credencial
+            <span class="lang-en">Verify Credential</span><span class="lang-es">Ver Credencial</span>
             <svg viewBox="0 0 20 20" fill="currentColor">
               <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
               <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
@@ -666,20 +1173,26 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
       <div class="section-header" style="text-align: center;">
-        <span class="section-pretitle">Conexión</span>
-        <h2 class="section-title">Hablemos</h2>
+        <span class="section-pretitle">
+          <span class="lang-en">Connection</span><span class="lang-es">Conexión</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-en">Let's Connect</span><span class="lang-es">Hablemos</span>
+        </h2>
       </div>
 
       <div class="contact-wrapper">
         <div class="glass-card contact-card">
           <p style="font-size: 1.15rem; color: var(--text-secondary);">
-            ¿Tienes algún proyecto en mente o te gustaría hablar sobre SRE, MLOps, arquitecturas en la nube o soluciones corporativas con Inteligencia Artificial? Escríbeme:
+            <span class="lang-en">Do you have a project in mind or want to talk about SRE, MLOps, cloud architectures, or enterprise AI solutions? Feel free to reach out:</span>
+            <span class="lang-es">¿Tienes algún proyecto en mente o te gustaría hablar sobre SRE, MLOps, arquitecturas en la nube o soluciones corporativas con Inteligencia Artificial? Escríbeme:</span>
           </p>
           
           <a href="mailto:reinaldoleon@gmail.com" class="contact-email" id="email-contact-link">reinaldoleon@gmail.com</a>
           
           <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem;">
-            También puedes encontrarme y conectar conmigo a través de mis redes:
+            <span class="lang-en">You can also find and connect with me on these channels:</span>
+            <span class="lang-es">También puedes encontrarme y conectar conmigo a través de mis redes:</span>
           </p>
           
           <div class="contact-social-links">
@@ -703,8 +1216,11 @@
   <!-- Footer Section -->
   <footer>
     <div class="container footer-content">
-      <p class="footer-text">&copy; 2026 Reinaldo León. Todos los derechos reservados.</p>
-      <p class="footer-text" style="font-size: 0.8rem;">Diseñado con fines profesionales y de alto impacto estético.</p>
+      <p class="footer-text">&copy; 2026 Reinaldo León. All rights reserved.</p>
+      <p class="footer-text" style="font-size: 0.8rem;">
+        <span class="lang-en">Designed for high visual impact and professional presentation.</span>
+        <span class="lang-es">Diseñado con fines profesionales y de alto impacto estético.</span>
+      </p>
     </div>
   </footer>
 
