@@ -338,10 +338,13 @@
             <div class="timeline-header">
               <div class="company-brand">
                 <div class="company-logo-container">
-                  <img src="assets/images/cobee.png" alt="Cobee Logo" class="company-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                  <div class="company-logo-fallback" style="background-color: #ff5c5c; color: white; display: none; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; border-radius: 8px; width: 2.75rem; height: 2.75rem; border: 1px solid var(--border-glass);" aria-hidden="true">
-                    C
-                  </div>
+                  <!-- Official Typographic SVG Logo for Cobee -->
+                  <svg class="company-logo" viewBox="0 0 100 100" style="background-color: #221c46; border-radius: 8px; border: 1px solid var(--border-glass); padding: 0.15rem; width: 2.75rem; height: 2.75rem; flex-shrink: 0;" aria-label="Cobee Logo">
+                    <!-- c in white -->
+                    <text x="40" y="68" font-family="'Outfit', 'Inter', sans-serif" font-weight="800" font-size="62" fill="#ffffff" text-anchor="middle">c</text>
+                    <!-- dot inside in Malachite green -->
+                    <circle cx="68" cy="50" r="10" fill="#01eb5e" />
+                  </svg>
                 </div>
                 <div>
                   <h3 class="job-title">Cobee</h3>
@@ -683,11 +686,14 @@
         <!-- Project 1: Multi-Account AWS Bedrock Landing Zone -->
         <article class="glass-card project-card">
           <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem;">
-            <div class="company-logo-container">
-              <div class="company-logo-fallback" style="background-color: #8b5cf6; color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem; border-radius: 8px; width: 2.75rem; height: 2.75rem; border: 1px solid var(--border-glass);" aria-hidden="true">
-                AWS
-              </div>
-            </div>
+            <!-- Custom Stylized AWS Bedrock vector logo -->
+            <svg viewBox="0 0 100 100" style="background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%); border-radius: 8px; width: 2.75rem; height: 2.75rem; padding: 0.5rem; flex-shrink: 0;" aria-hidden="true">
+              <path d="M50 15 L85 35 L85 65 L50 85 L15 65 L15 35 Z" fill="none" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M50 15 L50 85" fill="none" stroke="white" stroke-width="2" stroke-dasharray="2,2"/>
+              <path d="M15 35 L85 65" fill="none" stroke="white" stroke-width="2" stroke-dasharray="2,2"/>
+              <path d="M15 65 L85 35" fill="none" stroke="white" stroke-width="2" stroke-dasharray="2,2"/>
+              <circle cx="50" cy="50" r="14" fill="#01eb5e" stroke="white" stroke-width="2"/>
+            </svg>
           </div>
           <h3>
             <span class="lang-en">AWS Bedrock Multi-Account Landing Zone</span>
@@ -715,11 +721,12 @@
         <!-- Project 2: Azure-to-Bedrock Secure Compliance Bridge -->
         <article class="glass-card project-card">
           <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem;">
-            <div class="company-logo-container">
-              <div class="company-logo-fallback" style="background-color: #06b6d4; color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem; border-radius: 8px; width: 2.75rem; height: 2.75rem; border: 1px solid var(--border-glass);" aria-hidden="true">
-                AI
-              </div>
-            </div>
+            <!-- Custom Stylized Shield & Lock secure compliance bridge vector logo -->
+            <svg viewBox="0 0 100 100" style="background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%); border-radius: 8px; width: 2.75rem; height: 2.75rem; padding: 0.55rem; flex-shrink: 0;" aria-hidden="true">
+              <rect x="25" y="38" width="50" height="36" rx="6" fill="none" stroke="white" stroke-width="4.5"/>
+              <path d="M38 38 V28 A12 12 0 0 1 62 28 V38" fill="none" stroke="white" stroke-width="4.5"/>
+              <circle cx="50" cy="56" r="6" fill="white"/>
+            </svg>
           </div>
           <h3>
             <span class="lang-en">Azure-to-Bedrock Secure Integration</span>
@@ -747,12 +754,10 @@
         <!-- Project 3: WitAdvisor -->
         <article class="glass-card project-card">
           <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem;">
-            <div class="company-logo-container">
-              <img src="assets/images/witadvisor.png" alt="WitAdvisor Logo" class="company-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="company-logo-fallback" style="background-color: #3b82f6; color: white; display: none; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; border-radius: 8px; width: 2.75rem; height: 2.75rem; border: 1px solid var(--border-glass);" aria-hidden="true">
-                W
-              </div>
-            </div>
+            <!-- Official Typographic SVG Logo for WIT -->
+            <svg viewBox="0 0 100 100" style="background-color: #0f172a; border-radius: 8px; width: 2.75rem; height: 2.75rem; padding: 0.25rem; flex-shrink: 0; border: 1px solid var(--border-glass);" aria-hidden="true">
+              <text x="50" y="64" font-family="'Outfit', 'Inter', sans-serif" font-weight="800" font-size="34" fill="#06b6d4" text-anchor="middle" letter-spacing="-1">WIT</text>
+            </svg>
           </div>
           <h3>
             <span class="lang-en">AWS Cloud Migration: WitAdvisor</span>
@@ -778,7 +783,7 @@
           </div>
         </article>
 
-        <!-- Project 4: DevOps & Tech Leadership Programs -->
+        <!-- Project 4: DevOps & Tech Leadership Training Programs -->
         <article class="glass-card project-card">
           <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem;">
             <img src="assets/images/nubersia.png" alt="Nubersia Logo" class="company-logo">
@@ -1200,7 +1205,7 @@
             <span class="lang-en">Verify Credential</span><span class="lang-es">Ver Credencial</span>
             <svg viewBox="0 0 20 20" fill="currentColor">
               <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
-              <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+              <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
             </svg>
           </a>
         </article>
