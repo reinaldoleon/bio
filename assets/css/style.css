@@ -1067,3 +1067,22 @@ footer {
     padding: 0 1.25rem;
   }
 }
+
+/* Medium screen navigation spacing adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+  
+  .lang-selector {
+    margin-left: 0.25rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}
