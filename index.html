@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Reinaldo León | SRE, Cloud Architect & AI Platform Engineer</title>
+  <meta name="description" content="Perfil profesional de Reinaldo León - Ingeniero de Fiabilidad de Sitios (SRE), Arquitecto Cloud y especialista en Plataformas de Inteligencia Artificial Corporativa. AWS, Terraform, Kubernetes, LLMOps.">
+  <meta name="keywords" content="Reinaldo Leon, SRE, Site Reliability Engineering, Cloud Architect, DevOps, Terraform, AWS, Kubernetes, AI Platforms, LLMOps, Plataformas de IA">
+  <meta name="author" content="Reinaldo León">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Reinaldo León | SRE, Cloud Architect & AI Platform Engineer">
+  <meta property="og:description" content="Perfil profesional enfocado en DevOps, SRE y diseño de plataformas cloud y entornos corporativos de Inteligencia Artificial.">
+  <meta property="og:image" content="assets/images/avatar.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Reinaldo León | SRE, Cloud Architect & AI Platform Engineer">
+  <meta property="twitter:description" content="Perfil profesional enfocado en DevOps, SRE y diseño de plataformas cloud y entornos corporativos de Inteligencia Artificial.">
+  <meta property="twitter:image" content="assets/images/avatar.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/avatar.png">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Decorative background circles -->
+  <div class="background-decorations" aria-hidden="true">
+    <div class="decor-circle decor-1"></div>
+    <div class="decor-circle decor-2"></div>
+  </div>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="logo" id="site-logo">Reinaldo León</a>
+      
+      <button class="mobile-nav-toggle" id="mobile-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">Sobre Mí</a></li>
+          <li><a href="#ai-platforms">IA Corporativa</a></li>
+          <li><a href="#experience">Experiencia</a></li>
+          <li><a href="#skills">Conocimientos</a></li>
+          <li><a href="#certifications">Certificaciones</a></li>
+          <li><a href="#contact">Contacto</a></li>
+          <li>
+            <button class="theme-toggle-btn" id="theme-toggle" aria-label="Cambiar tema (Modo Claro / Oscuro)">
+              <!-- Moon Icon (Dark Mode active, click to change to light) -->
+              <svg class="moon-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+              </svg>
+              <!-- Sun Icon (Light Mode active, click to change to dark) -->
+              <svg class="sun-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.46 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <span class="hero-subtitle">SRE, Cloud Architect & AI Platform Engineer</span>
+        <h1 class="hero-title">Reinaldo León</h1>
+        <p class="hero-description">
+          Apasionado de la tecnología, entusiasta de DevOps/SRE y amante del código abierto. 
+          Especializado en automatizar infraestructuras de alta disponibilidad y en diseñar entornos seguros de producción para Inteligencia Artificial Corporativa.
+        </p>
+        
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/reinaldoleon/" class="social-btn" target="_blank" rel="noopener noreferrer" id="hero-linkedin-link" aria-label="LinkedIn Profile">
+            <svg viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/reinaldoleon" class="social-btn" target="_blank" rel="noopener noreferrer" id="hero-github-link" aria-label="GitHub Profile">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="mailto:reinaldoleon@gmail.com" class="social-btn" aria-label="Email Contact">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary" id="cta-contact-btn">Trabajemos Juntos</a>
+          <a href="#experience" class="btn btn-secondary" id="cta-experience-btn">Ver Experiencia</a>
+        </div>
+      </div>
+
+      <div class="hero-avatar">
+        <div class="avatar-ring" aria-hidden="true"></div>
+        <div class="avatar-ring-2" aria-hidden="true"></div>
+        <div class="avatar-img-container">
+          <img src="assets/images/avatar.png" alt="Reinaldo León Avatar">
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+      <div class="section-header">
+        <span class="section-pretitle">Presentación</span>
+        <h2 class="section-title">Sobre Mí</h2>
+      </div>
+      <div class="glass-card">
+        <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+          He desarrollado mi carácter con la suma de las experiencias compartidas con mi familia, compañeros y amigos. A lo largo de mi trayectoria profesional, siempre he intentado aprender de los logros pero, sobre todo, de los errores cometidos. Dedico una gran parte de mi tiempo al desarrollo y evolución de las personas que me rodean, trabajando activamente por su bienestar, lo que a su vez se traduce en el mío propio.
+        </p>
+        <p style="font-size: 1.1rem;">
+          Soy un ferviente seguidor de la tecnología, un entusiasta de DevOps y un apasionado del código abierto (Open Source Lover). Dedico mi tiempo libre a investigar, validar y proponer soluciones innovadoras. En la actualidad, dirijo mis esfuerzos hacia el diseño estratégico e implantación de tecnologías de Inteligencia Artificial aplicadas a infraestructuras y plataformas de nivel empresarial.
+        </p>
+      </div>
+    </section>
+
+    <!-- AI for Corporate Platforms Section -->
+    <section id="ai-platforms" class="ai-section">
+      <div class="section-header">
+        <span class="section-pretitle">Habilidades Especializadas</span>
+        <h2 class="section-title">IA para Plataformas Corporativas</h2>
+      </div>
+      
+      <div class="ai-grid">
+        
+        <!-- LLMOps & Serving -->
+        <article class="glass-card ai-card">
+          <div class="ai-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10-10-4.48-10-10 4.48-10 10-10zm0 2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm1 3v2h2v2h-2v2h-2v-2h-2v-2h2v-2h2zm3 8v2h-8v-2h8z"/>
+            </svg>
+          </div>
+          <div class="ai-card-content">
+            <h3>LLMOps & Despliegue de Modelos</h3>
+            <p>Arquitectura y optimización del ciclo de vida de Large Language Models (LLMs) dentro de la infraestructura corporativa estándar.</p>
+            <ul class="ai-bullet-list">
+              <li>Inferencia optimizada con <strong>vLLM, Triton Inference Server</strong> y Ollama.</li>
+              <li>Orquestación híbrida de recursos GPU en clusters Kubernetes (KServe, Ray).</li>
+              <li>Estrategias de caching semántico y cuantización de modelos para ahorro de costes.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- RAG Architectures & Vector DBs -->
+        <article class="glass-card ai-card">
+          <div class="ai-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </div>
+          <div class="ai-card-content">
+            <h3>Arquitecturas RAG & Bases de Datos Vectoriales</h3>
+            <p>Conexión segura de datos propietarios corporativos con modelos fundacionales mediante técnicas de recuperación semántica avanzada (Retrieval-Augmented Generation).</p>
+            <ul class="ai-bullet-list">
+              <li>Despliegue y escalado de bases de datos vectoriales: <strong>Pinecone, Milvus, Qdrant y PGVector</strong>.</li>
+              <li>Diseño de pipelines de extracción (ETL) e ingesta de documentos en tiempo real.</li>
+              <li>Evaluación y optimización de relevancia de contexto mediante re-ranking.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- AI Observability & Monitoring -->
+        <article class="glass-card ai-card">
+          <div class="ai-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z"/>
+            </svg>
+          </div>
+          <div class="ai-card-content">
+            <h3>Observabilidad de IA & LLM Monitoring</h3>
+            <p>Implementación de telemetría de extremo a extremo para rastrear el rendimiento y la seguridad del sistema cognitivo.</p>
+            <ul class="ai-bullet-list">
+              <li>Monitoreo de latencia, coste de tokens y tasa de fallos con <strong>LangSmith y Phoenix (Arize)</strong>.</li>
+              <li>Instrumentación de trazas con OpenTelemetry aplicadas a flujos genAI.</li>
+              <li>Detección sistemática de alucinaciones y deriva semántica (data drift) en producción.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- AI Governance & Secure Gateways -->
+        <article class="glass-card ai-card">
+          <div class="ai-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+            </svg>
+          </div>
+          <div class="ai-card-content">
+            <h3>Gobernanza de IA y Gateways Seguros</h3>
+            <p>Establecimiento de barreras de seguridad, mitigación de riesgos de fuga de datos sensibles y control de accesos centralizados.</p>
+            <ul class="ai-bullet-list">
+              <li>Diseño de API Gateways corporativos de IA para control de accesos, rate limiting y auditoría.</li>
+              <li>Implementación de capas de validación y seguridad mediante <strong>Guardrails (NeMo Guardrails, Llama Guard)</strong>.</li>
+              <li>Cumplimiento normativo y resguardo de privacidad de datos (data masking) en peticiones a proveedores externos.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Professional Career / Timeline Section -->
+    <section id="experience" class="experience-section">
+      <div class="section-header">
+        <span class="section-pretitle">Trayectoria Profesional</span>
+        <h2 class="section-title">Carrera Profesional</h2>
+      </div>
+
+      <div class="timeline">
+
+        <!-- Smart Protection -->
+        <article class="timeline-item">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="glass-card">
+            <div class="timeline-header">
+              <div class="company-brand">
+                <img src="assets/images/smart-protection.png" alt="Logo de Smart Protection" class="company-logo">
+                <div>
+                  <h3 class="job-title">Site Reliability Engineering</h3>
+                  <a href="https://smartprotection.com/es/" class="company-name" target="_blank" rel="noopener noreferrer">Smart Protection</a>
+                </div>
+              </div>
+              <div class="job-meta">
+                <span class="job-date">May. 2021 - Actualidad</span>
+                <span class="job-location">Madrid, España (100% Remoto)</span>
+              </div>
+            </div>
+            <ul class="job-description">
+              <li>Definición e implementación del despliegue, configuración y monitoreo del código, así como disponibilidad, latencia, gestión de cambios, respuesta a emergencias y gestión de capacidad de servicio en producción.</li>
+              <li>Definición de Objetivos de Nivel de Servicio (SLO) para cada uno de los servicios core.</li>
+              <li>Uso de SLOs para medir el rendimiento de cada servicio y generación de informes de estado periódicos.</li>
+              <li>Definición y control del presupuesto de errores (Error Budget) como criterio clave de lanzamientos (Launch Criteria).</li>
+              <li>Automatización integral de tareas complejas, infraestructuras y flujos de despliegue.</li>
+              <li>Liderazgo y ejecución de análisis postmortem tras eventos de indisponibilidad para impulsar la mejora continua.</li>
+              <li>Diseño y desarrollo de flujos complejos de infraestructura como código (IaC con Terraform) e integración y despliegue continuo (CI/CD).</li>
+              <li>Implementación de sistemas avanzados de observabilidad a nivel de aplicación, infraestructura e integraciones.</li>
+              <li>Colaboración en el establecimiento de métricas RTO / RPO y definición del Plan de Recuperación ante Desastres (DRP).</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Nubersia CTO -->
+        <article class="timeline-item">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="glass-card">
+            <div class="timeline-header">
+              <div class="company-brand">
+                <img src="assets/images/nubersia.png" alt="Logo de Nubersia" class="company-logo">
+                <div>
+                  <h3 class="job-title">Chief Technology Officer (CTO)</h3>
+                  <span class="company-name">Nubersia</span>
+                </div>
+              </div>
+              <div class="job-meta">
+                <span class="job-date">Ene. 2019 - May. 2021 (2 años 5 meses)</span>
+                <span class="job-location">Barcelona, España</span>
+              </div>
+            </div>
+            <ul class="job-description">
+              <li>Dirección y automatización de soluciones de computación en la nube para clientes de alta escala.</li>
+              <li>Diseño de sistemas de alta disponibilidad, escalabilidad y tolerancia a fallos en Amazon Web Services (AWS).</li>
+              <li>Identificación y aseguramiento del uso correcto de las mejores prácticas de arquitectura del AWS Well-Architected Framework.</li>
+              <li>Definición de la arquitectura técnica para soluciones de integración y entrega continuas.</li>
+              <li>Generación, control y mantenimiento de los diferentes stacks reutilizables de Terraform.</li>
+              <li>Responsable de los programas de formación y entrenamiento técnico de los equipos de IT.</li>
+              <li>Mantenimiento, desarrollo y evolución de las estrategias de dirección técnica y balanceo con objetivos de negocio.</li>
+              <li>Evaluación e incorporación de nuevas herramientas y tendencias tecnológicas de acuerdo a las demandas del mercado.</li>
+              <li>Orientación de los distintos equipos de ingeniería hacia objetivos técnicos sólidos a largo plazo.</li>
+              <li>Evaluación y reclutamiento de nuevos perfiles de ingeniería para la expansión de los equipos de desarrollo.</li>
+              <li>Supervisión y control del cumplimiento de objetivos en proyectos tecnológicos de alta complejidad.</li>
+              <li>Optimización y control financiero de costes de infraestructura cloud frente a los presupuestos establecidos de la empresa.</li>
+              <li>Definición de planes de análisis métrico de rendimiento y salud de la tecnología general de la organización.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Nubersia Architect -->
+        <article class="timeline-item">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="glass-card">
+            <div class="timeline-header">
+              <div class="company-brand">
+                <img src="assets/images/nubersia.png" alt="Logo de Nubersia" class="company-logo">
+                <div>
+                  <h3 class="job-title">IT Solutions Architect</h3>
+                  <span class="company-name">Nubersia</span>
+                </div>
+              </div>
+              <div class="job-meta">
+                <span class="job-date">Jul. 2017 - Ene. 2019 (1 año 7 meses)</span>
+                <span class="job-location">Barcelona, España</span>
+              </div>
+            </div>
+            <ul class="job-description">
+              <li>Implementación y automatización de complejas soluciones en entornos de nube pública.</li>
+              <li>Diseño y despliegue de arquitecturas cloud robustas y escalables con tolerancia a fallos sobre la infraestructura de AWS.</li>
+              <li>Garantía de cumplimiento de las mejores prácticas de seguridad y robustez arquitectónica en AWS.</li>
+              <li>Instalación y configuración de flujos avanzados de integración continua y despliegues automatizados (CI/CD).</li>
+              <li>Gestión de la configuración y administración del ciclo de vida de la infraestructura como código (IaC).</li>
+              <li>Soluciones de automatización de servicios del sistema operativo Linux para aprovisionamiento rápido.</li>
+              <li>Administración de los repositorios de código de la empresa y flujos de trabajo de control de versiones.</li>
+              <li>Creación, estandarización y documentación detallada de los procesos internos de TI.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Vileo Freelance -->
+        <article class="timeline-item">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="glass-card">
+            <div class="timeline-header">
+              <div class="company-brand">
+                <img src="assets/images/vileo.png" alt="Logo de Vileo" class="company-logo">
+                <div>
+                  <h3 class="job-title">Consultor en Infraestructura, Plataforma y Telecomunicaciones</h3>
+                  <span class="company-name">Vileo (Autónomo)</span>
+                </div>
+              </div>
+              <div class="job-meta">
+                <span class="job-date">Feb. 2016 - May. 2017 (1 año 4 meses)</span>
+                <span class="job-location">Caracas, Venezuela</span>
+              </div>
+            </div>
+            <ul class="job-description">
+              <li>Instalación, tunning y administración de cortafuegos de nivel perimetral (pfSense, Fortinet).</li>
+              <li>Instalación, segmentación de redes y configuración física/lógica de Switches y Routers CISCO.</li>
+              <li>Diseño e implantación de esquemas de alta disponibilidad (HA) en plataformas basadas en sistemas operativos Linux.</li>
+              <li>Aprovisionamiento, administración y empaquetado de microservicios contenerizados utilizando Docker.</li>
+              <li>Gestión inicial y migración de recursos de AWS: IAM, EC2, ECS, S3, Elastic Load Balancer, Auto Scaling y Virtual Private Cloud (VPC).</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <div class="section-header">
+        <span class="section-pretitle">Especialidades</span>
+        <h2 class="section-title">Habilidades Técnicas y Blandas</h2>
+      </div>
+
+      <div class="skills-filter">
+        <button class="filter-btn active" data-filter="all" id="filter-all">Todas</button>
+        <button class="filter-btn" data-filter="ai" id="filter-ai">IA & MLOps</button>
+        <button class="filter-btn" data-filter="cloud" id="filter-cloud">Cloud & IaC</button>
+        <button class="filter-btn" data-filter="devops" id="filter-devops">DevOps & Sistemas</button>
+        <button class="filter-btn" data-filter="soft" id="filter-soft">Blandas</button>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- AI Skills -->
+        <article class="glass-card skill-card" data-categories="ai">
+          <div class="skill-info">
+            <span class="skill-name">LLMOps & Serving (vLLM/Triton)</span>
+            <span class="skill-level-text">Avanzado</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="85"></div>
+          </div>
+        </article>
+
+        <article class="glass-card skill-card" data-categories="ai">
+          <div class="skill-info">
+            <span class="skill-name">AI Observability (LangSmith/Phoenix)</span>
+            <span class="skill-level-text">Avanzado</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="80"></div>
+          </div>
+        </article>
+
+        <article class="glass-card skill-card" data-categories="ai">
+          <div class="skill-info">
+            <span class="skill-name">Vector DBs (Pinecone/Milvus/Qdrant)</span>
+            <span class="skill-level-text">Avanzado</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="85"></div>
+          </div>
+        </article>
+
+        <!-- Cloud & IaC -->
+        <article class="glass-card skill-card" data-categories="cloud">
+          <div class="skill-info">
+            <span class="skill-name">Amazon Web Services (AWS)</span>
+            <span class="skill-level-text">Experto</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="95"></div>
+          </div>
+        </article>
+
+        <article class="glass-card skill-card" data-categories="cloud">
+          <div class="skill-info">
+            <span class="skill-name">Terraform (IaC)</span>
+            <span class="skill-level-text">Experto</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="95"></div>
+          </div>
+        </article>
+
+        <article class="glass-card skill-card" data-categories="cloud">
+          <div class="skill-info">
+            <span class="skill-name">Diseño de Infraestructura Cloud</span>
+            <span class="skill-level-text">Experto</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="95"></div>
+          </div>
+        </article>
+
+        <!-- DevOps & Systems -->
+        <article class="glass-card skill-card" data-categories="devops">
+          <div class="skill-info">
+            <span class="skill-name">Kubernetes</span>
+            <span class="skill-level-text">Avanzado</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="85"></div>
+          </div>
+        </article>
+
+        <article class="glass-card skill-card" data-categories="devops">
+          <div class="skill-info">
+            <span class="skill-name">Docker</span>
+            <span class="skill-level-text">Avanzado</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="85"></div>
+          </div>
+        </article>
+
+        <article class="glass-card skill-card" data-categories="devops">
+          <div class="skill-info">
+            <span class="skill-name">Git</span>
+            <span class="skill-level-text">Experto</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="90"></div>
+          </div>
+        </article>
+
+        <article class="glass-card skill-card" data-categories="devops">
+          <div class="skill-info">
+            <span class="skill-name">Sistemas CI/CD (Jenkins, Actions)</span>
+            <span class="skill-level-text">Avanzado</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="85"></div>
+          </div>
+        </article>
+
+        <article class="glass-card skill-card" data-categories="devops">
+          <div class="skill-info">
+            <span class="skill-name">Ansible</span>
+            <span class="skill-level-text">Avanzado</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="80"></div>
+          </div>
+        </article>
+
+        <article class="glass-card skill-card" data-categories="devops">
+          <div class="skill-info">
+            <span class="skill-name">Linux & Shell Scripting</span>
+            <span class="skill-level-text">Experto</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="95"></div>
+          </div>
+        </article>
+
+        <article class="glass-card skill-card" data-categories="devops">
+          <div class="skill-info">
+            <span class="skill-name">Networking</span>
+            <span class="skill-level-text">Experto</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="85"></div>
+          </div>
+        </article>
+
+        <!-- Soft Skills -->
+        <article class="glass-card skill-card" data-categories="soft">
+          <div class="skill-info">
+            <span class="skill-name">Trabajo en Equipo (Teamwork)</span>
+            <span class="skill-level-text">Experto</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="95"></div>
+          </div>
+        </article>
+
+        <article class="glass-card skill-card" data-categories="soft">
+          <div class="skill-info">
+            <span class="skill-name">Visión Global</span>
+            <span class="skill-level-text">Experto</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="95"></div>
+          </div>
+        </article>
+
+        <article class="glass-card skill-card" data-categories="soft">
+          <div class="skill-info">
+            <span class="skill-name">Iniciativa y Liderazgo</span>
+            <span class="skill-level-text">Avanzado</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="80"></div>
+          </div>
+        </article>
+
+        <article class="glass-card skill-card" data-categories="soft">
+          <div class="skill-info">
+            <span class="skill-name">Comunicación Efectiva</span>
+            <span class="skill-level-text">Avanzado</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="85"></div>
+          </div>
+        </article>
+
+        <article class="glass-card skill-card" data-categories="soft">
+          <div class="skill-info">
+            <span class="skill-name">Gestión de Proyectos & Clientes</span>
+            <span class="skill-level-text">Experto</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="90"></div>
+          </div>
+        </article>
+
+        <article class="glass-card skill-card" data-categories="soft">
+          <div class="skill-info">
+            <span class="skill-name">Responsabilidad & Ética</span>
+            <span class="skill-level-text">Experto</span>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-progress" data-level="95"></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Licenses & Certifications Section -->
+    <section id="certifications" class="certifications-section">
+      <div class="section-header">
+        <span class="section-pretitle">Acreditaciones</span>
+        <h2 class="section-title">Licencias y Certificaciones</h2>
+      </div>
+
+      <div class="certs-grid">
+        
+        <!-- Terraform Associate -->
+        <article class="glass-card cert-card">
+          <h3 class="cert-title">HashiCorp - Terraform Associate</h3>
+          <span class="cert-issuer">HashiCorp</span>
+          <span class="cert-date">Expedición: jul. 2022 · Vencimiento: jul. 2024</span>
+          <a href="https://www.credly.com/badges/160ab75d-8a2d-4bb6-844a-0f2b6320dcdb/public_url" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial HashiCorp Terraform Associate">
+            Ver Credencial
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+              <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+            </svg>
+          </a>
+        </article>
+
+        <!-- AWS DevOps Professional -->
+        <article class="glass-card cert-card">
+          <h3 class="cert-title">AWS Certified DevOps Engineer – Professional</h3>
+          <span class="cert-issuer">Amazon Web Services (AWS)</span>
+          <span class="cert-date">Expedición: nov. 2020 · Vencimiento: nov. 2023</span>
+          <a href="https://www.youracclaim.com/badges/1adbe747-1c1d-42bc-b8c1-2257382ebb4d?source=linked_in_profile" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial AWS Certified DevOps Engineer Professional">
+            Ver Credencial
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+              <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+            </svg>
+          </a>
+        </article>
+
+        <!-- AWS SysOps Associate -->
+        <article class="glass-card cert-card">
+          <h3 class="cert-title">AWS Certified SysOps Administrator - Associate</h3>
+          <span class="cert-issuer">Amazon Web Services (AWS)</span>
+          <span class="cert-date">Expedición: oct. 2019 · Vencimiento: oct. 2022</span>
+          <a href="https://www.youracclaim.com/badges/c9855e57-9f27-484e-9f3b-7a0df9a0d907/linked_in_profile" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial AWS Certified SysOps Administrator Associate">
+            Ver Credencial
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+              <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+            </svg>
+          </a>
+        </article>
+
+        <!-- AWS CTO and Cloud Economics -->
+        <article class="glass-card cert-card">
+          <h3 class="cert-title">AWS CTO and Cloud Economics</h3>
+          <span class="cert-issuer">Amazon Web Services (AWS)</span>
+          <span class="cert-date">Expedición: ago. 2018 · Vencimiento: jul. 2022</span>
+          <a href="https://certified-cloud.s3.eu-west-1.amazonaws.com/aws-cloud-practitioner.png" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial AWS CTO and Cloud Economics">
+            Ver Credencial
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+              <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+            </svg>
+          </a>
+        </article>
+
+        <!-- AWS Cloud Practitioner -->
+        <article class="glass-card cert-card">
+          <h3 class="cert-title">AWS Certified Cloud Practitioner</h3>
+          <span class="cert-issuer">Amazon Web Services (AWS)</span>
+          <span class="cert-date">Expedición: jul. 2019</span>
+          <a href="https://certified-cloud.s3.eu-west-1.amazonaws.com/aws-cloud-practitioner.png" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial AWS Cloud Practitioner">
+            Ver Credencial
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+              <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+            </svg>
+          </a>
+        </article>
+
+        <!-- AWS Solutions Architect -->
+        <article class="glass-card cert-card">
+          <h3 class="cert-title">AWS Solutions Architect - Associate</h3>
+          <span class="cert-issuer">Amazon Web Services (AWS)</span>
+          <span class="cert-date">Expedición: dic. 2017</span>
+          <a href="https://www.youracclaim.com/badges/361c7fea-e04b-49b3-b587-7098bf917fab/linked_in_profile" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial AWS Solutions Architect Associate">
+            Ver Credencial
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+              <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+            </svg>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="section-header" style="text-align: center;">
+        <span class="section-pretitle">Conexión</span>
+        <h2 class="section-title">Hablemos</h2>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="glass-card contact-card">
+          <p style="font-size: 1.15rem; color: var(--text-secondary);">
+            ¿Tienes algún proyecto en mente o te gustaría hablar sobre SRE, MLOps, arquitecturas en la nube o soluciones corporativas con Inteligencia Artificial? Escríbeme:
+          </p>
+          
+          <a href="mailto:reinaldoleon@gmail.com" class="contact-email" id="email-contact-link">reinaldoleon@gmail.com</a>
+          
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+            También puedes encontrarme y conectar conmigo a través de mis redes:
+          </p>
+          
+          <div class="contact-social-links">
+            <a href="https://www.linkedin.com/in/reinaldoleon/" class="social-btn" target="_blank" rel="noopener noreferrer" id="contact-linkedin-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/reinaldoleon" class="social-btn" target="_blank" rel="noopener noreferrer" id="contact-github-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-content">
+      <p class="footer-text">&copy; 2026 Reinaldo León. Todos los derechos reservados.</p>
+      <p class="footer-text" style="font-size: 0.8rem;">Diseñado con fines profesionales y de alto impacto estético.</p>
+    </div>
+  </footer>
+
+  <!-- JS Link -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
