@@ -68,58 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Skills Filtering & Progression Animation
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const skillCards = document.querySelectorAll('.skill-card');
-
-  // Trigger animation for visible progress bars
-  const animateSkillBars = () => {
-    skillCards.forEach(card => {
-      if (card.style.display !== 'none') {
-        const progressBar = card.querySelector('.skill-bar-progress');
-        if (progressBar) {
-          const val = progressBar.getAttribute('data-level');
-          progressBar.style.width = val + '%';
-        }
-      }
-    });
-  };
-
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Remove active class from all buttons
-      filterButtons.forEach(b => b.classList.remove('active'));
-      // Add active class to current button
-      btn.classList.add('active');
-
-      const filterValue = btn.getAttribute('data-filter');
-
-      skillCards.forEach(card => {
-        const categories = card.getAttribute('data-categories').split(' ');
-        
-        // Reset progress bar width first to re-trigger transition
-        const progressBar = card.querySelector('.skill-bar-progress');
-        if (progressBar) {
-          progressBar.style.width = '0';
-        }
-
-        if (filterValue === 'all' || categories.includes(filterValue)) {
-          card.style.display = 'block';
-          // Force reflow
-          void card.offsetWidth;
-        } else {
-          card.style.display = 'none';
-        }
-      });
-
-      // Animate the newly filtered progress bars
-      setTimeout(animateSkillBars, 50);
-    });
-  });
-
-  // Initial animation trigger
-  setTimeout(animateSkillBars, 150);
-
   // Scroll active link highlight
   const sections = document.querySelectorAll('section');
   const navItems = document.querySelectorAll('.nav-links a');
