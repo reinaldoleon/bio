@@ -1,6 +1,6 @@
 ---
-title: Dónde debe detenerse la autonomía de un agente
-description: Una forma práctica de definir límites según los efectos externos, los permisos y las decisiones humanas.
+title: ¿Cuándo debe pedir aprobación humana un agente de IA?
+description: Una forma práctica de decidir qué acciones puede ejecutar un agente, cuáles requieren aprobación y cómo aplicar ese límite.
 diagram_alt: Flujo de un agente desde la propuesta y preparación, pasando por autorización, hasta ejecución y reconciliación.
 diagram_caption: La libertad para proponer no implica permiso para ejecutar una acción externa.
 ---

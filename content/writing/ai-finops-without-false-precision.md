@@ -1,8 +1,8 @@
 ---
-title: AI FinOps without false precision
+title: How much does an AI workflow really cost?
 slug: ai-finops-without-false-precision
 date: 2026-10-29
-description: Separate usage, estimates, forecasts and billed cost before making AI cost decisions.
+description: How to distinguish observed usage, estimates, forecasts and billed cost before making AI cost decisions.
 diagram: ai-finops-without-false-precision
 diagram_alt: Cost evidence flow from observed usage through estimates and billing data to reconciliation.
 diagram_caption: Each cost figure has a different evidence basis; reconciliation makes the difference visible.

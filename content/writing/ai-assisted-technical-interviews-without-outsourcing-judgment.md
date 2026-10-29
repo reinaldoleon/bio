@@ -1,8 +1,8 @@
 ---
-title: AI-assisted technical interviews without outsourcing judgment
+title: Can AI help evaluate technical candidates without deciding for us?
 slug: ai-assisted-technical-interviews-without-outsourcing-judgment
 date: 2026-10-29
-description: How an AI-assisted review of platform engineering exercises can surface evidence and better interview questions while keeping hiring decisions human.
+description: What an AI-assisted technical exercise review can reveal, where bias can enter and why the hiring decision must remain human.
 illustration_en: ai-assisted-technical-interviews-en.jpg
 illustration_es: ai-assisted-technical-interviews-es.svg
 illustration_alt: A conceptual comparison between an AI score that drives a hiring decision and an evidence-led review that informs a human interview.

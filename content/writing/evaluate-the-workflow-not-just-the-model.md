@@ -1,8 +1,8 @@
 ---
-title: Evaluate the workflow, not just the model
+title: How do you know an AI workflow actually works?
 slug: evaluate-the-workflow-not-just-the-model
 date: 2026-10-29
-description: An end-to-end evaluation contract for AI systems with sources, tools, gates and publication.
+description: How to examine sources, tools, review gates and final outcomes instead of judging an AI system by model output alone.
 diagram: evaluate-the-workflow-not-just-the-model
 diagram_alt: Evaluation path from inputs and sources through the agent trace and quality gates to the published outcome.
 diagram_caption: Evaluate the full path to the observable outcome, including rejection and review.

@@ -1,8 +1,8 @@
 ---
-title: Where agent autonomy should stop
+title: When should an AI agent need human approval?
 slug: where-agent-autonomy-should-stop
 date: 2026-10-29
-description: A practical way to set agent boundaries around side effects, permissions and human decisions.
+description: A practical way to decide which agent actions can proceed, which need approval and how to enforce the boundary.
 diagram: where-agent-autonomy-should-stop
 diagram_alt: Agent flow from proposal and preparation through authorization to execution and reconciliation.
 diagram_caption: Freedom to propose does not imply permission to execute an external action.

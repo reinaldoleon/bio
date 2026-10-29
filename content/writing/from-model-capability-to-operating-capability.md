@@ -1,8 +1,8 @@
 ---
-title: From model capability to operating capability
+title: What does it take to make AI work beyond the demo?
 slug: from-model-capability-to-operating-capability
 date: 2026-10-29
-description: A platform engineering view of what it takes to make AI workflows reliable, governed and measurable.
+description: A platform engineering view of the controls, evidence and ownership needed to operate AI beyond a promising demo.
 diagram: from-model-capability-to-operating-capability
 diagram_alt: Flow from models and tools through platform controls and evidence to an operable AI capability.
 diagram_caption: "The operating capability sits beyond the model: controls, evidence and ownership connect the parts."

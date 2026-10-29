@@ -1,6 +1,6 @@
 ---
-title: Título en español
-description: Una frase que presente la pregunta técnica y por qué importa.
+title: ¿Una pregunta concreta que el lector necesite responder?
+description: Una frase que prometa la orientación concreta que el artículo realmente ofrece.
 diagram_alt:
 diagram_caption:
 illustration_alt:

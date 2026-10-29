@@ -1,6 +1,6 @@
 ---
-title: De la capacidad del modelo a la capacidad operativa
-description: Una perspectiva de ingeniería de plataforma sobre cómo hacer que los flujos de IA sean fiables, gobernados y medibles.
+title: ¿Qué hace falta para que la IA funcione más allá de una demo?
+description: Una perspectiva de ingeniería de plataforma sobre los controles, la evidencia y las responsabilidades necesarios para operar IA más allá de una demo prometedora.
 diagram_alt: Flujo desde modelos y herramientas, pasando por controles de plataforma y evidencia, hasta una capacidad de IA operable.
 diagram_caption: "La capacidad operativa va más allá del modelo: controles, evidencia y responsables conectan las piezas."
 ---

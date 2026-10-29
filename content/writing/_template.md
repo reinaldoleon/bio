@@ -1,8 +1,8 @@
 ---
-title: Working title
+title: A concrete question readers need to answer?
 slug: replace-with-file-name
 date: 2026-10-29
-description: One sentence that explains the technical question and why it matters.
+description: One sentence that promises the specific guidance the article actually provides.
 diagram:
 diagram_alt:
 diagram_caption:

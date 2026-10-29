@@ -1,6 +1,6 @@
 ---
-title: Entrevistas técnicas asistidas por IA sin delegar el criterio
-description: Cómo revisar pruebas de Platform Engineering con ayuda de IA para encontrar evidencias y preparar mejores preguntas sin delegar la decisión de contratación.
+title: ¿Puede la IA ayudar a evaluar candidatos sin decidir por nosotros?
+description: Qué puede revelar una revisión asistida de pruebas técnicas, dónde puede aparecer el sesgo y por qué la decisión de contratación debe seguir siendo humana.
 illustration_alt: Comparación conceptual entre una puntuación de IA que determina una contratación y una revisión basada en evidencias que informa una entrevista humana.
 illustration_caption: "Una representación conceptual del límite: la IA puede organizar evidencias y sugerir preguntas; la decisión de contratación corresponde a las personas."
 ---

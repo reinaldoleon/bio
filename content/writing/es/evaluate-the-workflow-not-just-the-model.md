@@ -1,6 +1,6 @@
 ---
-title: Evaluar el flujo completo, no solo el modelo
-description: Un contrato de evaluación de extremo a extremo para sistemas de IA con fuentes, herramientas, validaciones y publicación.
+title: ¿Cómo saber si un flujo de IA funciona de verdad?
+description: Cómo revisar fuentes, herramientas, validaciones y resultados finales en lugar de juzgar un sistema de IA solo por la respuesta del modelo.
 diagram_alt: Evaluación desde entradas y fuentes, pasando por la traza del agente y controles de calidad, hasta el resultado publicado.
 diagram_caption: Hay que evaluar el camino completo hasta el resultado observable, incluidos los rechazos y las revisiones.
 ---

@@ -1,6 +1,6 @@
 ---
-title: FinOps de IA sin falsa precisión
-description: Separar consumo, estimaciones, proyecciones y coste facturado antes de tomar decisiones de FinOps de IA.
+title: ¿Cuánto cuesta realmente un flujo de IA?
+description: Cómo distinguir consumo observado, estimaciones, proyecciones y coste facturado antes de tomar decisiones sobre costes de IA.
 diagram_alt: Flujo de evidencia de costes desde el uso observado, pasando por estimaciones y facturación, hasta la reconciliación.
 diagram_caption: Cada cifra de coste tiene una base de evidencia distinta; la reconciliación hace visible esa diferencia.
 ---
