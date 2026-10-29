@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 800" width="480" height="800" role="img" aria-labelledby="diagram-title diagram-desc">
+<title id="diagram-title">Repositorio preparado</title>
+<desc id="diagram-desc">Tres mecanismos distintos</desc>
+<rect width="480" height="800" rx="24" fill="#122031"/>
+<rect x="1" y="1" width="478" height="798" rx="23" fill="none" stroke="#304a5c" stroke-width="2"/>
+<text x="240" y="48" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="26" font-weight="600">Repositorio preparado</text>
+<text x="240" y="79" text-anchor="middle" fill="#a9c4d5" font-family="Arial, sans-serif" font-size="17" font-weight="400">Tres mecanismos distintos</text>
+<rect x="34" y="114" width="412" height="112" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="166" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">STANDARD</text><text x="240" y="196" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">¿Qué debe cumplirse?</text>
+<path d="M240 226 V262 M232 254 L240 263 L248 254" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="272" width="412" height="112" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="324" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">BOOTSTRAP</text><text x="240" y="354" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">¿Cómo llegar a ese estado?</text>
+<path d="M240 384 V420 M232 412 L240 421 L248 412" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="430" width="412" height="112" rx="16" fill="#1d3041" stroke="#8bbca7" stroke-width="2"/><text x="240" y="482" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">VALIDATION</text><text x="240" y="512" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">¿Se cumple de verdad?</text>
+<path d="M240 542 V574 M232 566 L240 575 L248 566" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="584" width="412" height="108" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="634" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Resultado accionable</text><text x="240" y="664" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Cumple · falta · corregible</text>
+<text x="240" y="744" text-anchor="middle" fill="#e2b977" font-family="Arial, sans-serif" font-size="18" font-weight="600">Revisión humana · no aplica</text>
+</svg>

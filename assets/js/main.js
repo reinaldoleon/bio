@@ -60,6 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  document.querySelectorAll('[data-lang-route]').forEach(link => {
+    link.addEventListener('click', () => {
+      localStorage.setItem('lang', link.getAttribute('data-lang-route'));
+    });
+  });
+
   // Mobile Menu Logic
   const mobileToggle = document.getElementById('mobile-toggle');
   const navLinks = document.getElementById('nav-links');

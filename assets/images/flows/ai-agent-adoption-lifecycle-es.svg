@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 800" width="480" height="800" role="img" aria-labelledby="diagram-title diagram-desc">
+<title id="diagram-title">Ciclo y metodología</title>
+<desc id="diagram-desc">Conectados mediante contratos</desc>
+<rect width="480" height="800" rx="24" fill="#122031"/>
+<rect x="1" y="1" width="478" height="798" rx="23" fill="none" stroke="#304a5c" stroke-width="2"/>
+<text x="240" y="48" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="26" font-weight="600">Ciclo y metodología</text>
+<text x="240" y="79" text-anchor="middle" fill="#a9c4d5" font-family="Arial, sans-serif" font-size="17" font-weight="400">Conectados mediante contratos</text>
+<rect x="34" y="112" width="412" height="82" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="161" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Idea → Inception → Definición</text>
+<path d="M240 194 V218 M232 210 L240 219 L248 210" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="228" width="412" height="92" rx="16" fill="#1d3041" stroke="#8bbca7" stroke-width="2"/><text x="240" y="270" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Contrato de entrada</text><text x="240" y="300" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Objetivo · alcance · restricciones</text>
+<path d="M240 320 V344 M232 336 L240 345 L248 336" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="354" width="412" height="116" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="408" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Construcción / SDD</text><text x="240" y="438" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Especificar → planificar → verificar</text>
+<path d="M240 470 V496 M232 488 L240 497 L248 488" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="506" width="412" height="92" rx="16" fill="#1d3041" stroke="#8bbca7" stroke-width="2"/><text x="240" y="548" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Contrato de salida</text><text x="240" y="578" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Evidencia · aprobación</text>
+<path d="M240 598 V622 M232 614 L240 623 L248 614" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="632" width="412" height="104" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="680" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Validación → Revisión</text><text x="240" y="710" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Entrega → Producción → Feedback</text>
+</svg>

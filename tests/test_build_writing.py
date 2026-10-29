@@ -120,6 +120,43 @@ class WritingBuildTests(unittest.TestCase):
             self.assertIn("review-es.svg", rendered)
             self.assertIn("Imagen española", rendered)
 
+    def test_localized_routes_have_reciprocal_metadata_and_diagrams(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "content" / "writing"
+            spanish = source / "es"
+            spanish.mkdir(parents=True)
+            flows = root / "assets" / "images" / "flows"
+            flows.mkdir(parents=True)
+            images = root / "assets" / "images" / "writing"
+            images.mkdir(parents=True)
+            for lang in ("en", "es"):
+                (flows / f"example-article-flow-{lang}.svg").write_text('<svg xmlns="http://www.w3.org/2000/svg"/>')
+                (images / f"example-article-{lang}.png").write_bytes(b"image")
+            english_extra = "slug_es: articulo-ejemplo\nlocalized_routes: true\ndiagram_prefix: example-article\nsubtitle: A useful subtitle.\ndiagrams:\n  - id: flow\n    alt: English diagram\n    caption: English caption\n"
+            spanish_extra = "subtitle: Un subtítulo útil.\ndiagrams:\n  - id: flow\n    alt: Diagrama español\n    caption: Leyenda española\n"
+            (source / "example-article.md").write_text(ARTICLE.replace("draft: false", english_extra + "draft: false").replace("The article body.", "The article body.\n\n{{diagram:flow}}"))
+            (spanish / "example-article.md").write_text(SPANISH.replace("---\n\n## Evidencia", spanish_extra + "---\n\n## Evidencia").replace("El cuerpo del artículo.", "El cuerpo del artículo.\n\n{{diagram:flow}}"))
+            with patch.object(build_writing, "ROOT", root), patch.object(build_writing, "SOURCE", source), patch.object(build_writing, "OUTPUT", root / "writing"):
+                build_writing.build()
+            en = (root / "en" / "writing" / "example-article" / "index.html").read_text()
+            es = (root / "es" / "writing" / "articulo-ejemplo" / "index.html").read_text()
+            self.assertIn('lang="en" data-theme', en)
+            self.assertIn('lang="es" data-theme', es)
+            self.assertIn('hreflang="es" href="https://reinaldoleon.github.io/bio/es/writing/articulo-ejemplo/"', en)
+            self.assertIn('hreflang="en" href="https://reinaldoleon.github.io/bio/en/writing/example-article/"', es)
+            self.assertIn("Diagrama español", es)
+            self.assertNotIn("English diagram", es)
+            self.assertIn("example-article-flow-en.svg", en)
+            self.assertIn("example-article-flow-es.svg", es)
+            self.assertIn("/es/writing/articulo-ejemplo/", (root / "sitemap.xml").read_text())
+            self.assertIn("/en/writing/example-article/", (root / "writing" / "feed.xml").read_text())
+            (source / "example-article.md").write_text((source / "example-article.md").read_text().replace("draft: false", "draft: true"))
+            with patch.object(build_writing, "ROOT", root), patch.object(build_writing, "SOURCE", source), patch.object(build_writing, "OUTPUT", root / "writing"):
+                build_writing.build()
+            self.assertFalse((root / "en" / "writing" / "example-article" / "index.html").exists())
+            self.assertFalse((root / "es" / "writing" / "articulo-ejemplo" / "index.html").exists())
+
 
 if __name__ == "__main__":
     unittest.main()

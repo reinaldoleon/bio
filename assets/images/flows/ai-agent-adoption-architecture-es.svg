@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 800" width="480" height="800" role="img" aria-labelledby="diagram-title diagram-desc">
+<title id="diagram-title">Arquitectura completa</title>
+<desc id="diagram-desc">Una plataforma, dos tracks</desc>
+<rect width="480" height="800" rx="24" fill="#122031"/>
+<rect x="1" y="1" width="478" height="798" rx="23" fill="none" stroke="#304a5c" stroke-width="2"/>
+<text x="240" y="48" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="26" font-weight="600">Arquitectura completa</text>
+<text x="240" y="79" text-anchor="middle" fill="#a9c4d5" font-family="Arial, sans-serif" font-size="17" font-weight="400">Una plataforma, dos tracks</text>
+<rect x="34" y="104" width="412" height="74" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="149" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Intención de producto</text>
+<path d="M240 178 V198 M232 190 L240 199 L248 190" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="208" width="412" height="98" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="253" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Ciclo de ingeniería</text><text x="240" y="283" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Idea → Construcción → Entrega</text>
+<path d="M240 306 V326 M232 318 L240 327 L248 318" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="336" width="412" height="98" rx="16" fill="#1d3041" stroke="#8bbca7" stroke-width="2"/><text x="240" y="381" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Context Delivery</text><text x="240" y="411" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Estándares · conocimiento · skills</text>
+<path d="M240 434 V454 M232 446 L240 455 L248 446" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="464" width="412" height="98" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="509" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Agentes + contratos</text><text x="240" y="539" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Evidencia · revisión · autoridad</text>
+<path d="M240 562 V586 M232 578 L240 587 L248 578" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="596" width="412" height="76" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="642" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Producto usa IA en producción?</text>
+<path d="M240 672 V692 M232 684 L240 693 L248 684" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="702" width="412" height="76" rx="16" fill="#1d3041" stroke="#e2b977" stroke-width="2"/><text x="240" y="736" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">AI Runtime, si aplica</text><text x="240" y="766" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Modelos · evaluación · gobierno</text>
+</svg>

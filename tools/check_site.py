@@ -10,7 +10,7 @@ from xml.etree import ElementTree as ET
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = [ROOT / "index.html", *sorted((ROOT / "writing").glob("**/index.html"))]
+PAGES = [ROOT / "index.html", *sorted((ROOT / "writing").glob("**/index.html")), *sorted((ROOT / "en" / "writing").glob("**/index.html")), *sorted((ROOT / "es" / "writing").glob("**/index.html"))]
 SITE = "https://reinaldoleon.github.io/bio/"
 
 
@@ -25,12 +25,23 @@ class Page(HTMLParser):
         self.title_locales: set[str] = set()
         self.language_buttons: set[str] = set()
         self.images_without_alt = 0
+        self.html_lang = ""
+        self.prose_lang = ""
+        self.alternates: dict[str, str] = {}
+        self.figures = 0
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = dict(attrs)
         classes = set((values.get("class") or "").split())
         if "writing-prose" in classes:
             self.prose_languages.update(classes & {"lang-en", "lang-es"})
+            self.prose_lang = values.get("lang", "") or ""
+        if tag == "html":
+            self.html_lang = values.get("lang", "") or ""
+        if tag == "figure":
+            self.figures += 1
+        if tag == "link" and values.get("hreflang"):
+            self.alternates[values["hreflang"]] = values.get("href", "") or ""
         if tag == "title":
             self.title_locales.update(key for key in ("data-title-en", "data-title-es") if values.get(key))
         if tag == "button" and values.get("data-lang-set"):
@@ -91,10 +102,33 @@ def check() -> None:
                 errors.append(f"{path}: missing localized browser title")
             if page.language_buttons != {"en", "es"}:
                 errors.append(f"{path}: missing language controls")
+        if len(relative.parts) > 3 and relative.parts[0] in {"en", "es"}:
+            lang = relative.parts[0]
+            if page.html_lang != lang or page.prose_lang != lang:
+                errors.append(f"{path}: page and prose language mismatch")
+            if page.figures != 8:
+                errors.append(f"{path}: expected eight diagrams, found {page.figures}")
+            if set(page.alternates) != {"en", "es", "x-default"}:
+                errors.append(f"{path}: missing reciprocal hreflang entries")
+            if page.alternates.get(lang) != expected:
+                errors.append(f"{path}: self hreflang mismatch")
+            if not page.meta.get("article:published_time") or not page.meta.get("article:modified_time"):
+                errors.append(f"{path}: missing article dates")
         image = page.meta.get("og:image", "")
         if image.startswith(SITE) and not (ROOT / image.removeprefix(SITE)).exists():
             errors.append(f"{path}: missing social image {image}")
     for path, page in parsed.items():
+        relative = path.relative_to(ROOT)
+        if len(relative.parts) > 3 and relative.parts[0] in {"en", "es"}:
+            other_lang = "es" if relative.parts[0] == "en" else "en"
+            other_url = page.alternates.get(other_lang, "")
+            if not other_url.startswith(SITE):
+                errors.append(f"{path}: invalid alternate URL")
+            else:
+                other_file = ROOT / other_url.removeprefix(SITE) / "index.html"
+                other = parsed.get(other_file.resolve())
+                if other is None or other.alternates.get(relative.parts[0]) != page.meta.get("canonical"):
+                    errors.append(f"{path}: hreflang is not reciprocal")
         for url in page.links:
             local = resolve_local(path, url)
             if local is None:

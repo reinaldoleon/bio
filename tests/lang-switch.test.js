@@ -32,7 +32,7 @@ function makePage() {
   }));
   const document = {
     title: 'English title',
-    documentElement: { setAttribute(name, value) { attributes[name] = value; } },
+    documentElement: { getAttribute(name) { return attributes[name] ?? null; }, setAttribute(name, value) { attributes[name] = value; } },
     querySelector(selector) {
       if (selector === 'title') return title;
       if (selector === 'meta[name="description"]') return description;
@@ -80,4 +80,31 @@ assert.equal(page.attributes['data-lang'], 'en');
 assert.equal(page.context.document.title, 'English title');
 assert.equal(page.description.content, 'English summary');
 assert.equal(page.buttons[0].attributes['aria-pressed'], 'true');
+
+let savedRouteLanguage;
+const routePage = {
+  document: {
+    documentElement: { getAttribute: (name) => name === 'data-route-lang' ? 'es' : null },
+    querySelector() { throw new Error('A localized route must not rewrite its metadata'); },
+  },
+  localStorage: {
+    getItem: () => 'en',
+    setItem: (key, value) => { if (key === 'lang') savedRouteLanguage = value; },
+  },
+};
+vm.runInNewContext(fs.readFileSync('assets/js/lang-init.js', 'utf8'), routePage);
+assert.equal(savedRouteLanguage, 'es');
+const englishRoute = {
+  getAttribute: () => 'en',
+  addEventListener(event, callback) { if (event === 'click') this.click = callback; },
+};
+routePage.document.querySelectorAll = selector => selector === '[data-lang-route]' ? [englishRoute] : [];
+routePage.document.getElementById = id => id === 'theme-toggle' ? { addEventListener() {} } : null;
+routePage.document.addEventListener = (event, callback) => { if (event === 'DOMContentLoaded') callback(); };
+routePage.document.documentElement.setAttribute = () => {};
+routePage.localStorage.getItem = () => 'es';
+routePage.window = { matchMedia: () => ({ matches: true }), addEventListener() {} };
+vm.runInNewContext(fs.readFileSync('assets/js/main.js', 'utf8'), routePage);
+englishRoute.click();
+assert.equal(savedRouteLanguage, 'en');
 console.log('Saved language and live switching update page metadata and controls');

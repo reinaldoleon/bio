@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 800" width="480" height="800" role="img" aria-labelledby="diagram-title diagram-desc">
+<title id="diagram-title">Dos responsabilidades</title>
+<desc id="diagram-desc">Relacionadas, pero distintas</desc>
+<rect width="480" height="800" rx="24" fill="#122031"/>
+<rect x="1" y="1" width="478" height="798" rx="23" fill="none" stroke="#304a5c" stroke-width="2"/>
+<text x="240" y="48" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="26" font-weight="600">Dos responsabilidades</text>
+<text x="240" y="79" text-anchor="middle" fill="#a9c4d5" font-family="Arial, sans-serif" font-size="17" font-weight="400">Relacionadas, pero distintas</text>
+<rect x="34" y="112" width="412" height="102" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="159" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">AI ENGINEERING</text><text x="240" y="189" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">IA para construir software</text>
+<path d="M240 214 V240 M232 232 L240 241 L248 232" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="250" width="412" height="102" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="297" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Plan → construir → validar</text><text x="240" y="327" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Revisar → entregar → operar</text>
+<text x="240" y="407" text-anchor="middle" fill="#e2b977" font-family="Arial, sans-serif" font-size="18" font-weight="600">AI Runtime solo si el producto usa IA</text>
+<rect x="34" y="444" width="412" height="102" rx="16" fill="#1d3041" stroke="#8bbca7" stroke-width="2"/><text x="240" y="491" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">AI RUNTIME</text><text x="240" y="521" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">IA dentro de la aplicación</text>
+<path d="M240 546 V572 M232 564 L240 573 L248 564" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="582" width="412" height="126" rx="16" fill="#1d3041" stroke="#8bbca7" stroke-width="2"/><text x="240" y="641" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Modelos · identidad · seguridad</text><text x="240" y="671" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Evaluación · observabilidad · coste</text>
+</svg>

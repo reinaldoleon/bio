@@ -221,7 +221,7 @@ nav {
   margin-left: 0.5rem;
 }
 
-.lang-btn {
+.lang-btn, .lang-route {
   background: none;
   border: none;
   color: var(--text-secondary);
@@ -234,15 +234,15 @@ nav {
   font-family: var(--font-body);
 }
 
-.lang-btn:hover, .lang-btn.active {
+.lang-btn:hover, .lang-btn.active, .lang-route:hover, .lang-route.active {
   color: var(--text-primary);
 }
 
-.lang-btn.active {
+.lang-btn.active, .lang-route.active {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-[data-theme="light"] .lang-btn.active {
+[data-theme="light"] .lang-btn.active, [data-theme="light"] .lang-route.active {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -902,6 +902,37 @@ footer a {
   margin-bottom: 1.75rem;
 }
 
+.writing-author {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.4rem;
+}
+
+.writing-longform .project-tags {
+  margin-bottom: 2.7rem;
+}
+
+.writing-flow-article {
+  width: min(100%, 480px);
+}
+
+.writing-flow-article figcaption {
+  max-width: 58ch;
+}
+
+.writing-longform .writing-prose h3 {
+  border-top: 0;
+  padding-top: 0;
+  font-size: 1.24rem;
+}
+
+.writing-longform .writing-prose blockquote {
+  background: var(--bg-secondary);
+  border-radius: 0 10px 10px 0;
+  padding: 1rem 1.25rem;
+  margin: 2.2rem 0;
+}
+
 .writing-flow {
   max-width: 480px;
   margin: 2.5rem auto 3.5rem;
@@ -1317,6 +1348,10 @@ footer {
 }
 
 @media (max-width: 1024px) {
+  .nav-wrapper nav {
+    margin-left: 0;
+  }
+
   .nav-links {
     display: none;
     position: absolute;
@@ -1337,6 +1372,10 @@ footer {
   
   .mobile-nav-toggle {
     display: block;
+    margin-left: auto;
+    padding: 0.4rem;
+    font-size: 1.4rem;
+    line-height: 1;
   }
 }
 
