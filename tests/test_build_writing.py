@@ -99,6 +99,27 @@ class WritingBuildTests(unittest.TestCase):
         self.assertLess(result.index("Introduction."), result.index("<figure>"))
         self.assertLess(result.index("<figure>"), result.index("<h2>"))
 
+    def test_bilingual_illustration_is_rendered(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "content" / "writing"
+            spanish = source / "es"
+            spanish.mkdir(parents=True)
+            images = root / "assets" / "images" / "writing"
+            images.mkdir(parents=True)
+            (images / "review-en.jpg").write_bytes(b"image")
+            (images / "review-es.svg").write_text('<svg xmlns="http://www.w3.org/2000/svg"/>')
+            extra = "illustration_en: review-en.jpg\nillustration_es: review-es.svg\nillustration_alt: English visual\nillustration_caption: English caption\n"
+            (source / "example-article.md").write_text(ARTICLE.replace("draft: false", extra + "draft: false"))
+            (spanish / "example-article.md").write_text(SPANISH.replace("---\n\n## Evidencia", "illustration_alt: Imagen española\nillustration_caption: Leyenda española\n---\n\n## Evidencia"))
+            output = root / "writing"
+            with patch.object(build_writing, "ROOT", root), patch.object(build_writing, "SOURCE", source), patch.object(build_writing, "OUTPUT", output):
+                build_writing.build()
+            rendered = (output / "example-article" / "index.html").read_text()
+            self.assertIn("review-en.jpg", rendered)
+            self.assertIn("review-es.svg", rendered)
+            self.assertIn("Imagen española", rendered)
+
 
 if __name__ == "__main__":
     unittest.main()

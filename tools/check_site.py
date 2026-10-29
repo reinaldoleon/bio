@@ -117,6 +117,8 @@ def check() -> None:
         ET.parse(ROOT / "writing" / "feed.xml")
         for diagram in (ROOT / "assets" / "images" / "flows").glob("*.svg"):
             ET.parse(diagram)
+        for illustration in (ROOT / "assets" / "images" / "writing").glob("*.svg"):
+            ET.parse(illustration)
     except ET.ParseError as exc:
         errors.append(f"invalid XML: {exc}")
     if errors:

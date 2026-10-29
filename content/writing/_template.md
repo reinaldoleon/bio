@@ -6,6 +6,10 @@ description: One sentence that explains the technical question and why it matter
 diagram:
 diagram_alt:
 diagram_caption:
+illustration_en:
+illustration_es:
+illustration_alt:
+illustration_caption:
 tags:
   - AI Platform Engineering
 pillar: AI Platform Engineering

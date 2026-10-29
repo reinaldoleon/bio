@@ -207,6 +207,20 @@ def build() -> None:
         translated = parse_translation(translation_path)
         for key in ("title", "description", "body"):
             article[f"{key}_es"] = translated[key]
+        if article.get("illustration_en") or article.get("illustration_es"):
+            if article.get("diagram"):
+                raise ValueError(f"{article['slug']}: use either a diagram or an illustration")
+            for lang in ("en", "es"):
+                filename = article.get(f"illustration_{lang}")
+                if not isinstance(filename, str) or Path(filename).name != filename or Path(filename).suffix.lower() not in {".jpg", ".jpeg", ".png", ".webp", ".svg"}:
+                    raise ValueError(f"{article['slug']}: invalid illustration_{lang}")
+                illustration = ROOT / "assets" / "images" / "writing" / filename
+                if not illustration.exists():
+                    raise ValueError(f"missing article illustration: {illustration}")
+            for key in ("illustration_alt", "illustration_caption"):
+                if not article.get(key) or not translated.get(key):
+                    raise ValueError(f"{article['slug']}: missing bilingual {key}")
+                article[f"{key}_es"] = translated[key]
         if article.get("diagram"):
             if not SLUG.fullmatch(str(article["diagram"])):
                 raise ValueError(f"{article['slug']}: invalid diagram name")
@@ -258,6 +272,15 @@ def build() -> None:
                 caption = article["diagram_caption"] if lang == "en" else article["diagram_caption_es"]
                 diagrams[lang] = f'''<figure class="writing-flow">
             <img src="../../assets/images/flows/{esc(article['diagram'])}-{lang}.svg" alt="{esc(alt)}" width="480" height="680" loading="lazy">
+            <figcaption>{esc(caption)}</figcaption>
+          </figure>'''
+        elif article.get("illustration_en"):
+            for lang in ("en", "es"):
+                alt = article["illustration_alt"] if lang == "en" else article["illustration_alt_es"]
+                caption = article["illustration_caption"] if lang == "en" else article["illustration_caption_es"]
+                image_url = f"../../assets/images/writing/{esc(article[f'illustration_{lang}'])}"
+                diagrams[lang] = f'''<figure class="writing-flow writing-illustration">
+            <a href="{image_url}" target="_blank" rel="noopener noreferrer" aria-label="{esc('Open full-size illustration' if lang == 'en' else 'Abrir ilustración a tamaño completo')}"><img src="{image_url}" alt="{esc(alt)}" width="1254" height="1254" loading="lazy"></a>
             <figcaption>{esc(caption)}</figcaption>
           </figure>'''
         main = f'''<article class="writing-article">

@@ -20,6 +20,8 @@ Copy both `content/writing/_template.md` and `content/writing/es/_template.md` t
 
 For a flow illustration, set `diagram`, `diagram_alt` and `diagram_caption` in the English source, and `diagram_alt` and `diagram_caption` in its Spanish companion. The builder then requires `assets/images/flows/<diagram>-en.svg` and `<diagram>-es.svg`. The current diagrams are generated from editable labels in `tools/build_diagrams.py`. An article can omit the diagram fields when a flow would not help.
 
+For a larger editorial illustration, use `illustration_en` and `illustration_es` with filenames in `assets/images/writing/`, plus `illustration_alt` and `illustration_caption` in both Markdown files. The two images may use different supported formats; readers can open either image at full size. Use an illustration or a flow diagram, not both.
+
 Pillars:
 
 - AI Platform Engineering
