@@ -25,6 +25,14 @@ PILLARS = {
     "AI Enablement",
     "Platform Engineering / SRE / FinOps",
 }
+PILLAR_ES = {
+    "AI Platform Engineering": "Ingeniería de plataformas de IA",
+    "Agentic Systems": "Sistemas agénticos",
+    "AI Reliability & Evaluation": "Fiabilidad y evaluación de IA",
+    "AI Governance": "Gobierno de IA",
+    "AI Enablement": "Habilitación de IA",
+    "Platform Engineering / SRE / FinOps": "Ingeniería de plataforma / SRE / FinOps",
+}
 PROJECTS = {
     "growthmesh": "GrowthMesh",
     "causio": "CAUSIO",
@@ -83,12 +91,26 @@ def parse_article(path: Path) -> dict:
     return data
 
 
-def head(title: str, description: str, canonical: str, prefix: str, page_type: str, published: date | None = None, description_es: str | None = None) -> str:
+def parse_translation(path: Path) -> dict:
+    source = path.read_text(encoding="utf-8")
+    match = re.match(r"\A---\s*\n(.*?)\n---\s*\n(.*)\Z", source, re.S)
+    if not match:
+        raise ValueError(f"{path}: expected YAML frontmatter")
+    data = yaml.safe_load(match.group(1))
+    if not isinstance(data, dict) or not all(data.get(key) for key in ("title", "description")):
+        raise ValueError(f"{path}: translation needs title and description")
+    if not match.group(2).strip():
+        raise ValueError(f"{path}: translation body is empty")
+    data["body"] = MARKDOWN.render(match.group(2))
+    return data
+
+
+def head(title: str, description: str, canonical: str, prefix: str, page_type: str, published: date | None = None, title_es: str | None = None, description_es: str | None = None) -> str:
     image = f"{SITE}/assets/images/social-card.png"
     meta = [
         '<meta charset="UTF-8">',
         '<meta name="viewport" content="width=device-width, initial-scale=1">',
-        f"<title>{esc(title)}</title>",
+        f'<title' + (f' data-title-en="{esc(title)}" data-title-es="{esc(title_es)}"' if title_es else "") + f'>{esc(title)}</title>',
         f'<meta name="description" content="{esc(description)}"' + (f' data-description-en="{esc(description)}" data-description-es="{esc(description_es)}"' if description_es else "") + '>',
         f'<link rel="canonical" href="{esc(canonical)}">',
         '<meta name="author" content="Reinaldo León">',
@@ -105,6 +127,7 @@ def head(title: str, description: str, canonical: str, prefix: str, page_type: s
         f'<meta name="twitter:image" content="{image}">',
         f'<link rel="alternate" type="application/rss+xml" title="Reinaldo León — Writing" href="{SITE}/writing/feed.xml">',
         f'<link rel="icon" type="image/png" href="{prefix}assets/images/avatar.png">',
+        f'<script src="{prefix}assets/js/lang-init.js"></script>',
         f'<link rel="stylesheet" href="{prefix}assets/css/style.css">',
     ]
     if published:
@@ -112,7 +135,7 @@ def head(title: str, description: str, canonical: str, prefix: str, page_type: s
     return "\n  ".join(meta)
 
 
-def shell(title: str, description: str, canonical: str, prefix: str, main: str, page_type: str = "website", published: date | None = None, structured: str = "", bilingual_ui: bool = False, description_es: str | None = None) -> str:
+def shell(title: str, description: str, canonical: str, prefix: str, main: str, page_type: str = "website", published: date | None = None, structured: str = "", bilingual_ui: bool = False, title_es: str | None = None, description_es: str | None = None) -> str:
     labels = [
         bilingual("About", "Sobre mí") if bilingual_ui else "About",
         bilingual("Experience", "Experiencia") if bilingual_ui else "Experience",
@@ -136,7 +159,7 @@ def shell(title: str, description: str, canonical: str, prefix: str, main: str, 
     page = f'''<!DOCTYPE html>
 <html lang="en" data-theme="dark" data-lang="en">
 <head>
-  {head(title, description, canonical, prefix, page_type, published, description_es)}
+  {head(title, description, canonical, prefix, page_type, published, title_es, description_es)}
   {structured}
 </head>
 <body>
@@ -154,12 +177,22 @@ def article_card(article: dict, prefix: str) -> str:
     url = f"{prefix}writing/{article['slug']}/"
     tags = "".join(f'<span class="project-tag">{esc(tag)}</span>' for tag in article["tags"])
     return f'''<article class="glass-card writing-card">
-      <p class="writing-meta"><time datetime="{article['date'].isoformat()}">{article['date'].isoformat()}</time> · {esc(article['pillar'])}</p>
-      <h2><a href="{url}">{esc(article['title'])}</a></h2>
-      <p>{bilingual(article['description'], article.get('description_es', article['description']))}</p>
+      <p class="writing-meta"><time datetime="{article['date'].isoformat()}">{article['date'].isoformat()}</time> · {bilingual(article['pillar'], PILLAR_ES[article['pillar']])}</p>
+      <h2><a href="{url}">{bilingual(article['title'], article['title_es'])}</a></h2>
+      <p>{bilingual(article['description'], article['description_es'])}</p>
       <div class="project-tags">{tags}</div>
-      <a class="project-link" href="{url}">{bilingual("Read article (English) →", "Leer artículo (en inglés) →")}</a>
+      <a class="project-link" href="{url}">{bilingual("Read article →", "Leer artículo →")}</a>
     </article>'''
+
+
+def with_diagram(body: str, figure: str) -> str:
+    if not figure:
+        return body
+    position = body.find("<h2>")
+    if position < 0:
+        first_paragraph_end = body.find("</p>")
+        position = first_paragraph_end + len("</p>") if first_paragraph_end >= 0 else len(body)
+    return body[:position].rstrip() + "\n" + figure + "\n" + body[position:].lstrip()
 
 
 def build() -> None:
@@ -167,6 +200,24 @@ def build() -> None:
     slugs = [article["slug"] for article in articles]
     if len(slugs) != len(set(slugs)):
         raise ValueError("duplicate article slug")
+    for article in articles:
+        translation_path = SOURCE / "es" / f"{article['slug']}.md"
+        if not translation_path.exists():
+            raise ValueError(f"missing Spanish translation: {translation_path}")
+        translated = parse_translation(translation_path)
+        for key in ("title", "description", "body"):
+            article[f"{key}_es"] = translated[key]
+        if article.get("diagram"):
+            if not SLUG.fullmatch(str(article["diagram"])):
+                raise ValueError(f"{article['slug']}: invalid diagram name")
+            for lang in ("en", "es"):
+                diagram = ROOT / "assets" / "images" / "flows" / f"{article['diagram']}-{lang}.svg"
+                if not diagram.exists():
+                    raise ValueError(f"missing flow diagram: {diagram}")
+            for key in ("diagram_alt", "diagram_caption"):
+                if not article.get(key) or not translated.get(key):
+                    raise ValueError(f"{article['slug']}: missing bilingual {key}")
+                article[f"{key}_es"] = translated[key]
     articles = [article for article in articles if not article.get("draft", False)]
     articles.sort(key=lambda article: (article.get("featured", False), article["date"], article["slug"]), reverse=True)
     OUTPUT.mkdir(exist_ok=True)
@@ -187,27 +238,36 @@ def build() -> None:
         cards = '<p class="glass-card">' + bilingual("Articles are being prepared. Follow the RSS feed for updates.", "Estamos preparando nuevos artículos. Sigue el RSS para recibir novedades.") + '</p>'
     index_main = f'''<section class="writing-landing">
       <p class="section-pretitle">{bilingual("Field notes", "Notas técnicas")}</p>
-      <h1>Writing</h1>
+      <h1>{bilingual("Writing", "Artículos")}</h1>
       <p class="section-intro">{bilingual("Long-form notes on AI Platform Engineering, agentic systems, reliability, governance and the platform foundations behind them. Projects are evidence within these themes.", "Artículos sobre AI Platform Engineering, sistemas agénticos, fiabilidad, gobierno y los fundamentos de plataforma que los sostienen. Los proyectos aportan evidencia dentro de estos temas.")}</p>
-      <p class="writing-follow">{bilingual("This site is the canonical home for articles. LinkedIn is where shorter versions and conversations happen. Articles are currently written in English.", "Esta web es la fuente canónica de los artículos. LinkedIn acoge versiones breves y conversaciones. Por ahora, los artículos están escritos en inglés.")}</p>
+      <p class="writing-follow">{bilingual("This site is the canonical home for articles in English and Spanish. LinkedIn is where shorter versions and conversations happen.", "Esta web es la fuente canónica de los artículos en español e inglés. LinkedIn acoge versiones breves y conversaciones.")}</p>
       <div class="writing-list">{cards}</div>
     </section>'''
-    (OUTPUT / "index.html").write_text(shell("Writing | Reinaldo León", "Technical writing on AI Platform Engineering, AI Enablement, agentic systems, reliability and governance.", f"{SITE}/writing/", "../", index_main, bilingual_ui=True, description_es="Artículos técnicos sobre AI Platform Engineering, AI Enablement, sistemas agénticos, fiabilidad y gobierno."), encoding="utf-8")
+    (OUTPUT / "index.html").write_text(shell("Writing | Reinaldo León", "Technical writing on AI Platform Engineering, AI Enablement, agentic systems, reliability and governance.", f"{SITE}/writing/", "../", index_main, bilingual_ui=True, title_es="Artículos | Reinaldo León", description_es="Artículos técnicos sobre AI Platform Engineering, AI Enablement, sistemas agénticos, fiabilidad y gobierno."), encoding="utf-8")
 
     for article in articles:
         url = f"{SITE}/writing/{article['slug']}/"
         project = article.get("project")
-        related = f'<p class="related-project">Related project: <a href="../../index.html#project-{project}">{esc(PROJECTS[project])}</a></p>' if project else ""
-        linkedin = f'<p class="writing-linkedin"><a href="{esc(article["linkedin_url"])}" rel="noopener noreferrer" target="_blank">Discuss on LinkedIn ↗</a></p>' if article.get("linkedin_url") else ""
+        related = f'<p class="related-project">{bilingual("Related project:", "Proyecto relacionado:")} <a href="../../index.html#project-{project}">{esc(PROJECTS[project])}</a></p>' if project else ""
+        linkedin = f'<p class="writing-linkedin"><a href="{esc(article["linkedin_url"])}" rel="noopener noreferrer" target="_blank">{bilingual("Discuss on LinkedIn ↗", "Conversar en LinkedIn ↗")}</a></p>' if article.get("linkedin_url") else ""
         tags = "".join(f'<span class="project-tag">{esc(tag)}</span>' for tag in article["tags"])
+        diagrams = {"en": "", "es": ""}
+        if article.get("diagram"):
+            for lang in ("en", "es"):
+                alt = article["diagram_alt"] if lang == "en" else article["diagram_alt_es"]
+                caption = article["diagram_caption"] if lang == "en" else article["diagram_caption_es"]
+                diagrams[lang] = f'''<figure class="writing-flow">
+            <img src="../../assets/images/flows/{esc(article['diagram'])}-{lang}.svg" alt="{esc(alt)}" width="480" height="680" loading="lazy">
+            <figcaption>{esc(caption)}</figcaption>
+          </figure>'''
         main = f'''<article class="writing-article">
-          <p class="writing-back"><a href="../../writing/">← All writing</a></p>
-          <p class="writing-language">Article in English</p>
-          <p class="writing-meta"><time datetime="{article['date'].isoformat()}">{article['date'].isoformat()}</time> · {esc(article['pillar'])}</p>
-          <h1>{esc(article['title'])}</h1>
-          <p class="writing-deck">{esc(article['description'])}</p>
+          <p class="writing-back"><a href="../../writing/">{bilingual("← All writing", "← Todos los artículos")}</a></p>
+          <p class="writing-meta"><time datetime="{article['date'].isoformat()}">{article['date'].isoformat()}</time> · {bilingual(article['pillar'], PILLAR_ES[article['pillar']])}</p>
+          <h1>{bilingual(article['title'], article['title_es'])}</h1>
+          <p class="writing-deck">{bilingual(article['description'], article['description_es'])}</p>
           <div class="project-tags">{tags}</div>
-          <div class="writing-prose">{article['body']}</div>
+          <div class="writing-prose lang-en" lang="en">{with_diagram(article['body'], diagrams['en'])}</div>
+          <div class="writing-prose lang-es" lang="es">{with_diagram(article['body_es'], diagrams['es'])}</div>
           {related}{linkedin}
         </article>'''
         schema = {
@@ -216,6 +276,7 @@ def build() -> None:
             "headline": article["title"],
             "description": article["description"],
             "datePublished": article["date"].isoformat(),
+            "inLanguage": ["en", "es"],
             "author": {"@type": "Person", "name": "Reinaldo León", "url": f"{SITE}/"},
             "mainEntityOfPage": url,
             "image": f"{SITE}/assets/images/social-card.png",
@@ -223,7 +284,7 @@ def build() -> None:
         structured = '<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False).replace("<", "\\u003c") + "</script>"
         target = OUTPUT / article["slug"]
         target.mkdir(exist_ok=True)
-        (target / "index.html").write_text(shell(f"{article['title']} | Reinaldo León", article["description"], url, "../../", main, "article", article["date"], structured), encoding="utf-8")
+        (target / "index.html").write_text(shell(f"{article['title']} | Reinaldo León", article["description"], url, "../../", main, "article", article["date"], structured, bilingual_ui=True, title_es=f"{article['title_es']} | Reinaldo León", description_es=article["description_es"]), encoding="utf-8")
 
     ET.register_namespace("", "http://www.sitemaps.org/schemas/sitemap/0.9")
     sitemap = ET.Element("{http://www.sitemaps.org/schemas/sitemap/0.9}urlset")

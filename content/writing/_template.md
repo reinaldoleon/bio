@@ -3,7 +3,9 @@ title: Working title
 slug: replace-with-file-name
 date: 2026-10-29
 description: One sentence that explains the technical question and why it matters.
-description_es: Una frase equivalente en español para el índice de Writing.
+diagram:
+diagram_alt:
+diagram_caption:
 tags:
   - AI Platform Engineering
 pillar: AI Platform Engineering
@@ -15,4 +17,4 @@ linkedin_url: ""
 linkedin_published_at:
 ---
 
-Write the article in Markdown. Rename this file to match the slug before publishing.
+Write the English article in Markdown. Rename this file to match the slug before publishing, then add its full Spanish counterpart in `content/writing/es/`.

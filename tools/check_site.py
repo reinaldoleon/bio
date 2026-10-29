@@ -21,9 +21,20 @@ class Page(HTMLParser):
         self.links: list[str] = []
         self.h1 = 0
         self.meta: dict[str, str] = {}
+        self.prose_languages: set[str] = set()
+        self.title_locales: set[str] = set()
+        self.language_buttons: set[str] = set()
+        self.images_without_alt = 0
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = dict(attrs)
+        classes = set((values.get("class") or "").split())
+        if "writing-prose" in classes:
+            self.prose_languages.update(classes & {"lang-en", "lang-es"})
+        if tag == "title":
+            self.title_locales.update(key for key in ("data-title-en", "data-title-es") if values.get(key))
+        if tag == "button" and values.get("data-lang-set"):
+            self.language_buttons.add(values["data-lang-set"])
         if values.get("id"):
             self.ids.append(values["id"])
         if tag == "h1":
@@ -32,6 +43,8 @@ class Page(HTMLParser):
             self.links.append(values["href"])
         if tag in {"img", "script"} and values.get("src"):
             self.links.append(values["src"])
+        if tag == "img" and values.get("alt") is None:
+            self.images_without_alt += 1
         if tag == "meta":
             name = values.get("name") or values.get("property")
             if name:
@@ -62,6 +75,8 @@ def check() -> None:
             errors.append(f"{path}: duplicate ids {dupes}")
         if page.h1 != 1:
             errors.append(f"{path}: expected one h1, found {page.h1}")
+        if page.images_without_alt:
+            errors.append(f"{path}: {page.images_without_alt} image(s) lack alt text")
         for key in ("description", "og:title", "og:description", "og:image", "canonical"):
             if not page.meta.get(key):
                 errors.append(f"{path}: missing {key}")
@@ -69,6 +84,13 @@ def check() -> None:
         expected = SITE if relative == Path("index.html") else SITE + str(relative.parent).replace("\\", "/") + "/"
         if page.meta.get("canonical") != expected:
             errors.append(f"{path}: canonical mismatch: {page.meta.get('canonical')}")
+        if len(relative.parts) > 2 and relative.parts[0] == "writing":
+            if page.prose_languages != {"lang-en", "lang-es"}:
+                errors.append(f"{path}: missing bilingual article body")
+            if page.title_locales != {"data-title-en", "data-title-es"}:
+                errors.append(f"{path}: missing localized browser title")
+            if page.language_buttons != {"en", "es"}:
+                errors.append(f"{path}: missing language controls")
         image = page.meta.get("og:image", "")
         if image.startswith(SITE) and not (ROOT / image.removeprefix(SITE)).exists():
             errors.append(f"{path}: missing social image {image}")
@@ -93,6 +115,8 @@ def check() -> None:
     try:
         ET.parse(ROOT / "sitemap.xml")
         ET.parse(ROOT / "writing" / "feed.xml")
+        for diagram in (ROOT / "assets" / "images" / "flows").glob("*.svg"):
+            ET.parse(diagram)
     except ET.ParseError as exc:
         errors.append(f"invalid XML: {exc}")
     if errors:

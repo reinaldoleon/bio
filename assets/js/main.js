@@ -24,26 +24,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Language Toggle Logic
   const langButtons = document.querySelectorAll('.lang-btn');
-  const initialLang = localStorage.getItem('lang') || 'en';
+  const initialLang = localStorage.getItem('lang') === 'es' ? 'es' : 'en';
   
   const setLanguage = (lang) => {
     document.documentElement.setAttribute('data-lang', lang);
     document.documentElement.setAttribute('lang', lang);
+    const pageTitle = document.querySelector('title');
+    if (pageTitle && pageTitle.getAttribute('data-title-' + lang)) {
+      document.title = pageTitle.getAttribute('data-title-' + lang);
+    }
     const description = document.querySelector('meta[name="description"]');
-    if (description) {
+    if (description && description.getAttribute('data-description-' + lang)) {
       description.setAttribute('content', description.getAttribute('data-description-' + lang));
     }
     localStorage.setItem('lang', lang);
     langButtons.forEach(btn => {
       if (btn.getAttribute('data-lang-set') === lang) {
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
       } else {
         btn.classList.remove('active');
+        btn.setAttribute('aria-pressed', 'false');
       }
     });
   };
 
-  // Article pages are currently authored in English and have no language selector.
   if (langButtons.length) {
     setLanguage(initialLang);
   }

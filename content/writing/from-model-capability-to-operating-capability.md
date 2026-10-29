@@ -3,7 +3,9 @@ title: From model capability to operating capability
 slug: from-model-capability-to-operating-capability
 date: 2026-10-29
 description: A platform engineering view of what it takes to make AI workflows reliable, governed and measurable.
-description_es: Una perspectiva de ingeniería de plataforma sobre cómo hacer que los flujos de IA sean fiables, gobernados y medibles.
+diagram: from-model-capability-to-operating-capability
+diagram_alt: Flow from models and tools through platform controls and evidence to an operable AI capability.
+diagram_caption: "The operating capability sits beyond the model: controls, evidence and ownership connect the parts."
 tags:
   - AI Platform Engineering
   - AI Reliability

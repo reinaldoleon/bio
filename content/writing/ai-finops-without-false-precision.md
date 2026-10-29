@@ -3,7 +3,9 @@ title: AI FinOps without false precision
 slug: ai-finops-without-false-precision
 date: 2026-10-29
 description: Separate usage, estimates, forecasts and billed cost before making AI cost decisions.
-description_es: Separar uso, estimaciones, proyecciones y coste facturado antes de tomar decisiones de FinOps de IA.
+diagram: ai-finops-without-false-precision
+diagram_alt: Cost evidence flow from observed usage through estimates and billing data to reconciliation.
+diagram_caption: Each cost figure has a different evidence basis; reconciliation makes the difference visible.
 tags:
   - AI FinOps
   - AI Observability

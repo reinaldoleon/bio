@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 680" width="480" height="680">
+<rect width="480" height="680" rx="24" fill="#122031"/>
+<rect x="1" y="1" width="478" height="678" rx="23" fill="none" stroke="#304a5c" stroke-width="2"/>
+<rect x="42" y="36" width="396" height="108" rx="16" fill="#1d3041" stroke="#466b80" stroke-width="2"/>
+<circle cx="92" cy="90" r="22" fill="#80aeca"/>
+<text x="92" y="98" text-anchor="middle" fill="#10202f" font-family="Arial, sans-serif" font-size="22" font-weight="700">1</text>
+<text x="262" y="84" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="23" font-weight="700">Observed</text>
+<text x="262" y="115" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="21">usage</text>
+<path d="M240 144 V183" stroke="#80aeca" stroke-width="3" stroke-linecap="round"/>
+<path d="M232 175 L240 185 L248 175" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="42" y="192" width="396" height="108" rx="16" fill="#1d3041" stroke="#466b80" stroke-width="2"/>
+<circle cx="92" cy="246" r="22" fill="#80aeca"/>
+<text x="92" y="254" text-anchor="middle" fill="#10202f" font-family="Arial, sans-serif" font-size="22" font-weight="700">2</text>
+<text x="262" y="240" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="23" font-weight="700">Estimated</text>
+<text x="262" y="271" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="21">or projected</text>
+<path d="M240 300 V339" stroke="#80aeca" stroke-width="3" stroke-linecap="round"/>
+<path d="M232 331 L240 341 L248 331" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="42" y="348" width="396" height="108" rx="16" fill="#1d3041" stroke="#466b80" stroke-width="2"/>
+<circle cx="92" cy="402" r="22" fill="#80aeca"/>
+<text x="92" y="410" text-anchor="middle" fill="#10202f" font-family="Arial, sans-serif" font-size="22" font-weight="700">3</text>
+<text x="262" y="396" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="23" font-weight="700">Billed</text>
+<text x="262" y="427" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="21">cost</text>
+<path d="M240 456 V495" stroke="#80aeca" stroke-width="3" stroke-linecap="round"/>
+<path d="M232 487 L240 497 L248 487" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="42" y="504" width="396" height="108" rx="16" fill="#1d3041" stroke="#466b80" stroke-width="2"/>
+<circle cx="92" cy="558" r="22" fill="#80aeca"/>
+<text x="92" y="566" text-anchor="middle" fill="#10202f" font-family="Arial, sans-serif" font-size="22" font-weight="700">4</text>
+<text x="262" y="552" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="23" font-weight="700">Reconcile</text>
+<text x="262" y="583" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="21">&amp; decide</text>
+</svg>

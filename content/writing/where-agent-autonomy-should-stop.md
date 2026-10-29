@@ -3,7 +3,9 @@ title: Where agent autonomy should stop
 slug: where-agent-autonomy-should-stop
 date: 2026-10-29
 description: A practical way to set agent boundaries around side effects, permissions and human decisions.
-description_es: Cómo definir los límites de un agente según sus efectos externos, permisos y decisiones humanas.
+diagram: where-agent-autonomy-should-stop
+diagram_alt: Agent flow from proposal and preparation through authorization to execution and reconciliation.
+diagram_caption: Freedom to propose does not imply permission to execute an external action.
 tags:
   - Agentic Systems
   - AI Governance

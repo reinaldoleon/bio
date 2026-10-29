@@ -886,16 +886,10 @@ footer a {
   font-weight: 600;
 }
 
-.writing-language {
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  margin-bottom: 1rem;
-}
-
 .writing-article {
-  max-width: 760px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 5rem 0 7rem;
+  padding: 4.5rem 0 7rem;
 }
 
 .writing-back {
@@ -903,21 +897,54 @@ footer a {
 }
 
 .writing-deck {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  font-size: clamp(1.12rem, 2.6vw, 1.3rem);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.writing-flow {
+  max-width: 480px;
+  margin: 2.5rem auto 3.5rem;
+}
+
+.writing-flow img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: var(--shadow-md);
+}
+
+.writing-flow figcaption {
+  max-width: 42ch;
+  margin: 0.85rem auto 0;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  text-align: center;
 }
 
 .writing-prose {
-  border-top: 1px solid var(--border-glass);
-  padding-top: 2rem;
+  max-width: 68ch;
+  margin: 0 auto;
   color: var(--text-secondary);
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+.writing-prose > p:first-child {
+  color: var(--text-primary);
+  font-size: 1.17rem;
+  line-height: 1.72;
 }
 
 .writing-prose h2,
 .writing-prose h3 {
-  margin: 2.5rem 0 0.8rem;
+  margin: 3rem 0 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-glass);
+  font-size: clamp(1.4rem, 3vw, 1.65rem);
+  line-height: 1.35;
 }
 
 .writing-prose p,
@@ -925,7 +952,7 @@ footer a {
 .writing-prose ol,
 .writing-prose blockquote,
 .writing-prose pre {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.55rem;
 }
 
 .writing-prose ul,
@@ -933,8 +960,15 @@ footer a {
   padding-left: 1.5rem;
 }
 
+.writing-prose li {
+  padding-left: 0.25rem;
+  margin-bottom: 0.55rem;
+}
+
 .writing-prose a {
   color: var(--accent-purple);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
 }
 
 .writing-prose strong {
@@ -958,6 +992,12 @@ footer a {
 .writing-prose pre code {
   background: none;
   padding: 0;
+}
+
+.writing-prose blockquote {
+  border-left: 3px solid var(--accent-purple);
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  color: var(--text-primary);
 }
 
 .related-project,
@@ -1300,7 +1340,17 @@ footer {
   }
 
   .writing-article {
-    padding: 3.5rem 0 5rem;
+    padding: 3rem 0 5rem;
+  }
+
+  .writing-flow {
+    max-width: min(100%, 480px);
+    margin: 2rem auto 3rem;
+  }
+
+  .writing-prose {
+    font-size: 1.02rem;
+    line-height: 1.78;
   }
 
   .timeline-header {

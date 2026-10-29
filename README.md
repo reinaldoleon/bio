@@ -4,18 +4,21 @@ Static GitHub Pages site. The homepage is hand-authored in `index.html`; styling
 
 ## Writing
 
-Long-form articles live in `content/writing/*.md` with YAML frontmatter. `tools/build_writing.py` generates the public `writing/` pages, `writing/feed.xml` and `sitemap.xml`. Generated files are committed alongside their Markdown sources. No client-side Markdown rendering is needed, so articles remain indexable without JavaScript.
+Long-form articles live in `content/writing/*.md` (English) and `content/writing/es/*.md` (Spanish) with YAML frontmatter. Every English source requires a complete Spanish companion with the same filename. `tools/build_writing.py` generates bilingual public `writing/` pages, `writing/feed.xml` and `sitemap.xml`. Generated files are committed alongside their Markdown sources. Both language bodies are present in the static HTML; the shared language selector displays the reader's chosen language.
 
 Run:
 
 ```sh
 uv sync
+uv run python tools/build_diagrams.py
 uv run python tools/build_writing.py
 ```
 
 Then preview the repository root with a static server, for example `python3 -m http.server 8000`, and open `http://localhost:8000/`.
 
-Copy `content/writing/_template.md` to a filename matching its `slug`. Required frontmatter: `title`, `slug`, `date` (YYYY-MM-DD), `description`, `tags` (list) and `pillar`. Optional: `description_es`, `project`, `draft`, `featured`, `linkedin_text`, `linkedin_url`, `linkedin_published_at`. `description_es` localizes the Writing index summary; article bodies are currently English. Drafts are omitted from the generated index, feed and sitemap. `project` accepts `growthmesh`, `causio`, `ecos-inmersivos` or `ai-conversacional-lab` and links to the related homepage card. Add a new project to `PROJECTS` in the build script when it is added to the homepage.
+Copy both `content/writing/_template.md` and `content/writing/es/_template.md` to filenames matching the article `slug`. English required frontmatter: `title`, `slug`, `date` (YYYY-MM-DD), `description`, `tags` (list) and `pillar`. The Spanish companion requires `title`, `description` and a full translated body. Optional English fields: `project`, `draft`, `featured`, `linkedin_text`, `linkedin_url`, `linkedin_published_at`. Drafts are omitted from the generated index, feed and sitemap. `project` accepts `growthmesh`, `causio`, `ecos-inmersivos` or `ai-conversacional-lab` and links to the related homepage card. Add a new project to `PROJECTS` in the build script when it is added to the homepage.
+
+For a flow illustration, set `diagram`, `diagram_alt` and `diagram_caption` in the English source, and `diagram_alt` and `diagram_caption` in its Spanish companion. The builder then requires `assets/images/flows/<diagram>-en.svg` and `<diagram>-es.svg`. The current diagrams are generated from editable labels in `tools/build_diagrams.py`. An article can omit the diagram fields when a flow would not help.
 
 Pillars:
 

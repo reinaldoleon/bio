@@ -3,7 +3,9 @@ title: Evaluate the workflow, not just the model
 slug: evaluate-the-workflow-not-just-the-model
 date: 2026-10-29
 description: An end-to-end evaluation contract for AI systems with sources, tools, gates and publication.
-description_es: Un contrato de evaluación integral para sistemas de IA con fuentes, herramientas, validaciones y publicación.
+diagram: evaluate-the-workflow-not-just-the-model
+diagram_alt: Evaluation path from inputs and sources through the agent trace and quality gates to the published outcome.
+diagram_caption: Evaluate the full path to the observable outcome, including rejection and review.
 tags:
   - AI Evaluation
   - AI Reliability
