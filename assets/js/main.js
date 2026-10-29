@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const setLanguage = (lang) => {
     document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+    const description = document.querySelector('meta[name="description"]');
+    if (description) {
+      description.setAttribute('content', description.getAttribute('data-description-' + lang));
+    }
     localStorage.setItem('lang', lang);
     langButtons.forEach(btn => {
       if (btn.getAttribute('data-lang-set') === lang) {
@@ -38,8 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // Set initial language
-  setLanguage(initialLang);
+  // Article pages are currently authored in English and have no language selector.
+  if (langButtons.length) {
+    setLanguage(initialLang);
+  }
 
   langButtons.forEach(btn => {
     btn.addEventListener('click', () => {
