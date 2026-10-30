@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-lang="es" data-route-lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Qué pasa cuando tu agente de IA puede escribir código, pero no puede demostrar cómo llegó hasta él? | Reinaldo León</title>
+  <meta name="description" content="Por qué generar código no basta para entregar software de forma gobernada y qué enseña AI-DLC Workflows sobre evidencia, aprobaciones y controles proporcionales.">
+  <link rel="canonical" href="https://reinaldoleon.github.io/bio/es/writing/agente-ia-codigo-trazabilidad/">
+  <meta name="author" content="Reinaldo León">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="¿Qué pasa cuando tu agente de IA puede escribir código, pero no puede demostrar cómo llegó hasta él? | Reinaldo León">
+  <meta property="og:description" content="Por qué generar código no basta para entregar software de forma gobernada y qué enseña AI-DLC Workflows sobre evidencia, aprobaciones y controles proporcionales.">
+  <meta property="og:url" content="https://reinaldoleon.github.io/bio/es/writing/agente-ia-codigo-trazabilidad/">
+  <meta property="og:image" content="https://reinaldoleon.github.io/bio/assets/images/writing/ai-agent-code-traceability-es.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="¿Qué pasa cuando tu agente de IA puede escribir código, pero no puede demostrar cómo llegó hasta él? | Reinaldo León">
+  <meta name="twitter:description" content="Por qué generar código no basta para entregar software de forma gobernada y qué enseña AI-DLC Workflows sobre evidencia, aprobaciones y controles proporcionales.">
+  <meta name="twitter:image" content="https://reinaldoleon.github.io/bio/assets/images/writing/ai-agent-code-traceability-es.png">
+  <link rel="alternate" type="application/rss+xml" title="Reinaldo León — Writing" href="https://reinaldoleon.github.io/bio/writing/feed.xml">
+  <link rel="icon" type="image/png" href="../../../assets/images/avatar.png">
+  <script src="../../../assets/js/lang-init.js"></script>
+  <link rel="stylesheet" href="../../../assets/css/style.css">
+  <meta property="og:image:alt" content="¿Qué pasa cuando tu agente de IA puede escribir código, pero no puede demostrar cómo llegó hasta él? | Reinaldo León">
+  <meta name="twitter:image:alt" content="¿Qué pasa cuando tu agente de IA puede escribir código, pero no puede demostrar cómo llegó hasta él? | Reinaldo León">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <link rel="alternate" hreflang="en" href="https://reinaldoleon.github.io/bio/en/writing/ai-agent-code-traceability/">
+  <link rel="alternate" hreflang="es" href="https://reinaldoleon.github.io/bio/es/writing/agente-ia-codigo-trazabilidad/">
+  <link rel="alternate" hreflang="x-default" href="https://reinaldoleon.github.io/bio/en/writing/ai-agent-code-traceability/">
+  <meta property="article:published_time" content="2026-11-02">
+  <meta property="article:modified_time" content="2026-11-02">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "¿Qué pasa cuando tu agente de IA puede escribir código, pero no puede demostrar cómo llegó hasta él?", "description": "Por qué generar código no basta para entregar software de forma gobernada y qué enseña AI-DLC Workflows sobre evidencia, aprobaciones y controles proporcionales.", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "inLanguage": "es", "author": {"@type": "Person", "name": "Reinaldo León", "url": "https://reinaldoleon.github.io/bio/"}, "mainEntityOfPage": "https://reinaldoleon.github.io/bio/es/writing/agente-ia-codigo-trazabilidad/", "image": "https://reinaldoleon.github.io/bio/assets/images/writing/ai-agent-code-traceability-es.png"}</script>
+</head>
+<body>
+  <header><div class="container nav-wrapper">
+      <a class="logo" href="../../../index.html">Reinaldo León</a>
+      <button class="mobile-nav-toggle" id="mobile-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <nav><ul class="nav-links" id="nav-links">
+        <li><a href="../../../index.html#about"><span class="lang-en">About</span><span class="lang-es">Sobre mí</span></a></li>
+        <li><a href="../../../index.html#experience"><span class="lang-en">Experience</span><span class="lang-es">Experiencia</span></a></li>
+        <li><a href="../../../index.html#projects"><span class="lang-en">Projects</span><span class="lang-es">Proyectos</span></a></li>
+        <li><a href="../../../writing/" aria-current="page"><span class="lang-en">Writing</span><span class="lang-es">Artículos</span></a></li>
+        <li><a href="../../../index.html#contact"><span class="lang-en">Contact</span><span class="lang-es">Contacto</span></a></li>
+        <li><button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme"><svg class="moon-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg><svg class="sun-icon" viewBox="0 0 20 20" fill="currentColor"><circle cx="10" cy="10" r="4"/></svg></button></li>
+        <li><div class="lang-selector"><a class="lang-route" data-lang-route="en" href="https://reinaldoleon.github.io/bio/en/writing/ai-agent-code-traceability/" hreflang="en" aria-label="Read in English">EN</a><span class="lang-divider">|</span><a class="lang-route active" data-lang-route="es" href="https://reinaldoleon.github.io/bio/es/writing/agente-ia-codigo-trazabilidad/" hreflang="es" aria-label="Leer en español" aria-current="page">ES</a></div></li>
+      </ul></nav></div></header>
+  <main class="container writing-main"><article class="writing-article writing-longform">
+          <p class="writing-back"><a href="../../../writing/">← Todos los artículos</a></p>
+          <p class="writing-meta"><time datetime="2026-11-02">2026-11-02</time> · Ingeniería de plataformas de IA</p>
+          <h1>¿Qué pasa cuando tu agente de IA puede escribir código, pero no puede demostrar cómo llegó hasta él?</h1>
+          <p class="writing-deck">Un coding agent puede producir una solución convincente. El reto de ingeniería es conservar los requisitos, decisiones, pruebas y aprobaciones que permiten revisar su trabajo.</p>
+          <p class="writing-author">Reinaldo León <span aria-hidden="true">·</span> Principal Platform Engineer | AI Platform &amp; Enablement</p>
+          <div class="project-tags"><span class="project-tag">AI Platform Engineering</span><span class="project-tag">Agentic Systems</span><span class="project-tag">AI Governance</span><span class="project-tag">Platform Engineering</span><span class="project-tag">AI Reliability</span><span class="project-tag">Developer Experience</span></div>
+          <div class="writing-prose" lang="es"><p>Los coding agents son cada vez mejores produciendo software. Podemos darles una petición abierta como <em>«Construye un servicio de inventario con una API REST»</em> y obtener requisitos, arquitectura, código, tests e incluso infraestructura. Resulta impresionante. Pero eso es solo una parte del problema de ingeniería.</p>
+<p>¿Por qué se eligió un diseño? ¿Qué requisito satisface una funcionalidad? ¿Qué alternativas se descartaron? ¿Qué pruebas respaldan el resultado? ¿Quién aprobó las decisiones importantes? ¿Podríamos reconstruir el razonamiento tres semanas después?</p>
+<p>Generar software y <strong>entregar software mediante un proceso gobernado</strong> son capacidades diferentes.</p>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/coding-agent-traceability-short-path-es.svg" target="_blank" rel="noopener noreferrer" aria-label="Abrir diagrama a tamaño completo"><img src="../../../assets/images/flows/coding-agent-traceability-short-path-es.svg" alt="Un camino corto va de la intención de negocio al agente de IA, al código y al despliegue, mientras requisitos, decisiones, evidencia, aprobaciones y trazabilidad quedan sin resolver." width="480" height="800" loading="lazy"></a>
+          <figcaption>Podemos generar y desplegar código mientras el razonamiento entre intención e implementación sigue siendo difícil de reconstruir.</figcaption>
+        </figure>
+<h2>El problema no es generar código</h2>
+<p>El trabajo ad hoc con agentes suele seguir un camino corto: intención, prompt, agente, código. Puede funcionar bien para una tarea acotada. Cuando el trabajo crece, una conversación produce una decisión, la siguiente modifica otra, parte del contexto desaparece y las razones arquitectónicas quedan enterradas en el historial. Cambia un requisito, pero resulta difícil encontrar las decisiones que dependían de él. El código avanza mientras la trazabilidad se debilita.</p>
+<p>Podemos terminar con software correcto y aun así no poder explicar el proceso de entrega. El vacío es todo lo que hay entre la intención original y el código: requisitos, decisiones, validación, evidencia y autoridad.</p>
+<h2>¿Y si el agente tuviera que participar en un lifecycle?</h2>
+<p><a href="https://github.com/awslabs/aidlc-workflows">awslabs/aidlc-workflows</a> es un ejemplo concreto interesante. Implementa AI-Driven Development Life Cycle (AI-DLC) como un workflow estructurado alrededor de agentes de desarrollo. La idea central no es otro generador de código. Es una metodología alrededor del agente: la intención avanza por requisitos, diseño, decisiones, implementación, validación, evidencia, aprobación y operación.</p>
+<p>El modelo sigue importando, pero ya no es todo el sistema. El <strong>workflow</strong> pasa a formar parte del sistema de ingeniería. Sus etapas crean traspasos explícitos y puntos donde examinar lo producido.</p>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/coding-agent-traceability-lifecycle-es.svg" target="_blank" rel="noopener noreferrer" aria-label="Abrir diagrama a tamaño completo"><img src="../../../assets/images/flows/coding-agent-traceability-lifecycle-es.svg" alt="Un workflow de ingeniería avanza desde la intención por requisitos, diseño, decisiones, implementación y validación hasta evidencia, aprobación y operación." width="480" height="800" loading="lazy"></a>
+          <figcaption>Un lifecycle hace explícitos los traspasos y la evidencia que rodean al agente.</figcaption>
+        </figure>
+<h3>El harness no debería ser dueño de la metodología</h3>
+<p>El proyecto separa la metodología del coding harness. Su <a href="https://github.com/awslabs/aidlc-workflows/blob/main/docs/guide/harnesses/README.md">documentación de integraciones</a> describe Claude Code, Kiro, Codex, Cursor, opencode y GitHub Copilot. El mismo núcleo metodológico se adapta a distintos entornos de ejecución, aunque sus mecanismos de control difieren.</p>
+<p>Si el proceso vive dentro de un único asistente, cambiar de asistente puede cambiar también el proceso. Separar las capas permite evolucionar herramientas y modelos mientras los contratos de ingeniería permanecen más estables. Eso tiene más consecuencias que decidir qué coding assistant gana esta semana.</p>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/coding-agent-traceability-harness-es.svg" target="_blank" rel="noopener noreferrer" aria-label="Abrir diagrama a tamaño completo"><img src="../../../assets/images/flows/coding-agent-traceability-harness-es.svg" alt="Una metodología y un workflow independientes del harness se sitúan sobre varios coding assistants, permitiendo cambiar herramientas y modelos sin redefinir el proceso de ingeniería." width="480" height="800" loading="lazy"></a>
+          <figcaption>El coding harness ejecuta el trabajo; la metodología define los contratos y controles que lo rodean.</figcaption>
+        </figure>
+<h2>El agente ya no ejecuta una única tarea</h2>
+<p>La <a href="https://github.com/awslabs/aidlc-workflows/blob/main/docs/guide/04-phases-and-stages.md">documentación actual del lifecycle</a> describe <strong>cinco fases y 33 etapas</strong>; la <a href="https://github.com/awslabs/aidlc-workflows/blob/main/docs/harness-engineering/00-overview.md">guía de ingeniería del harness</a> describe <strong>14 roles de agente</strong>. Esas cifras describen el framework disponible, no una obligación de ejecutar cada etapa en cada cambio.</p>
+<p>Sus <a href="https://github.com/awslabs/aidlc-workflows/blob/main/docs/guide/workflow-profiles.md">perfiles de workflow</a> seleccionan caminos distintos para una feature, un bugfix, una prueba de concepto, un cambio de infraestructura o una corrección de seguridad. Un typo, un rediseño de autenticación y un cambio de infraestructura en producción no necesitan el mismo recorrido.</p>
+<blockquote>
+<p><strong>Gobernanza debería significar aplicar el control adecuado al riesgo que tenemos delante, no la máxima ceremonia a cada cambio.</strong></p>
+</blockquote>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/coding-agent-traceability-profiles-es.svg" target="_blank" rel="noopener noreferrer" aria-label="Abrir diagrama a tamaño completo"><img src="../../../assets/images/flows/coding-agent-traceability-profiles-es.svg" alt="Una petición selecciona un perfil de workflow proporcional, como prueba de concepto, feature, bugfix, infraestructura o seguridad, con distintas etapas y profundidad de revisión." width="480" height="800" loading="lazy"></a>
+          <figcaption>La gobernanza debe adaptarse al tipo de cambio y a su riesgo, en vez de aplicar la misma ceremonia a todo.</figcaption>
+        </figure>
+<h2>Los human gates son límites deliberados</h2>
+<p>En puntos importantes el agente se detiene; una persona revisa, pregunta, corrige o aprueba; el workflow continúa. Esto añade fricción. Un agente totalmente autónomo puede generar código más rápido, pero el <em>tiempo hasta generar código</em> no equivale al tiempo de entrega con confianza, trazabilidad y capacidad de recuperación.</p>
+<p>La <a href="https://github.com/awslabs/aidlc-workflows/blob/main/docs/guide/07-interaction-modes.md">guía de interacción del proyecto</a> describe compuertas de aprobación después de las etapas que no son de inicialización. Es una decisión concreta de esa implementación. La pregunta general de ingeniería es dónde aporta valor real la autoridad humana según el riesgo del cambio. Una edición trivial no necesita la misma revisión que un límite de seguridad o una decisión de despliegue.</p>
+<h3>Una aprobación necesita evidencia</h3>
+<p>Pedirle a alguien que pulse <em>Approve</em> no basta. Quien revisa debería poder seguir una cadena: <strong>requisito → decisión → implementación → validación → evidencia → aprobación</strong>. La aprobación puede entonces referirse a qué se intentaba conseguir, cómo se abordó y qué respalda el resultado.</p>
+<p>Los artefactos y el estado del workflow pueden hacer que esa cadena sea más duradera que un transcript de chat por sí solo. El transcript puede contener contexto útil, pero no debería ser el único lugar donde un equipo busque una decisión semanas después. El objetivo es un rastro de evidencia navegable, no un historial de conversación más largo.</p>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/coding-agent-traceability-evidence-es.svg" target="_blank" rel="noopener noreferrer" aria-label="Abrir diagrama a tamaño completo"><img src="../../../assets/images/flows/coding-agent-traceability-evidence-es.svg" alt="Un requisito conecta con una decisión, implementación, evidencia de validación y aprobación humana, formando una cadena trazable." width="480" height="800" loading="lazy"></a>
+          <figcaption>Una aprobación vale más cuando quien revisa puede seguir la cadena desde el requisito hasta la evidencia.</figcaption>
+        </figure>
+<h2>Más estructura no garantiza mejores decisiones</h2>
+<p>Un workflow estructurado puede amplificar una mala premisa. Una suposición incorrecta puede convertirse en requisito formal y después en diseño, código, tests y un registro pulcramente aprobado. La cadena es trazable, pero puede seguir estando equivocada.</p>
+<p>Ese es el riesgo de confundir <strong>ceremonia con rigor</strong>. Un workflow puede hacer explícitas y revisables las decisiones. No puede garantizar que la pregunta inicial, el contexto o el razonamiento fueran correctos. Siguen siendo necesarios modelos capaces, buenos criterios, comprobaciones independientes, pensamiento crítico y experiencia humana. La revisión debe cuestionar las suposiciones pronto, antes de que adquieran la aparente legitimidad de una cadena completa de artefactos.</p>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/coding-agent-traceability-premise-es.svg" target="_blank" rel="noopener noreferrer" aria-label="Abrir diagrama a tamaño completo"><img src="../../../assets/images/flows/coding-agent-traceability-premise-es.svg" alt="Una suposición errónea pasa a requisitos, diseño, implementación y pruebas estructurados, mostrando que una trazabilidad completa puede partir de una mala premisa." width="480" height="800" loading="lazy"></a>
+          <figcaption>La estructura hace visible el razonamiento; no convierte una premisa incorrecta en correcta.</figcaption>
+        </figure>
+<h2>La fricción necesita un presupuesto</h2>
+<p>Cada pregunta, aprobación, artefacto y llamada adicional al modelo consume tiempo, tokens y atención humana. Por eso un workflow gobernado necesita un <em>friction budget</em>: ¿cuánta revisión justifican el efecto y la reversibilidad del cambio?</p>
+<p>Una prueba de concepto puede seguir un camino ligero. Una feature en producción puede necesitar evidencia más fuerte. Un cambio de infraestructura o seguridad puede requerir autoridad explícita y planes de recuperación. La clave es la proporcionalidad, no una clasificación universal de tipos de tarea: un cambio aparentemente pequeño también puede tener mucho riesgo en el contexto equivocado.</p>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/coding-agent-traceability-friction-es.svg" target="_blank" rel="noopener noreferrer" aria-label="Abrir diagrama a tamaño completo"><img src="../../../assets/images/flows/coding-agent-traceability-friction-es.svg" alt="La profundidad de revisión crece con el riesgo del cambio, mientras preguntas, aprobaciones, artefactos, llamadas al modelo, latencia y atención humana forman un presupuesto de fricción." width="480" height="800" loading="lazy"></a>
+          <figcaption>El objetivo es un control proporcional al riesgo, con evidencia y autoridad humana suficientes, sin ceremonia innecesaria.</figcaption>
+        </figure>
+<p>Existe además un coste del modelo. Analizar requisitos, razonar sobre arquitectura, descubrir riesgos y mantener coherencia entre etapas exige más que generar una función. La <a href="https://github.com/awslabs/aidlc-workflows/blob/main/docs/guide/18-install-and-lifecycle.md">guía de modelos del proyecto</a> recomienda actualmente un modelo de razonamiento capaz y nombra Claude Opus 4.8 como referencia. Es una recomendación de esta implementación, no un requisito del modelo operativo. Más razonamiento puede mejorar decisiones, pero también añade coste y latencia. Deberíamos evaluar la calidad de la evidencia y los resultados entregados junto con el coste de ejecutar el workflow.</p>
+<p>La pregunta útil no es simplemente <em>«¿funciona AI-DLC?»</em>. Es <strong>¿para qué trabajos compensa este nivel de estructura?</strong> Los perfiles adaptativos importan porque permiten responderla para cada cambio.</p>
+<h2>Del coding assistant al engineering system</h2>
+<p>Esto conecta directamente con <a href="../../../index.html#experience">Platform Engineering</a>. Los equipos de Plataforma llevan años haciendo consumibles el despliegue, la observabilidad, la infraestructura, los secretos, CI/CD y las políticas mediante interfaces repetibles. Con los agentes, metodología, contexto, decisiones, validación, evidencia y gobernanza también necesitan interfaces que otro actor pueda consumir con seguridad.</p>
+<p>El consumidor ya no es solo una persona. Un agente puede realizar más trabajo, pero la organización sigue necesitando saber qué hizo, por qué, bajo qué reglas, con qué evidencia y quién conservó la autoridad sobre las decisiones importantes. Ese es también el hilo de mi artículo anterior sobre <a href="../../../es/writing/adopcion-agentes-ia-gobernanza/">adopción gobernable de agentes</a>.</p>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/coding-agent-traceability-synthesis-es.svg" target="_blank" rel="noopener noreferrer" aria-label="Abrir diagrama a tamaño completo"><img src="../../../assets/images/flows/coding-agent-traceability-synthesis-es.svg" alt="Un sistema de ingeniería gobernado conecta intención, selección de workflow adaptable, agentes especializados, requisitos, decisiones, implementación, pruebas, evidencia, aprobaciones humanas y operación." width="480" height="800" loading="lazy"></a>
+          <figcaption>El salto va de un asistente que escribe código a un sistema de entrega capaz de explicar y gobernar cómo se produjo ese código.</figcaption>
+        </figure>
+<p>AI-DLC Workflows es una implementación de una posible respuesta. No todas las organizaciones necesitan esta metodología exacta ni todas las tareas requieren su profundidad completa. La pregunta importante cuando aumenta la autonomía de los agentes es: <strong>¿qué sistema de ingeniería construimos a su alrededor para que su trabajo siga siendo explicable, revisable y gobernable?</strong></p>
+</div>
+        </article></main>
+  <footer><div class="container footer-content"><p class="footer-text">© Reinaldo León · <a href="../../../index.html"><span class="lang-en">Professional bio</span><span class="lang-es">Bio profesional</span></a> · <a href="../../../writing/feed.xml">RSS</a></p></div></footer>
+  <script src="../../../assets/js/main.js"></script>
+</body>
+</html>

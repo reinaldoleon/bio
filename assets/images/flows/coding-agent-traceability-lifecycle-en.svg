@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 800" width="480" height="800" role="img" aria-labelledby="diagram-title diagram-desc">
+<title id="diagram-title">An explicit lifecycle</title>
+<desc id="diagram-desc">From intent to operation</desc>
+<rect width="480" height="800" rx="24" fill="#122031"/>
+<rect x="1" y="1" width="478" height="798" rx="23" fill="none" stroke="#304a5c" stroke-width="2"/>
+<text x="240" y="48" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="26" font-weight="600">An explicit lifecycle</text>
+<text x="240" y="79" text-anchor="middle" fill="#a9c4d5" font-family="Arial, sans-serif" font-size="17" font-weight="400">From intent to operation</text>
+<rect x="34" y="108" width="412" height="79" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="155" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Intent → requirements</text>
+<path d="M240 187 V209 M232 201 L240 210 L248 201" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="219" width="412" height="79" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="266" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Design → decisions</text>
+<path d="M240 298 V320 M232 312 L240 321 L248 312" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="330" width="412" height="79" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="377" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Implementation</text>
+<path d="M240 409 V431 M232 423 L240 432 L248 423" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="441" width="412" height="91" rx="16" fill="#1d3041" stroke="#8bbca7" stroke-width="2"/><text x="240" y="494" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Validation → evidence</text>
+<path d="M240 532 V554 M232 546 L240 555 L248 546" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="564" width="412" height="79" rx="16" fill="#1d3041" stroke="#e2b977" stroke-width="2"/><text x="240" y="611" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Human approval</text>
+<path d="M240 643 V665 M232 657 L240 666 L248 657" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="675" width="412" height="79" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="722" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Operation</text>
+</svg>

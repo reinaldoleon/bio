@@ -36,6 +36,21 @@ El cuerpo del artículo.
 
 
 class WritingBuildTests(unittest.TestCase):
+    def test_traceability_article_has_requested_publication_date(self):
+        root = Path(__file__).resolve().parents[1]
+        article = build_writing.parse_article(root / "content" / "writing" / "ai-agent-code-traceability.md")
+        self.assertEqual(article["date"], date(2026, 11, 2))
+        self.assertEqual(article["date"].weekday(), 0)
+        for path in (
+            root / "en" / "writing" / "ai-agent-code-traceability" / "index.html",
+            root / "es" / "writing" / "agente-ia-codigo-trazabilidad" / "index.html",
+        ):
+            rendered = path.read_text(encoding="utf-8")
+            self.assertIn('article:published_time" content="2026-11-02"', rendered)
+            self.assertEqual(rendered.count('<figure class="writing-flow writing-flow-article">'), 8)
+        self.assertIn("Mon, 02 Nov 2026 00:00:00 GMT", (root / "writing" / "feed.xml").read_text())
+        self.assertIn("<lastmod>2026-11-02</lastmod>", (root / "sitemap.xml").read_text())
+
     def test_frontmatter_and_markdown(self):
         with tempfile.TemporaryDirectory() as directory:
             source = Path(directory) / "example-article.md"

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 800" width="480" height="800" role="img" aria-labelledby="diagram-title diagram-desc">
+<title id="diagram-title">El camino corto</title>
+<desc id="diagram-desc">Generar no equivale a entregar</desc>
+<rect width="480" height="800" rx="24" fill="#122031"/>
+<rect x="1" y="1" width="478" height="798" rx="23" fill="none" stroke="#304a5c" stroke-width="2"/>
+<text x="240" y="48" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="26" font-weight="600">El camino corto</text>
+<text x="240" y="79" text-anchor="middle" fill="#a9c4d5" font-family="Arial, sans-serif" font-size="17" font-weight="400">Generar no equivale a entregar</text>
+<rect x="34" y="105" width="412" height="74" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="150" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Intención de negocio</text>
+<path d="M240 179 V197 M232 189 L240 198 L248 189" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="207" width="412" height="74" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="252" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Coding agent</text>
+<path d="M240 281 V299 M232 291 L240 300 L248 291" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="309" width="412" height="74" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="354" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Código</text>
+<path d="M240 383 V401 M232 393 L240 402 L248 393" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="411" width="412" height="74" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="456" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Despliegue</text>
+<path d="M240 485 V515 M232 507 L240 516 L248 507" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="525" width="412" height="95" rx="16" fill="#1d3041" stroke="#e2b977" stroke-width="2"/><text x="240" y="568" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">¿Qué falta?</text><text x="240" y="598" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">El camino no explica el porqué</text>
+<rect x="34" y="648" width="201" height="51" rx="12" fill="#22394c" stroke="#466b80"/><text x="134" y="680" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="18" font-weight="600">Requisitos</text><rect x="245" y="648" width="201" height="51" rx="12" fill="#22394c" stroke="#466b80"/><text x="345" y="680" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="18" font-weight="600">Decisiones</text><rect x="34" y="709" width="201" height="51" rx="12" fill="#22394c" stroke="#466b80"/><text x="134" y="741" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="18" font-weight="600">Evidencia</text><rect x="245" y="709" width="201" height="51" rx="12" fill="#22394c" stroke="#466b80"/><text x="345" y="741" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="18" font-weight="600">Aprobaciones</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 800" width="480" height="800" role="img" aria-labelledby="diagram-title diagram-desc">
+<title id="diagram-title">Sistema de ingeniería</title>
+<desc id="diagram-desc">Del asistente al delivery gobernado</desc>
+<rect width="480" height="800" rx="24" fill="#122031"/>
+<rect x="1" y="1" width="478" height="798" rx="23" fill="none" stroke="#304a5c" stroke-width="2"/>
+<text x="240" y="48" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="26" font-weight="600">Sistema de ingeniería</text>
+<text x="240" y="79" text-anchor="middle" fill="#a9c4d5" font-family="Arial, sans-serif" font-size="17" font-weight="400">Del asistente al delivery gobernado</text>
+<rect x="34" y="103" width="412" height="69" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="145" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Intención</text>
+<path d="M240 172 V189 M232 181 L240 190 L248 181" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="199" width="412" height="94" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="242" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Workflow adaptable</text><text x="240" y="272" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Perfil · etapas · agentes</text>
+<path d="M240 293 V311 M232 303 L240 312 L248 303" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="321" width="412" height="69" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="363" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Requisitos → decisiones</text>
+<path d="M240 390 V408 M232 400 L240 409 L248 400" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="418" width="412" height="69" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="460" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Código → tests</text>
+<path d="M240 487 V505 M232 497 L240 506 L248 497" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="515" width="412" height="94" rx="16" fill="#1d3041" stroke="#8bbca7" stroke-width="2"/><text x="240" y="570" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Evidencia → gates humanos</text>
+<path d="M240 609 V627 M232 619 L240 628 L248 619" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="637" width="412" height="104" rx="16" fill="#1d3041" stroke="#e2b977" stroke-width="2"/><text x="240" y="685" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Entrega → operación</text><text x="240" y="715" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Explicable · revisable · gobernable</text>
+</svg>

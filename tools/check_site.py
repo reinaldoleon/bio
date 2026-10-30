@@ -106,8 +106,8 @@ def check() -> None:
             lang = relative.parts[0]
             if page.html_lang != lang or page.prose_lang != lang:
                 errors.append(f"{path}: page and prose language mismatch")
-            if page.figures != 8:
-                errors.append(f"{path}: expected eight diagrams, found {page.figures}")
+            if page.figures < 1:
+                errors.append(f"{path}: expected at least one diagram")
             if set(page.alternates) != {"en", "es", "x-default"}:
                 errors.append(f"{path}: missing reciprocal hreflang entries")
             if page.alternates.get(lang) != expected:

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 800" width="480" height="800" role="img" aria-labelledby="diagram-title diagram-desc">
+<title id="diagram-title">Evidence chain</title>
+<desc id="diagram-desc">An approval you can review</desc>
+<rect width="480" height="800" rx="24" fill="#122031"/>
+<rect x="1" y="1" width="478" height="798" rx="23" fill="none" stroke="#304a5c" stroke-width="2"/>
+<text x="240" y="48" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="26" font-weight="600">Evidence chain</text>
+<text x="240" y="79" text-anchor="middle" fill="#a9c4d5" font-family="Arial, sans-serif" font-size="17" font-weight="400">An approval you can review</text>
+<rect x="34" y="103" width="412" height="75" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="148" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Requirement</text>
+<path d="M240 178 V205 M232 197 L240 206 L248 197" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="214" width="412" height="75" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="259" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Decision</text>
+<path d="M240 289 V316 M232 308 L240 317 L248 308" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="325" width="412" height="75" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="370" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Implementation</text>
+<path d="M240 400 V427 M232 419 L240 428 L248 419" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="436" width="412" height="75" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="481" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Validation</text>
+<path d="M240 511 V538 M232 530 L240 539 L248 530" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="547" width="412" height="75" rx="16" fill="#1d3041" stroke="#8bbca7" stroke-width="2"/><text x="240" y="592" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Evidence</text>
+<path d="M240 622 V649 M232 641 L240 650 L248 641" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="658" width="412" height="75" rx="16" fill="#1d3041" stroke="#e2b977" stroke-width="2"/><text x="240" y="703" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Approval</text>
+</svg>
