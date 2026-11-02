@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 800" width="480" height="800" role="img" aria-labelledby="diagram-title diagram-desc">
+<title id="diagram-title">Verifiable governance</title>
+<desc id="diagram-desc">Objective rules with clear limits</desc>
+<rect width="480" height="800" rx="24" fill="#122031"/>
+<rect x="1" y="1" width="478" height="798" rx="23" fill="none" stroke="#304a5c" stroke-width="2"/>
+<text x="240" y="48" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="26" font-weight="600">Verifiable governance</text>
+<text x="240" y="79" text-anchor="middle" fill="#a9c4d5" font-family="Arial, sans-serif" font-size="17" font-weight="400">Objective rules with clear limits</text>
+<rect x="34" y="111" width="412" height="110" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="162" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Explicit rule</text><text x="240" y="192" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">No static credentials</text>
+<path d="M240 221 V249 M232 241 L240 250 L248 241" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="259" width="412" height="111" rx="16" fill="#1d3041" stroke="#8bbca7" stroke-width="2"/><text x="240" y="310" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Executable policy</text><text x="240" y="340" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Config · identity · CI</text>
+<path d="M240 370 V401 M232 393 L240 402 L248 393" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="411" width="412" height="94" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="466" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Result + evidence</text>
+<path d="M240 505 V534 M232 526 L240 535 L248 526" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="544" width="412" height="113" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="596" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">LLM: explain / correct</text><text x="240" y="626" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Review ambiguous exceptions</text>
+<path d="M240 657 V686 M232 678 L240 687 L248 678" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="240" y="754" text-anchor="middle" fill="#e2b977" font-family="Arial, sans-serif" font-size="19" font-weight="600">Policy decides the rule</text>
+</svg>

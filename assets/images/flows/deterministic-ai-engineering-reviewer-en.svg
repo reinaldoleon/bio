@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 800" width="480" height="800" role="img" aria-labelledby="diagram-title diagram-desc">
+<title id="diagram-title">Evidence-led review</title>
+<desc id="diagram-desc">More than two agreeing models</desc>
+<rect width="480" height="800" rx="24" fill="#122031"/>
+<rect x="1" y="1" width="478" height="798" rx="23" fill="none" stroke="#304a5c" stroke-width="2"/>
+<text x="240" y="48" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="26" font-weight="600">Evidence-led review</text>
+<text x="240" y="79" text-anchor="middle" fill="#a9c4d5" font-family="Arial, sans-serif" font-size="17" font-weight="400">More than two agreeing models</text>
+<rect x="34" y="110" width="412" height="91" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="163" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Creator → implementation</text>
+<path d="M240 201 V231 M232 223 L240 232 L248 223" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="241" width="201" height="74" rx="12" fill="#22394c" stroke="#466b80"/><text x="134" y="285" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="18" font-weight="600">Tests</text><rect x="245" y="241" width="201" height="74" rx="12" fill="#22394c" stroke="#466b80"/><text x="345" y="285" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="18" font-weight="600">Policies</text><rect x="34" y="325" width="201" height="74" rx="12" fill="#22394c" stroke="#466b80"/><text x="134" y="369" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="18" font-weight="600">Static analysis</text><rect x="245" y="325" width="201" height="74" rx="12" fill="#22394c" stroke="#466b80"/><text x="345" y="369" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="18" font-weight="600">Schemas</text>
+<path d="M240 399 V430 M232 422 L240 431 L248 422" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="440" width="412" height="96" rx="16" fill="#1d3041" stroke="#8bbca7" stroke-width="2"/><text x="240" y="496" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Independent evidence</text>
+<path d="M240 536 V571 M232 563 L240 572 L248 563" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="581" width="412" height="108" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="631" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Reviewer</text><text x="240" y="661" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">What is proved? What is missing?</text>
+<path d="M240 689 V715 M232 707 L240 716 L248 707" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="240" y="758" text-anchor="middle" fill="#e2b977" font-family="Arial, sans-serif" font-size="17" font-weight="600">Examine each check&#x27;s scope</text>
+</svg>

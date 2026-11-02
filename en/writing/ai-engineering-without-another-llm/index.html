@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-lang="en" data-route-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why doesn&#x27;t every AI Engineering problem need another LLM? | Reinaldo León</title>
+  <meta name="description" content="When to use deterministic checks, when an LLM adds value, and how to connect reasoning with verifiable evidence in AI Engineering.">
+  <link rel="canonical" href="https://reinaldoleon.github.io/bio/en/writing/ai-engineering-without-another-llm/">
+  <meta name="author" content="Reinaldo León">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Why doesn&#x27;t every AI Engineering problem need another LLM? | Reinaldo León">
+  <meta property="og:description" content="When to use deterministic checks, when an LLM adds value, and how to connect reasoning with verifiable evidence in AI Engineering.">
+  <meta property="og:url" content="https://reinaldoleon.github.io/bio/en/writing/ai-engineering-without-another-llm/">
+  <meta property="og:image" content="https://reinaldoleon.github.io/bio/assets/images/writing/ai-engineering-without-another-llm-en.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why doesn&#x27;t every AI Engineering problem need another LLM? | Reinaldo León">
+  <meta name="twitter:description" content="When to use deterministic checks, when an LLM adds value, and how to connect reasoning with verifiable evidence in AI Engineering.">
+  <meta name="twitter:image" content="https://reinaldoleon.github.io/bio/assets/images/writing/ai-engineering-without-another-llm-en.png">
+  <link rel="alternate" type="application/rss+xml" title="Reinaldo León — Writing" href="https://reinaldoleon.github.io/bio/writing/feed.xml">
+  <link rel="icon" type="image/png" href="../../../assets/images/avatar.png">
+  <script src="../../../assets/js/lang-init.js"></script>
+  <link rel="stylesheet" href="../../../assets/css/style.css">
+  <meta property="og:image:alt" content="Why doesn&#x27;t every AI Engineering problem need another LLM? | Reinaldo León">
+  <meta name="twitter:image:alt" content="Why doesn&#x27;t every AI Engineering problem need another LLM? | Reinaldo León">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <link rel="alternate" hreflang="en" href="https://reinaldoleon.github.io/bio/en/writing/ai-engineering-without-another-llm/">
+  <link rel="alternate" hreflang="es" href="https://reinaldoleon.github.io/bio/es/writing/ai-engineering-sin-otro-llm/">
+  <link rel="alternate" hreflang="x-default" href="https://reinaldoleon.github.io/bio/en/writing/ai-engineering-without-another-llm/">
+  <meta property="article:published_time" content="2026-11-02">
+  <meta property="article:modified_time" content="2026-11-02">
+  <script defer src="../../../assets/js/analytics-config.js"></script>
+  <script defer src="../../../assets/js/analytics.js"></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Why doesn't every AI Engineering problem need another LLM?", "description": "When to use deterministic checks, when an LLM adds value, and how to connect reasoning with verifiable evidence in AI Engineering.", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "inLanguage": "en", "author": {"@type": "Person", "name": "Reinaldo León", "url": "https://reinaldoleon.github.io/bio/"}, "mainEntityOfPage": "https://reinaldoleon.github.io/bio/en/writing/ai-engineering-without-another-llm/", "image": "https://reinaldoleon.github.io/bio/assets/images/writing/ai-engineering-without-another-llm-en.png"}</script>
+</head>
+<body>
+  <header><div class="container nav-wrapper">
+      <a class="logo" href="../../../index.html">Reinaldo León</a>
+      <button class="mobile-nav-toggle" id="mobile-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <nav><ul class="nav-links" id="nav-links">
+        <li><a href="../../../index.html#about"><span class="lang-en">About</span><span class="lang-es">Sobre mí</span></a></li>
+        <li><a href="../../../index.html#experience"><span class="lang-en">Experience</span><span class="lang-es">Experiencia</span></a></li>
+        <li><a href="../../../index.html#projects"><span class="lang-en">Projects</span><span class="lang-es">Proyectos</span></a></li>
+        <li><a href="../../../writing/" aria-current="page"><span class="lang-en">Writing</span><span class="lang-es">Artículos</span></a></li>
+        <li><a href="../../../index.html#contact"><span class="lang-en">Contact</span><span class="lang-es">Contacto</span></a></li>
+        <li><button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme"><svg class="moon-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg><svg class="sun-icon" viewBox="0 0 20 20" fill="currentColor"><circle cx="10" cy="10" r="4"/></svg></button></li>
+        <li><div class="lang-selector"><a class="lang-route active" data-lang-route="en" href="https://reinaldoleon.github.io/bio/en/writing/ai-engineering-without-another-llm/" hreflang="en" aria-label="Read in English" aria-current="page">EN</a><span class="lang-divider">|</span><a class="lang-route" data-lang-route="es" href="https://reinaldoleon.github.io/bio/es/writing/ai-engineering-sin-otro-llm/" hreflang="es" aria-label="Leer en español">ES</a></div></li>
+      </ul></nav></div></header>
+  <main class="container writing-main"><article class="writing-article writing-longform" data-analytics-article="ai-engineering-without-another-llm" data-analytics-pillar="AI Platform Engineering" data-analytics-title-en="Why doesn&#x27;t every AI Engineering problem need another LLM?" data-analytics-title-es="¿Por qué no todo problema de AI Engineering necesita otro LLM?">
+          <p class="writing-back"><a href="../../../writing/">← All writing</a></p>
+          <p class="writing-meta"><time datetime="2026-11-02">2026-11-02</time> · AI Platform Engineering</p>
+          <h1>Why doesn&#x27;t every AI Engineering problem need another LLM?</h1>
+          <p class="writing-deck">Models are useful for ambiguity. Tests, policies and conventional software should keep answering questions that have reproducible answers.</p>
+          <p class="writing-author">Reinaldo León <span aria-hidden="true">·</span> Principal Platform Engineer | AI Platform &amp; Enablement</p>
+          <div class="project-tags"><span class="project-tag">AI Platform Engineering</span><span class="project-tag">Agentic Systems</span><span class="project-tag">AI Reliability</span><span class="project-tag">AI Governance</span><span class="project-tag">Platform Engineering</span><span class="project-tag">AI FinOps</span></div>
+          <div class="writing-prose" lang="en"><p>As AI enters engineering workflows, a tempting question appears: if an LLM can reason about code, infrastructure, documentation and operations, why not let it validate everything too?</p>
+<p>We could ask it whether a file exists, a version is pinned, a pipeline passed, a policy is satisfied or a requirement has evidence. We could even ask another agent to review the first one. Technically, we can. <strong>Should we?</strong></p>
+<p>One of the most consequential design decisions in AI Engineering is not which model to use. It is <strong>which problems should continue to be solved without a model at all</strong>.</p>
+<h2>The problem with turning certainty into probability</h2>
+<p>Suppose the question is: <em>Does this repository contain <code>SECURITY.md</code>?</em> A file check returns a reproducible yes or no. It does not need interpretation, creativity or inference.</p>
+<p>Now ask a model to inspect the repository and decide whether it has a well-defined security policy. That is a different, broader question. If the requirement was only to establish the file's presence, we have replaced an exact check with a probabilistic answer and added tokens, latency, cost, variability and a harder audit trail.</p>
+<p>The two questions should not be conflated. The existence of <code>SECURITY.md</code> does not prove that the policy is good. But asking an LLM whether the file exists does not improve the existence check either.</p>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/deterministic-ai-engineering-decision-en.svg" target="_blank" rel="noopener noreferrer" aria-label="Open diagram at full size"><img src="../../../assets/images/flows/deterministic-ai-engineering-decision-en.svg" alt="An engineering question is first checked for an exact reproducible answer. Exact questions go to code or policy; ambiguous questions go to model reasoning. Both paths produce evidence." width="480" height="800" loading="lazy"></a>
+          <figcaption>Start by asking whether the result can be determined reproducibly. Use model reasoning where interpretation is actually required.</figcaption>
+        </figure>
+<p>The first question should be: <strong>can we determine this result reproducibly without probabilistic reasoning?</strong> If so, conventional software usually deserves the job.</p>
+<h2>Where models add real value</h2>
+<p>This does not diminish AI. It directs it toward work that needs interpretation: incomplete information, distributed context, documentation synthesis, trade-offs, semantic contradictions, intent and hypotheses.</p>
+<p>Consider: <em>Does the proposed architecture fit the availability, cost and tenant-isolation requirements?</em> Requirements, architecture, constraints and context must be related. There may be several defensible answers. A model can surface assumptions, compare alternatives and identify questions for a reviewer.</p>
+<p>That output is an <strong>assessment</strong>, not a proof. It should state what evidence it used, what remains uncertain and which decisions need a person.</p>
+<h2>The result can still be checked deterministically</h2>
+<p>An agent may use an LLM to reason about infrastructure architecture, resilience, security and cost. Once it produces Terraform, different tools can verify different properties:</p>
+<pre><code class="language-text">terraform fmt -check     → formatting
+terraform validate       → syntax and internal consistency
+tflint                   → lint rules and provider checks
+checkov                  → configured IaC policies
+tests / policy checks    → project-specific requirements
+</code></pre>
+<p>These checks do not prove that the architecture is good. In particular, <code>terraform validate</code> does not inspect live provider state. They do produce inspectable evidence for the properties they cover. The distinction between what a check establishes and what it does not is part of the engineering work. The <a href="https://developer.hashicorp.com/terraform/cli/commands/validate">Terraform CLI documentation</a> makes that boundary explicit.</p>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/deterministic-ai-engineering-propose-verify-en.svg" target="_blank" rel="noopener noreferrer" aria-label="Open diagram at full size"><img src="../../../assets/images/flows/deterministic-ai-engineering-propose-verify-en.svg" alt="An ambiguous infrastructure task goes through LLM reasoning and a proposed solution, then through deterministic formatting, validation, tests and policy checks before producing evidence." width="480" height="800" loading="lazy"></a>
+          <figcaption>A model can propose infrastructure; independent tools should verify every property they can establish objectively.</figcaption>
+        </figure>
+<p>The useful pattern is: <strong>AI proposes; software verifies whatever can be verified objectively; people retain authority over consequential judgment.</strong></p>
+<h2>Reasoning and verification are different responsibilities</h2>
+<p>An agent need not be just an LLM connected to tools. It can decide which check is relevant, execute the appropriate tool, read the result and decide whether to continue, revise or escalate.</p>
+<p>The model might choose a test. The test result should come from the test runner. The model might interpret a policy violation. The policy decision should come from the policy engine when the rule is explicit and machine-checkable.</p>
+<p>This separation improves debugging. It lets a reviewer see whether the model made a poor judgment, used the wrong tool, missed a check or correctly reported a failing check. Those are different failure modes.</p>
+<h2>Repository readiness needs both kinds of evaluation</h2>
+<p>Imagine assessing whether a repository is ready for agents. An initial standard might require stable instructions, validation commands, pinned critical versions, CI, known ownership, architecture documentation and runnable tests.</p>
+<p>Several questions are direct: does the instruction file exist? Is a version pinned? Does CI exist? Can the tests run? Is required configuration present? Code can answer these and retain the result, command and version as evidence.</p>
+<p>Other questions need judgment: are the instructions clear enough for this task? Does the architecture documentation contradict the implementation? Is ownership ambiguous? Does the validation strategy match the risk? A model can help examine those questions, provided its observations remain distinguishable from measured facts.</p>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/deterministic-ai-engineering-repository-en.svg" target="_blank" rel="noopener noreferrer" aria-label="Open diagram at full size"><img src="../../../assets/images/flows/deterministic-ai-engineering-repository-en.svg" alt="Repository readiness branches into deterministic checks for files, versions, CI and tests, and semantic evaluation for clarity, contradictions and missing context. Both streams contribute to a recommendation backed by evidence." width="480" height="800" loading="lazy"></a>
+          <figcaption>Repository readiness combines checkable facts with explicit, reviewable observations about ambiguous concerns.</figcaption>
+        </figure>
+<p>A useful result might look like this:</p>
+<pre><code class="language-text">✓ CI configured                 fact: workflow found
+✓ tests executable              fact: command passed
+✓ critical versions pinned      fact: lockfile checked
+△ architecture guidance thin    observation: review suggested
+! ownership unclear             observation: human clarification needed
+— security profile not applicable, with a recorded reason
+</code></pre>
+<p>That is more actionable than <em>“yes, the repository looks ready.”</em> It also prevents a numerical readiness score from hiding uncertainty.</p>
+<h2>Another LLM is not automatically an independent reviewer</h2>
+<p>A creator model followed by a reviewer model can be useful. The second model may catch a problem the first missed. But agreement between two models is not automatically independent confirmation. They may share training patterns, context or the same mistaken interpretation of a specification.</p>
+<p>The reviewer becomes more valuable when it can inspect evidence beyond the creator's reasoning: tests, schemas, static analysis, policy results, runtime checks and source material. It can ask <em>what does the evidence demonstrate?</em> and <em>what remains untested?</em> rather than only <em>do I agree with the first model?</em></p>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/deterministic-ai-engineering-reviewer-en.svg" target="_blank" rel="noopener noreferrer" aria-label="Open diagram at full size"><img src="../../../assets/images/flows/deterministic-ai-engineering-reviewer-en.svg" alt="A creator produces an implementation. Tests, policy checks, static analysis and schemas produce external evidence that a reviewer can inspect rather than merely agreeing with the creator model." width="480" height="800" loading="lazy"></a>
+          <figcaption>A second model becomes a stronger reviewer when it can challenge the implementation against evidence outside model reasoning.</figcaption>
+        </figure>
+<p>Evidence itself needs scrutiny. A passing test may cover the wrong behavior. A policy rule may have a blind spot. A reviewer should examine the scope of the checks, not treat every green result as complete proof.</p>
+<h2>Governance should not be probabilistic by default</h2>
+<p>Take an explicit policy: <em>production workloads must not use static credentials.</em> If the relevant configuration is structured and visible, enforce that rule through policy as code, identity controls, static analysis and deployment checks. An LLM can explain a violation, suggest a correction or investigate an ambiguous exception. It need not become the authority that decides whether the objective rule passes.</p>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/deterministic-ai-engineering-policy-en.svg" target="_blank" rel="noopener noreferrer" aria-label="Open diagram at full size"><img src="../../../assets/images/flows/deterministic-ai-engineering-policy-en.svg" alt="An explicit production credential rule is enforced by deterministic policy checks, while an LLM explains violations and helps investigate ambiguous exceptions without becoming the enforcement authority." width="480" height="800" loading="lazy"></a>
+          <figcaption>Use executable policy for objective rules and model reasoning for explanation, correction and exceptional cases.</figcaption>
+        </figure>
+<p>Executable policy is easier to repeat and audit, but only within its coverage. Missing configuration, undeclared dependencies and policy gaps still need review. Deterministic enforcement is a foundation for governance, not a guarantee that the entire system is safe.</p>
+<h2>Deterministic first does not mean deterministic only</h2>
+<p>Some questions resist a Boolean rule: Is the architecture unnecessarily complex? Do the ADRs explain the trade-offs? Is a change aligned with product intent? What coupling or failure scenario have we overlooked?</p>
+<p>Metrics and rules can help, but judgment remains necessary. The principle is <strong>deterministic where possible, probabilistic where valuable</strong>. A model should consume evidence, identify gaps and help decide what to investigate next, rather than replace evidence with a confident sentence.</p>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/deterministic-ai-engineering-synthesis-en.svg" target="_blank" rel="noopener noreferrer" aria-label="Open diagram at full size"><img src="../../../assets/images/flows/deterministic-ai-engineering-synthesis-en.svg" alt="Intent leads to AI reasoning, action, deterministic checks, evidence and interpretation, followed by a decision or human escalation. Reproducible checks and probabilistic reasoning have separate responsibilities." width="480" height="800" loading="lazy"></a>
+          <figcaption>A reliable AI Engineering system combines flexible reasoning with verifiable checks and clear decision authority.</figcaption>
+        </figure>
+<p>The decision boundary is practical. Use conventional software when the question is <em>does it exist, match, pass, satisfy this explicit rule or reproduce?</em> Consider AI when the question is <em>what does it mean, what alternatives exist, what context is missing or what should we investigate next?</em></p>
+<p>One path produces checkable facts. The other produces reasoning. A dependable engineering process needs both and keeps them labeled.</p>
+<h2>There is a cost and a reliability reason</h2>
+<p>One model call to check a file can look insignificant. Run it thousands of times across repositories, CI jobs and agents, and the tokens, latency and attention add up. AI FinOps starts with a simple design choice: do not pay for model reasoning where a cheap, reliable check answers the question.</p>
+<p>The reliability argument matters even more. A pinned version check should return the same result for the same input. Turning it into a model judgment adds uncertainty where none was required. Models are valuable because they can work under ambiguity; we should not make the unambiguous parts ambiguous for their sake.</p>
+<h2>Architecture matters more than agent count</h2>
+<p>A system with a planner, architect, developer, reviewer, security agent and FinOps agent can still be a chain of probabilistic guesses. More agents do not necessarily mean more control.</p>
+<p>A stronger pattern connects <strong>reasoning → action → deterministic evidence → interpretation → decision or human escalation</strong>. The intelligence is distributed across the model, tools, checks, contracts and people. It matters which parts may vary and which must be reproducible.</p>
+<p>This connects to a broader question I explored in <a href="../ai-agent-adoption-governance/">what happens when agent adoption outpaces governance</a>: agents need standards and capabilities they can consume, plus ways to prove that they applied them. It also complements <a href="../ai-agent-code-traceability/">the discussion of traceable agent delivery</a>: a delivery record is stronger when its evidence comes from independent checks.</p>
+<p>Perhaps the most useful agent is one that knows when not to reason from scratch: when to call a tool, run a test, consult an authoritative source, apply a policy, wait for evidence or ask a person.</p>
+<p>When designing AI Engineering, a productive question is not only <em>which other agent should we add?</em> It is <strong>which part of this problem should not need an LLM at all?</strong></p>
+</div>
+        </article></main>
+  <footer><div class="container footer-content"><p class="footer-text">© Reinaldo León · <a href="../../../index.html"><span class="lang-en">Professional bio</span><span class="lang-es">Bio profesional</span></a> · <a href="../../../writing/feed.xml">RSS</a></p><p class="footer-text analytics-disclosure"><span class="lang-en">This site uses cookie-free Umami Cloud for aggregate reports on visits, reading and campaigns. Custom events contain no names, emails or form content. Umami may process IP data to derive anonymous sessions.</span><span class="lang-es">Esta web utiliza Umami Cloud sin cookies para obtener informes agregados de visitas, lectura y campañas. Los eventos personalizados no incluyen nombres, correos ni contenido de formularios. Umami puede procesar datos de IP para derivar sesiones anónimas.</span> <a href="https://umami.is/privacy" rel="noopener noreferrer" target="_blank"><span class="lang-en">Umami privacy policy</span><span class="lang-es">Privacidad de Umami</span></a>.</p></div></footer>
+  <script src="../../../assets/js/main.js"></script>
+</body>
+</html>
