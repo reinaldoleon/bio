@@ -184,12 +184,14 @@ def shell(title: str, description: str, canonical: str, prefix: str, main: str, 
 <html lang="{locale or 'en'}" data-theme="dark" data-lang="{locale or 'en'}"{' data-route-lang="' + locale + '"' if locale else ''}>
 <head>
   {head(title, description, canonical, prefix, page_type, published, title_es, description_es, locale=locale, alternates=alternates, image=image, updated=updated)}
+  <script defer src="{prefix}assets/js/analytics-config.js"></script>
+  <script defer src="{prefix}assets/js/analytics.js"></script>
   {structured}
 </head>
 <body>
   {header}
   <main class="container writing-main">{main}</main>
-  <footer><div class="container footer-content"><p class="footer-text">© Reinaldo León · <a href="{prefix}index.html">{bilingual("Professional bio", "Bio profesional") if bilingual_ui else "Professional bio"}</a> · <a href="{prefix}writing/feed.xml">RSS</a></p></div></footer>
+  <footer><div class="container footer-content"><p class="footer-text">© Reinaldo León · <a href="{prefix}index.html">{bilingual("Professional bio", "Bio profesional") if bilingual_ui else "Professional bio"}</a> · <a href="{prefix}writing/feed.xml">RSS</a></p><p class="footer-text analytics-disclosure">{bilingual("This site uses cookie-free Umami Cloud for aggregate reports on visits, reading and campaigns. Custom events contain no names, emails or form content. Umami may process IP data to derive anonymous sessions.", "Esta web utiliza Umami Cloud sin cookies para obtener informes agregados de visitas, lectura y campañas. Los eventos personalizados no incluyen nombres, correos ni contenido de formularios. Umami puede procesar datos de IP para derivar sesiones anónimas.")} <a href="https://umami.is/privacy" rel="noopener noreferrer" target="_blank">{bilingual("Umami privacy policy", "Privacidad de Umami")}</a>.</p></div></footer>
   <script src="{prefix}assets/js/main.js"></script>
 </body>
 </html>
@@ -270,7 +272,8 @@ def build_localized_article(article: dict) -> None:
         tags = "".join(f'<span class="project-tag">{esc(tag)}</span>' for tag in article["tags"][:6])
         modified = article.get("updated", article["date"])
         updated_label = f' · {"Actualizado" if translated else "Updated"} <time datetime="{modified.isoformat()}">{modified.isoformat()}</time>' if modified != article["date"] else ""
-        main = f'''<article class="writing-article writing-longform">
+        slug = article["slug"] if lang == "en" else article["slug_es"]
+        main = f'''<article class="writing-article writing-longform" data-analytics-article="{esc(slug)}" data-analytics-pillar="{esc(article['pillar'])}" data-analytics-title-en="{esc(article['title'])}" data-analytics-title-es="{esc(article['title_es'])}">
           <p class="writing-back"><a href="../../../writing/">{"← Todos los artículos" if translated else "← All writing"}</a></p>
           <p class="writing-meta"><time datetime="{article['date'].isoformat()}">{article['date'].isoformat()}</time>{updated_label} · {esc(PILLAR_ES[article['pillar']] if translated else article['pillar'])}</p>
           <h1>{esc(title)}</h1>
@@ -289,7 +292,6 @@ def build_localized_article(article: dict) -> None:
             "mainEntityOfPage": url, "image": image,
         }
         structured = '<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False).replace("<", "\\u003c") + "</script>"
-        slug = article["slug"] if lang == "en" else article["slug_es"]
         target = ROOT / lang / "writing" / slug
         target.mkdir(parents=True, exist_ok=True)
         (target / "index.html").write_text(shell(f"{title} | Reinaldo León", description, url, "../../../", main, "article", article["date"], structured, bilingual_ui=True, locale=lang, alternates=alternates, image=image, updated=modified), encoding="utf-8")
@@ -418,7 +420,7 @@ def build() -> None:
             <a href="{image_url}" target="_blank" rel="noopener noreferrer" aria-label="{esc('Open full-size illustration' if lang == 'en' else 'Abrir ilustración a tamaño completo')}"><img src="{image_url}" alt="{esc(alt)}" width="1254" height="1254" loading="lazy"></a>
             <figcaption>{esc(caption)}</figcaption>
           </figure>'''
-        main = f'''<article class="writing-article">
+        main = f'''<article class="writing-article" data-analytics-article="{esc(article['slug'])}" data-analytics-pillar="{esc(article['pillar'])}" data-analytics-title-en="{esc(article['title'])}" data-analytics-title-es="{esc(article['title_es'])}">
           <p class="writing-back"><a href="../../writing/">{bilingual("← All writing", "← Todos los artículos")}</a></p>
           <p class="writing-meta"><time datetime="{article['date'].isoformat()}">{article['date'].isoformat()}</time> · {bilingual(article['pillar'], PILLAR_ES[article['pillar']])}</p>
           <h1>{bilingual(article['title'], article['title_es'])}</h1>

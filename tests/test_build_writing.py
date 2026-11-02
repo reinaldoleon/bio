@@ -36,6 +36,22 @@ El cuerpo del artículo.
 
 
 class WritingBuildTests(unittest.TestCase):
+    def test_analytics_is_shared_and_article_metadata_is_public(self):
+        root = Path(__file__).resolve().parents[1]
+        for path in (
+            root / "index.html",
+            root / "writing" / "index.html",
+            root / "en" / "writing" / "ai-agent-code-traceability" / "index.html",
+            root / "es" / "writing" / "agente-ia-codigo-trazabilidad" / "index.html",
+        ):
+            rendered = path.read_text(encoding="utf-8")
+            self.assertEqual(rendered.count("assets/js/analytics.js"), 1)
+            self.assertIn("assets/js/analytics-config.js", rendered)
+            self.assertIn("https://umami.is/privacy", rendered)
+        es = (root / "es" / "writing" / "agente-ia-codigo-trazabilidad" / "index.html").read_text()
+        self.assertIn('data-analytics-article="agente-ia-codigo-trazabilidad"', es)
+        self.assertIn('data-analytics-pillar="AI Platform Engineering"', es)
+
     def test_traceability_article_has_requested_publication_date(self):
         root = Path(__file__).resolve().parents[1]
         article = build_writing.parse_article(root / "content" / "writing" / "ai-agent-code-traceability.md")

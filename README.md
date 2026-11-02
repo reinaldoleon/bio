@@ -41,6 +41,24 @@ Pillars:
 
 The bio is the canonical home for long-form articles. `linkedin_text` can hold a short distribution version, and `linkedin_url` can be added after publication. A short LinkedIn-only post does not require a website article.
 
+## Analytics (review before activation)
+
+The homepage and generated Writing layout load the same local `assets/js/analytics.js` loader. Umami Cloud is **disabled** while `assets/js/analytics-config.js` has an empty Website ID. Create the website in Umami Cloud for `reinaldoleon.github.io`, then, after reviewing the configuration, set the public UUID and regenerate the config:
+
+```sh
+UMAMI_WEBSITE_ID=your-website-uuid uv run python tools/build_analytics_config.py
+```
+
+`UMAMI_WEBSITE_ID` is the only configuration variable. The Website ID is a public tracking identifier embedded in the static site, not an API key or secret. Never put an Umami login, API key or other credential in the repository. Review the resulting `assets/js/analytics-config.js` before committing or deploying. Pushing `gh-pages` publishes immediately, so do not push this change before configuration review.
+
+The loader runs only on `https://reinaldoleon.github.io/bio/` routes and requires a valid Website ID. `localhost`, `file://`, preview domains and an empty config never load Umami. The Umami script is loaded asynchronously; if it is blocked or unavailable, the site continues normally. The tracker uses automatic pageviews, honors Do Not Track, excludes URL fragments and uses a `before-send` filter. The filter keeps only `utm_source`, `utm_medium`, `utm_campaign` and `utm_content` with short campaign-safe values; it discards other query parameters and reduces referrers to their origin. Do not put personal data in UTM values. No distinct IDs are sent by site code; cookies, form contents, error tracking and session replay are not configured. Umami Cloud may process IP addresses and technical visit data in its infrastructure and derives anonymous session identifiers from IP and browser data. If the privacy requirement excludes that provider-side derivation too, do not activate Umami Cloud. Consult its [privacy policy](https://umami.is/privacy) and select the appropriate Cloud data region before activation.
+
+Page paths distinguish `/es/writing/.../` from `/en/writing/.../`; filter **Pages** by path in Umami. An individual article's pageview is its article view, so there is no duplicate `article_view` event. Older articles at the shared `/writing/.../` URL and the homepage have no language prefix; their pageviews cannot be split reliably by URL, but language switches and article progress events include the active `language` property. Article milestones (`article_50_percent` and `article_90_percent`) fire at most once each per page load and include `language`, route `article_slug`, public `pillar` and public `title`. `language_switch`, `project_click` and `linkedin_click` fire on relevant controls only. Umami's referrer and UTM reports provide attribution; do not copy these into custom event properties.
+
+For LinkedIn distribution, use `utm_source=linkedin`, `utm_medium=social`, `utm_campaign=<article-slug>` and `utm_content=<post-variant>`. For example, `utm_campaign=ai-agent-traceability` and `utm_content=post-v1`. Keep the campaign name stable across languages and change the content value for each LinkedIn post variant. This separates total article traffic from LinkedIn traffic and compares posts pointing to the same article. Do not add visitor information to these values.
+
+For a safe local check, run `node tests/analytics.test.js`, build the site, and preview it on `localhost`: the Network panel should show no request to `cloud.umami.is`. To verify production attribution **after approved deployment**, visit a localized article with `?utm_source=linkedin&utm_medium=social&utm_campaign=ai-agent-traceability&utm_content=post-v1`, then inspect Umami's Pages and UTM views. Use a separate Umami test website if a full end-to-end event test is needed before production; never spoof the production hostname using the production Website ID. Ad blockers and Do Not Track can suppress requests.
+
 ## Review before publishing
 
 Run the builder, check `git diff --check`, review the generated HTML and verify public claims and Cobee confidentiality. Pushing the `gh-pages` branch publishes the committed static files; this repository does not run an automatic build.
