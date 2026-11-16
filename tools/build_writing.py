@@ -352,7 +352,7 @@ def build() -> None:
                     raise ValueError(f"{article['slug']}: missing bilingual {key}")
                 article[f"{key}_es"] = translated[key]
     articles = [article for article in articles if not article.get("draft", False)]
-    articles.sort(key=lambda article: (article.get("featured", False), article["date"], article["slug"]), reverse=True)
+    articles.sort(key=lambda article: (article["date"], article["slug"]), reverse=True)
     OUTPUT.mkdir(exist_ok=True)
     localized_manifest = OUTPUT / ".generated-localized-routes"
     previous_localized = set(localized_manifest.read_text(encoding="utf-8").splitlines()) if localized_manifest.exists() else set()

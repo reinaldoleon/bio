@@ -36,6 +36,24 @@ El cuerpo del artículo.
 
 
 class WritingBuildTests(unittest.TestCase):
+    def test_index_and_feed_order_by_date_before_featured(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "content" / "writing"
+            spanish = source / "es"
+            spanish.mkdir(parents=True)
+            (source / "example-article.md").write_text(ARTICLE)
+            (spanish / "example-article.md").write_text(SPANISH)
+            newer = ARTICLE.replace("example-article", "newer-article").replace("Example article", "Newer article").replace("2026-10-29", "2026-11-16").replace("featured: true", "featured: false")
+            (source / "newer-article.md").write_text(newer)
+            (spanish / "newer-article.md").write_text(SPANISH)
+            output = root / "writing"
+            with patch.object(build_writing, "ROOT", root), patch.object(build_writing, "SOURCE", source), patch.object(build_writing, "OUTPUT", output):
+                build_writing.build()
+            for path in (output / "index.html", output / "feed.xml"):
+                rendered = path.read_text()
+                self.assertLess(rendered.index("Newer article"), rendered.index("Example article"))
+
     def test_analytics_is_shared_and_article_metadata_is_public(self):
         root = Path(__file__).resolve().parents[1]
         for path in (
