@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 800" width="480" height="800" role="img" aria-labelledby="diagram-title diagram-desc">
+<title id="diagram-title">Decision tree</title>
+<desc id="diagram-desc">Add controls based on risk</desc>
+<rect width="480" height="800" rx="24" fill="#122031"/>
+<rect x="1" y="1" width="478" height="798" rx="23" fill="none" stroke="#304a5c" stroke-width="2"/>
+<text x="240" y="48" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="26" font-weight="600">Decision tree</text>
+<text x="240" y="79" text-anchor="middle" fill="#a9c4d5" font-family="Arial, sans-serif" font-size="17" font-weight="400">Add controls based on risk</text>
+<rect x="34" y="102" width="412" height="100" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="148" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">AI at runtime?</text><text x="240" y="178" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">No → engineering controls</text>
+<path d="M240 202 V220 M232 212 L240 221 L248 212" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="230" width="412" height="100" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="276" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Yes → inference</text><text x="240" y="306" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Identity · quality · cost</text>
+<path d="M240 330 V348 M232 340 L240 349 L248 340" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="358" width="412" height="100" rx="16" fill="#1d3041" stroke="#8bbca7" stroke-width="2"/><text x="240" y="404" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">RAG or tools?</text><text x="240" y="434" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Data, access and isolation</text>
+<path d="M240 458 V476 M232 468 L240 477 L248 468" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="486" width="412" height="100" rx="16" fill="#1d3041" stroke="#e2b977" stroke-width="2"/><text x="240" y="532" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">External side effects?</text><text x="240" y="562" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Permissions · approval · recovery</text>
+<path d="M240 586 V604 M232 596 L240 605 L248 596" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="614" width="412" height="108" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="664" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Shared or high risk?</text><text x="240" y="694" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Owner · SLO · added controls</text>
+</svg>

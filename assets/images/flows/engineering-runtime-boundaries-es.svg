@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 800" width="480" height="800" role="img" aria-labelledby="diagram-title diagram-desc">
+<title id="diagram-title">Límites de confianza</title>
+<desc id="diagram-desc">La autoridad cambia con el contexto</desc>
+<rect width="480" height="800" rx="24" fill="#122031"/>
+<rect x="1" y="1" width="478" height="798" rx="23" fill="none" stroke="#304a5c" stroke-width="2"/>
+<text x="240" y="48" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="26" font-weight="600">Límites de confianza</text>
+<text x="240" y="79" text-anchor="middle" fill="#a9c4d5" font-family="Arial, sans-serif" font-size="17" font-weight="400">La autoridad cambia con el contexto</text>
+<rect x="34" y="105" width="412" height="94" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="148" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Developer → coding agent</text><text x="240" y="178" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Identidad y permisos delegados</text>
+<path d="M240 199 V220 M232 212 L240 221 L248 212" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="230" width="412" height="94" rx="16" fill="#1d3041" stroke="#80aeca" stroke-width="2"/><text x="240" y="273" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Repositorio + herramientas</text><text x="240" y="303" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Cambios → CI → revisión</text>
+<text x="240" y="375" text-anchor="middle" fill="#e2b977" font-family="Arial, sans-serif" font-size="18" font-weight="600">LÍMITE DE ENTREGA</text>
+<rect x="34" y="414" width="412" height="94" rx="16" fill="#1d3041" stroke="#8bbca7" stroke-width="2"/><text x="240" y="457" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Aplicación → agente</text><text x="240" y="487" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Identidad de servicio</text>
+<path d="M240 508 V529 M232 521 L240 530 L248 521" fill="none" stroke="#80aeca" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="34" y="539" width="412" height="100" rx="16" fill="#1d3041" stroke="#8bbca7" stroke-width="2"/><text x="240" y="585" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="22" font-weight="600">Datos + herramientas de negocio</text><text x="240" y="615" text-anchor="middle" fill="#c6d5de" font-family="Arial, sans-serif" font-size="17" font-weight="400">Tenant · autorización · aprobación</text>
+<text x="240" y="718" text-anchor="middle" fill="#e2b977" font-family="Arial, sans-serif" font-size="18" font-weight="600">Cada acción cruza un límite</text>
+</svg>

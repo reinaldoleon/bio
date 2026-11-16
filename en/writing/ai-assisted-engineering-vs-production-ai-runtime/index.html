@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-lang="en" data-route-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What&#x27;s the difference between using AI to build software and running AI in production? | Reinaldo León</title>
+  <meta name="description" content="A practical architecture for separating AI-assisted engineering from production AI runtime controls while sharing platform capabilities.">
+  <link rel="canonical" href="https://reinaldoleon.github.io/bio/en/writing/ai-assisted-engineering-vs-production-ai-runtime/">
+  <meta name="author" content="Reinaldo León">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What&#x27;s the difference between using AI to build software and running AI in production? | Reinaldo León">
+  <meta property="og:description" content="A practical architecture for separating AI-assisted engineering from production AI runtime controls while sharing platform capabilities.">
+  <meta property="og:url" content="https://reinaldoleon.github.io/bio/en/writing/ai-assisted-engineering-vs-production-ai-runtime/">
+  <meta property="og:image" content="https://reinaldoleon.github.io/bio/assets/images/writing/ai-assisted-engineering-vs-production-ai-runtime-en.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What&#x27;s the difference between using AI to build software and running AI in production? | Reinaldo León">
+  <meta name="twitter:description" content="A practical architecture for separating AI-assisted engineering from production AI runtime controls while sharing platform capabilities.">
+  <meta name="twitter:image" content="https://reinaldoleon.github.io/bio/assets/images/writing/ai-assisted-engineering-vs-production-ai-runtime-en.png">
+  <link rel="alternate" type="application/rss+xml" title="Reinaldo León — Writing" href="https://reinaldoleon.github.io/bio/writing/feed.xml">
+  <link rel="icon" type="image/png" href="../../../assets/images/avatar.png">
+  <script src="../../../assets/js/lang-init.js"></script>
+  <link rel="stylesheet" href="../../../assets/css/style.css">
+  <meta property="og:image:alt" content="What&#x27;s the difference between using AI to build software and running AI in production? | Reinaldo León">
+  <meta name="twitter:image:alt" content="What&#x27;s the difference between using AI to build software and running AI in production? | Reinaldo León">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <link rel="alternate" hreflang="en" href="https://reinaldoleon.github.io/bio/en/writing/ai-assisted-engineering-vs-production-ai-runtime/">
+  <link rel="alternate" hreflang="es" href="https://reinaldoleon.github.io/bio/es/writing/ai-engineering-vs-ai-runtime/">
+  <link rel="alternate" hreflang="x-default" href="https://reinaldoleon.github.io/bio/en/writing/ai-assisted-engineering-vs-production-ai-runtime/">
+  <meta property="article:published_time" content="2026-11-16">
+  <meta property="article:modified_time" content="2026-11-16">
+  <script defer src="../../../assets/js/analytics-config.js"></script>
+  <script defer src="../../../assets/js/analytics.js"></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "What's the difference between using AI to build software and running AI in production?", "description": "A practical architecture for separating AI-assisted engineering from production AI runtime controls while sharing platform capabilities.", "datePublished": "2026-11-16", "dateModified": "2026-11-16", "inLanguage": "en", "author": {"@type": "Person", "name": "Reinaldo León", "url": "https://reinaldoleon.github.io/bio/"}, "mainEntityOfPage": "https://reinaldoleon.github.io/bio/en/writing/ai-assisted-engineering-vs-production-ai-runtime/", "image": "https://reinaldoleon.github.io/bio/assets/images/writing/ai-assisted-engineering-vs-production-ai-runtime-en.png"}</script>
+</head>
+<body>
+  <header><div class="container nav-wrapper">
+      <a class="logo" href="../../../index.html">Reinaldo León</a>
+      <button class="mobile-nav-toggle" id="mobile-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <nav><ul class="nav-links" id="nav-links">
+        <li><a href="../../../index.html#about"><span class="lang-en">About</span><span class="lang-es">Sobre mí</span></a></li>
+        <li><a href="../../../index.html#experience"><span class="lang-en">Experience</span><span class="lang-es">Experiencia</span></a></li>
+        <li><a href="../../../index.html#projects"><span class="lang-en">Projects</span><span class="lang-es">Proyectos</span></a></li>
+        <li><a href="../../../writing/" aria-current="page"><span class="lang-en">Writing</span><span class="lang-es">Artículos</span></a></li>
+        <li><a href="../../../index.html#contact"><span class="lang-en">Contact</span><span class="lang-es">Contacto</span></a></li>
+        <li><button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme"><svg class="moon-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg><svg class="sun-icon" viewBox="0 0 20 20" fill="currentColor"><circle cx="10" cy="10" r="4"/></svg></button></li>
+        <li><div class="lang-selector"><a class="lang-route active" data-lang-route="en" href="https://reinaldoleon.github.io/bio/en/writing/ai-assisted-engineering-vs-production-ai-runtime/" hreflang="en" aria-label="Read in English" aria-current="page">EN</a><span class="lang-divider">|</span><a class="lang-route" data-lang-route="es" href="https://reinaldoleon.github.io/bio/es/writing/ai-engineering-vs-ai-runtime/" hreflang="es" aria-label="Leer en español">ES</a></div></li>
+      </ul></nav></div></header>
+  <main class="container writing-main"><article class="writing-article writing-longform" data-analytics-article="ai-assisted-engineering-vs-production-ai-runtime" data-analytics-pillar="AI Platform Engineering" data-analytics-title-en="What&#x27;s the difference between using AI to build software and running AI in production?" data-analytics-title-es="¿Qué diferencia hay entre usar IA para desarrollar software y operar IA en producción?">
+          <p class="writing-back"><a href="../../../writing/">← All writing</a></p>
+          <p class="writing-meta"><time datetime="2026-11-16">2026-11-16</time> · AI Platform Engineering</p>
+          <h1>What&#x27;s the difference between using AI to build software and running AI in production?</h1>
+          <p class="writing-deck">Two operating models can use the same platform capabilities. Their trust boundaries, policies and operational owners still need explicit contracts.</p>
+          <p class="writing-author">Reinaldo León <span aria-hidden="true">·</span> Principal Platform Engineer | AI Platform &amp; Enablement</p>
+          <div class="project-tags"><span class="project-tag">AI Platform Engineering</span><span class="project-tag">Agentic Systems</span><span class="project-tag">AI Governance</span><span class="project-tag">Platform Engineering</span><span class="project-tag">AI Reliability</span></div>
+          <div class="writing-prose" lang="en"><p>A platform team receives two requests in the same week. Team A uses Claude Code or Codex to change a conventional backend API. Team B is building a customer-facing assistant that calls a model and can use business tools. Both teams say they are “using AI”. Should both products depend on the same production AI platform?</p>
+<p>Team A's API does not need model inference in production merely because an agent helped write it. The coding agent still needs controls for repository access, external services, credentials and review. Team B needs those engineering controls too. Its application also needs controls for AI behavior while customers use it.</p>
+<p><strong>Using AI to build software does not imply an AI runtime in that software. But the two operating models can share platform capabilities.</strong> This article uses <em>AI Runtime</em> to mean the capabilities needed to run and govern AI behavior in an application. It does not imply a mandatory standalone platform. The examples are illustrative designs, not descriptions of a deployed system.</p>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/engineering-runtime-tracks-en.svg" target="_blank" rel="noopener noreferrer" aria-label="Open diagram at full size"><img src="../../../assets/images/flows/engineering-runtime-tracks-en.svg" alt="AI-assisted engineering delivers software; only software that uses AI during execution needs production AI runtime controls. Both tracks can share platform capabilities." width="480" height="800" loading="lazy"></a>
+          <figcaption>The product&#x27;s runtime behavior determines the second track, not the use of AI during development.</figcaption>
+        </figure>
+<h2>Track 1: AI-assisted engineering</h2>
+<p>I use <strong>AI Engineering Operating System</strong> to mean an operating model: the lifecycle, contracts, tools, controls and owners that let people and agents participate in software delivery. It is not a commercial product. An AI-driven development lifecycle (AI-DLC) describes how AI can participate across stages of development. For example, <a href="https://aws.amazon.com/blogs/devops/ai-driven-development-life-cycle/">AWS's AI-DLC description</a> discusses development as a lifecycle; a team can adapt its own stages.</p>
+<p>A lifecycle is not an execution tool. A methodology such as Spec-Driven Development can define how a team specifies, plans and verifies a change within one stage. A coding-agent harness is the execution environment around an agent: it supplies instructions, tool access and execution controls. Neither the method nor the harness replaces ownership of the lifecycle.</p>
+<p>Context Engineering selects the instructions and knowledge relevant to a task. Repository instructions, versioned architecture decisions, shared skills and reusable procedures provide context; approved tools let the harness act. Treat external documents, tool responses and repository content as potentially untrusted inputs, not as authority to override policy. A coding agent may use a developer's delegated access or a separate workload identity. Scope that access, protect credentials and record which principal authorized consequential actions.</p>
+<p>Continuous integration and delivery (CI/CD) should run deterministic checks for properties that code can verify. Tests, policy checks, change review and approval gates produce evidence; an agent's explanation is not a substitute for those checks. An owner must be able to reconstruct the change, its inputs and approvals at a level proportionate to risk. The earlier articles cover <a href="../../../en/writing/ai-agent-adoption-governance/">adoption and governance</a>, <a href="../../../en/writing/ai-agent-code-traceability/">coding-agent traceability</a> and <a href="../../../en/writing/ai-engineering-without-another-llm/">deterministic verification</a> in more detail.</p>
+<h2>Track 2: production AI runtime</h2>
+<p>When a running application calls a model, the model's availability, output and cost become application concerns. The team needs a defined model access path and routing rules, runtime identity and authorization, timeouts, rate limits, cost attribution and an owner for incidents. It must decide what happens when the model fails, times out, returns an invalid format or produces a plausible but incorrect result. A fallback may be a safe deterministic path, a queue for human review, or an explicit failure; it must not silently imply that an unverified answer is correct.</p>
+<p>Inputs and outputs may contain customer data. Enforce tenant and data access at the application and tool boundaries. Set retention, deletion and security rules for prompts, results and traces. Logs can themselves expose sensitive data: minimize or redact content and restrict access. Guardrails can filter selected content, but they do not replace authorization, input handling or testing against prompt injection.</p>
+<p>Evaluation measures task quality against representative cases, including adversarial inputs and relevant failure modes. Monitor quality after release as well as latency, availability, errors and cost. Traces should connect a request to model version, prompt or configuration version, retrieval and tool calls, policy decisions and outcome, subject to data rules. Define a service level objective (SLO), an explicit target for service behavior, and an incident response path appropriate to the feature.</p>
+<p>Controls depend on risk. A bounded classification call may need schema validation, a quality test set and a fallback, with no agent framework. A long-running agent with write access needs stronger controls. Not every AI application is an autonomous agent.</p>
+<h2>Compare the operating models</h2>
+<p>The table describes typical boundaries, not absolute rules. A centrally operated coding agent can itself be a production service; its own operators need runtime controls even if the software it changes has no AI dependency.</p>
+<ul>
+<li><strong>Consumers:</strong> Developers, coding agents, delivery workflows / Application users, services and runtime agents.</li>
+<li><strong>Objective:</strong> Deliver a correct, reviewable change / Deliver a safe, useful application outcome.</li>
+<li><strong>Execution boundary:</strong> Workstation or managed agent environment and delivery pipeline / Application, model access, retrieval and tool execution.</li>
+<li><strong>Trust boundary:</strong> Developer, repository, external context, CI and deployment / User, tenant, service, model, retrieved content and business tools.</li>
+<li><strong>Identity:</strong> Human identity and scoped delegated or agent identity / Workload identity; user delegation when needed.</li>
+<li><strong>Tools:</strong> Repository, test, build and approved engineering tools / Model, retrieval and business APIs; restricted actions.</li>
+<li><strong>Context and data:</strong> Source code, instructions, specifications and secrets / User input, tenant data, retrieved records and state.</li>
+<li><strong>Validation:</strong> Tests, static checks, policy and change review / Schemas, authorization, policy checks and safe fallback.</li>
+<li><strong>Evaluation:</strong> Change quality, task success and agent behavior / Task quality, safety and outcome across representative cases.</li>
+<li><strong>Observability:</strong> Change history, tool calls, CI evidence and approvals / Request traces, model and tool calls, quality, latency and errors.</li>
+<li><strong>Human control:</strong> Review and approve changes or privileged tool use / Review outputs or approve actions according to risk.</li>
+<li><strong>Failure impact:</strong> Bad change, exposed code or credentials, delivery disruption / Incorrect customer result, data exposure or business side effect.</li>
+<li><strong>Cost:</strong> Developer time, agent usage and CI / Inference, retrieval, execution, operations and incident cost.</li>
+<li><strong>Ownership:</strong> Engineering team; platform and security own shared controls / Product/service owner with platform, security and operations.</li>
+<li><strong>Lifecycle:</strong> Task, change, review, release and feedback / Request or event, execution, monitoring, incident and recovery.</li>
+</ul>
+<p>Both need identity, authorization, evidence and evaluation. The allowed principal, data scope, retention, response time and approval threshold can differ. A shared log pipeline, for example, must not expose customer prompts to every developer who can see build logs.</p>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/engineering-runtime-boundaries-en.svg" target="_blank" rel="noopener noreferrer" aria-label="Open diagram at full size"><img src="../../../assets/images/flows/engineering-runtime-boundaries-en.svg" alt="A developer delegates access to a coding agent that works with a repository and review pipeline. A production agent uses a service identity to access business data and tools across separate authorization boundaries." width="480" height="800" loading="lazy"></a>
+          <figcaption>Repository authority and authority over customer data or business actions are different trust boundaries.</figcaption>
+        </figure>
+<h2>Shared platform capabilities, separate contracts</h2>
+<p>A platform can offer common identity and access control, policy-as-code (versioned executable policy), observability, secrets and credential management, and cost attribution. It can also offer model gateways where useful, registries of approved tools and capabilities, versioned skills and configuration, and evaluation infrastructure. A registry records what is available; it must not grant access by itself. A gateway can centralize routing and measurement, but it can also become a shared failure and latency dependency. Define its failure mode and owner before making it mandatory.</p>
+<p>Reuse the interface and control machinery, then set policy per consumer. A coding agent may read a repository but have no customer-data access. A runtime agent may read a tenant's records through a filtered API but have no repository access. Evaluation can share datasets and execution infrastructure only when data access permits it; a code test suite and a customer-answer quality set measure different outcomes. Separate budgets, retention, incident escalation and SLOs even if telemetry uses one backend.</p>
+<p>Location alone is a poor boundary. A local coding agent can call remote models and services. A centrally managed developer agent may run shared jobs, maintain credentials and affect many teams. A company-operated runtime agent may act for a customer or process events without an interactive user. Ask who operates each component, which dependencies are shared, whose identity is used, what it can do, and who absorbs a failure. A developer agent operated as a shared service deserves its own production reliability and security controls.</p>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/engineering-runtime-shared-en.svg" target="_blank" rel="noopener noreferrer" aria-label="Open diagram at full size"><img src="../../../assets/images/flows/engineering-runtime-shared-en.svg" alt="Developers, coding agents, workflows and AI workloads consume identity, policy, observability, registry, evaluation and cost capabilities under different contracts." width="480" height="800" loading="lazy"></a>
+          <figcaption>A common capability can serve several consumers without granting them the same authority or service objective.</figcaption>
+        </figure>
+<h2>Three architecture examples</h2>
+<h3>1. A conventional API built with AI</h3>
+<p>A developer uses a coding agent to propose a change to an inventory API. The harness reads the allowed repository and runs approved tests. CI verifies the change and a reviewer approves it. The deployed API serves requests through its normal backend and database; it makes no model call.</p>
+<p><strong>Trust boundary:</strong> the agent crosses from developer authority into repository and tool access; CI and deployment have separate permissions. Protect code, credentials and external model inputs. <strong>Owner:</strong> the engineering team owns the change and service; the platform team owns any shared agent service and CI capability. No production inference infrastructure is implied for the API.</p>
+<h3>2. A production AI feature</h3>
+<p>A support backend sends a customer request to a model for classification or summarization. The backend authenticates the caller, scopes the request to the tenant, minimizes data sent, calls an approved model and validates the output schema. It applies a timeout and a rate and cost budget. If the response fails validation, it routes the request to a human queue instead of inventing a category. A representative evaluation set checks classification errors and summary omissions; monitoring tracks quality, latency and failures.</p>
+<p><strong>Trust boundary:</strong> customer input crosses into model processing, then the model output returns as untrusted application input. The application enforces tenant access and retention. <strong>Owner:</strong> the product service team owns behavior, quality and incidents; platform can own the model access service. This design needs no multi-agent system.</p>
+<h3>3. A tool-using production agent</h3>
+<p>An agent reads approved account data and proposes a refund. A tool gateway validates the service identity, tenant, action and amount against policy. A human approves actions above a risk threshold; the approval binds to the exact action and its parameters, expires, and is checked again before execution. The business API independently authorizes the action. A trace connects the request, retrieved data references, tool calls, approval and result without logging unnecessary sensitive content.</p>
+<p>A retry after a timeout can duplicate a refund. Use an idempotency key bound to the business operation and check the authoritative system for the result before retrying. Persist state at appropriate checkpoints; distinguish a failed action from an unknown outcome. Define reconciliation, compensation where possible, escalation and a way to stop the agent. Isolate tenant data and execution state, limit tool scope and duration, and test prompt injection in retrieved content.</p>
+<p><strong>Trust boundary:</strong> the agent crosses from model-generated intent into business data and side effects. A model response is a proposal, not authorization. <strong>Owner:</strong> the product/service team owns business outcomes and recovery; tool owners enforce their APIs; platform, security and operations own their respective shared controls and incident paths.</p>
+<h2>Decision framework</h2>
+<figure class="writing-flow writing-flow-article">
+          <a href="../../../assets/images/flows/engineering-runtime-decision-en.svg" target="_blank" rel="noopener noreferrer" aria-label="Open diagram at full size"><img src="../../../assets/images/flows/engineering-runtime-decision-en.svg" alt="A decision path starts with runtime AI use, then considers inference, retrieval or tools, external side effects, shared execution and high risk." width="480" height="800" loading="lazy"></a>
+          <figcaption>Each answer adds a design question; the required controls depend on the workload and its consequences.</figcaption>
+        </figure>
+<ol>
+<li><strong>Only development uses AI?</strong> Protect the agent, context, tools and delivery pipeline. The resulting application does not need inference solely for that reason. If the agent is centrally operated, treat that agent service as its own production workload.</li>
+<li><strong>Does the application call a model?</strong> Define identity, model access, data handling, validation, quality evaluation, failure behavior, observability and cost ownership. Start with the smallest controls that meet the risk.</li>
+<li><strong>Does it use retrieval-augmented generation (RAG)?</strong> RAG adds retrieved material to the model's input. Enforce source and tenant permissions before retrieval, track source versions and freshness, and evaluate both retrieval and answer quality. Treat retrieved text as untrusted.</li>
+<li><strong>Can tools cause external side effects?</strong> Add independent authorization, narrow permissions, idempotency, approval where warranted, and recovery for partial or uncertain outcomes. Read-only access can still expose sensitive data.</li>
+<li><strong>Is execution shared, scheduled or event-triggered?</strong> Name the operator and workload identity. Bound concurrency, retries, budgets and isolation. Provide traceability and an on-call path even when no person starts the run.</li>
+<li><strong>Is the operation high-risk or regulated?</strong> Map applicable obligations to evidence, retention, approval, independent review and incident procedures. Involve the relevant risk and legal owners; do not assume a managed service establishes compliance.</li>
+</ol>
+<p>These branches accumulate. The appropriate architecture depends on consequences, reversibility, data sensitivity and the ability to detect and recover from failure, not on the word “agent”.</p>
+<h2>AWS as one implementation option</h2>
+<p>For the second example, <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Amazon Bedrock</a> provides model access; an application could use <a href="https://docs.aws.amazon.com/lambda/latest/dg/welcome.html">AWS Lambda</a> to execute its request handler and <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html">AWS IAM</a> roles with temporary credentials for workload access. <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html">Amazon CloudWatch</a> can collect operational telemetry. The team still defines tenant authorization, data handling, quality tests, alerts and fallback behavior.</p>
+<p><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html">Amazon Bedrock Guardrails</a> can evaluate configured content policies for supported use cases. Its <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-prompt-attack.html">prompt-attack documentation</a> describes integration requirements and states that the prompt-attack filter does not evaluate tool results. Test the actual integration and enforce tool authorization independently.</p>
+<p>For a suitable agent workload, <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-security-best-practices.html">Amazon Bedrock AgentCore Runtime</a> provides managed execution and isolation capabilities. Its security guidance still assigns the application responsibility for binding users to sessions and applying least privilege. Check the documentation for the selected runtime mode and its isolation limits. <a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-error-handling.html">AWS Step Functions</a> can coordinate workflows with retry and error handling. Neither a retry policy nor managed orchestration makes an external business action idempotent. The team owns action authorization, deduplication, recovery and incident response.</p>
+<p>These are options, not required components. Choose them against the workload's contracts and verify current service support, region and configuration before implementation.</p>
+<h2>Platform Engineering: make the contracts consumable</h2>
+<p>The platform now serves human developers, coding agents, automated engineering workflows and production AI workloads. Each needs a usable interface to request identity, tools, model access, policy decisions, telemetry or evaluation. A useful contract states the consumer, permissions, data scope, owner, reliability target, cost attribution, failure behavior and escalation path. It should make the secure path easy to consume and make exceptions visible.</p>
+<p>The goal is not more infrastructure. It is clear interfaces, security boundaries and operating responsibilities. The platform team provides capabilities; application and engineering teams remain accountable for their use and outcomes. Security sets and reviews controls with those owners; operations and SRE help define reliability and response. A shared capability is valuable only if each consumer can understand its guarantees and limits.</p>
+<h2>Conclusion</h2>
+<p>AI-assisted software engineering and production AI behavior are different engineering problems. They can reuse identity, policy, observability and other capabilities, but each needs its own authority, runtime boundaries and operational owner.</p>
+<p>When an agent requests its next capability, <strong>who grants the authority, which boundary does the action cross, and who can detect and recover from its failure?</strong></p>
+</div>
+        </article></main>
+  <footer><div class="container footer-content"><p class="footer-text">© Reinaldo León · <a href="../../../index.html"><span class="lang-en">Professional bio</span><span class="lang-es">Bio profesional</span></a> · <a href="../../../writing/feed.xml">RSS</a></p><p class="footer-text analytics-disclosure"><span class="lang-en">This site uses cookie-free Umami Cloud for aggregate reports on visits, reading and campaigns. Custom events contain no names, emails or form content. Umami may process IP data to derive anonymous sessions.</span><span class="lang-es">Esta web utiliza Umami Cloud sin cookies para obtener informes agregados de visitas, lectura y campañas. Los eventos personalizados no incluyen nombres, correos ni contenido de formularios. Umami puede procesar datos de IP para derivar sesiones anónimas.</span> <a href="https://umami.is/privacy" rel="noopener noreferrer" target="_blank"><span class="lang-en">Umami privacy policy</span><span class="lang-es">Privacidad de Umami</span></a>.</p></div></footer>
+  <script src="../../../assets/js/main.js"></script>
+</body>
+</html>
